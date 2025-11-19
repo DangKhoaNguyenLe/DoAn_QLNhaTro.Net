@@ -1,0 +1,12 @@
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\bin\Debug\Datatabse\QL_nhaTro.mdf
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\bin\Debug\Datatabse\QL_nhaTro_log.ldf
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\bin\Debug\DAL.dll.config
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\bin\Debug\DAL.dll
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\bin\Debug\DAL.pdb
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\bin\Debug\DTO.dll
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\bin\Debug\DTO.pdb
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\obj\Debug\DAL.dll
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\obj\Debug\DAL.pdb
