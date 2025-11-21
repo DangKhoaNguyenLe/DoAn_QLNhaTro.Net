@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace DAL
 {
@@ -12,6 +14,7 @@ namespace DAL
         protected HOSTELTableAdapter hostel;
         protected USERSTableAdapter user;
         protected GIADIENNUOCTableAdapter GiaDienNuoc;
+
         public DbProcessDAL() {
             hostel = new HOSTELTableAdapter();
             user = new USERSTableAdapter();

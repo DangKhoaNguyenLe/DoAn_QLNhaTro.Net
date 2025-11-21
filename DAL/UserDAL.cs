@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace DAL
 {
@@ -34,5 +35,51 @@ namespace DAL
             }
             return users;
         }
+
+        // ĐĂNG NHẬP: duyệt từng dòng trong bảng USERS
+        public bool DangNhap(string username, string password)
+        {
+            DataNhaTro.USERSDataTable dt = user.GetData();
+
+            foreach (DataNhaTro.USERSRow row in dt.Rows)
+            {
+                if (row.UserName == username && row.PasswordHash == password)
+                {
+                    return true;    
+                }
+            }
+
+            return false;           
+        }
+
+        public bool CheckUser(string username)
+        {
+            DataNhaTro.USERSDataTable dt = user.GetData();
+
+            foreach (DataNhaTro.USERSRow row in dt.Rows)
+            {
+                if (row.UserName == username)
+                {
+                    return true;    
+                }
+            }
+
+            return false;           
+        }
+
+        public bool DangKy(UserDTO userDTO)
+        {
+            try
+            {
+                user.DangKy(userDTO.Username, userDTO.PasswordHash, userDTO.FullName, userDTO.Email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
+
+

@@ -10,3 +10,15 @@ C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\obj\Debug\DAL.csproj.
 C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\obj\Debug\DAL.dll
 C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\DAL\obj\Debug\DAL.pdb
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\bin\Debug\Datatabse\QL_nhaTro.mdf
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\bin\Debug\Datatabse\QL_nhaTro_log.ldf
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\bin\Debug\DAL.dll.config
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\bin\Debug\DAL.dll
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\bin\Debug\DAL.pdb
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\bin\Debug\DTO.dll
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\bin\Debug\DTO.pdb
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\obj\Debug\DAL.dll
+C:\Users\phamv\OneDrive\Desktop\New folder\DAL\obj\Debug\DAL.pdb
