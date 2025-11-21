@@ -12,6 +12,8 @@ namespace GUI
 {
     public partial class FormMainTu : Form
     {
+        private Form currentChildForm;
+
         public FormMainTu()
         {
             InitializeComponent();
@@ -19,7 +21,46 @@ namespace GUI
             this.slidebarTransition.Tick += SlidebarTransition_Tick;
             this.button_khachthue.Click += Button_khachthue_Click;
             this.btn_ThuGon.Click += Btn_ThuGon_Click;
+            this.button_taikhoan.Click += Button_taikhoan_Click;
+            this.button_thongke.Click += Button_thongke_Click;
+            this.button_danhsachnha.Click += Button_danhsachnha_Click;
+            this.button_phong.Click += Button_phong_Click;
+            this.button_dshopdong.Click += Button_dshopdong_Click;
+            this.Button_dskhachthue.Click += Button_dskhachthue_Click;
+        }
+
+        private void Button_dskhachthue_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Button_dshopdong_Click1(object sender, EventArgs e)
+        {
+        }
+
+        private void Button_dshopdong_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Button_khachthue_Click1(object sender, EventArgs e)
+        {
+        }
+
+        private void Button_phong_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Button_danhsachnha_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Button_thongke_Click(object sender, EventArgs e)
+        {
             
+        }
+
+        private void Button_taikhoan_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormTaiKhoan());
         }
 
         private void Btn_ThuGon_Click(object sender, EventArgs e)
@@ -82,7 +123,27 @@ namespace GUI
                 }
             }
         }
+        
+        //Hien thi form con
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
 
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            panel_container_main.Controls.Clear();
+            panel_container_main.Controls.Add(childForm);
+            panel_container_main.Tag = childForm;
+
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
     }
 }

@@ -36,7 +36,7 @@
             this.panel_thongke = new System.Windows.Forms.Panel();
             this.button_thongke = new System.Windows.Forms.Button();
             this.panel_danhsachnha = new System.Windows.Forms.Panel();
-            this.button_danhsachphong = new System.Windows.Forms.Button();
+            this.button_danhsachnha = new System.Windows.Forms.Button();
             this.panel_phong = new System.Windows.Forms.Panel();
             this.button_phong = new System.Windows.Forms.Button();
             this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
@@ -52,8 +52,8 @@
             this.slidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.btn_ThuGon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel_container_main = new System.Windows.Forms.Panel();
             this.sidebar.SuspendLayout();
             this.panel_taikhoan.SuspendLayout();
             this.panel_thongke.SuspendLayout();
@@ -135,26 +135,26 @@
             // 
             // panel_danhsachnha
             // 
-            this.panel_danhsachnha.Controls.Add(this.button_danhsachphong);
+            this.panel_danhsachnha.Controls.Add(this.button_danhsachnha);
             this.panel_danhsachnha.Location = new System.Drawing.Point(3, 145);
             this.panel_danhsachnha.Name = "panel_danhsachnha";
             this.panel_danhsachnha.Size = new System.Drawing.Size(261, 65);
             this.panel_danhsachnha.TabIndex = 4;
             // 
-            // button_danhsachphong
+            // button_danhsachnha
             // 
-            this.button_danhsachphong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button_danhsachphong.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.button_danhsachphong.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button_danhsachphong.Image = ((System.Drawing.Image)(resources.GetObject("button_danhsachphong.Image")));
-            this.button_danhsachphong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_danhsachphong.Location = new System.Drawing.Point(-12, -8);
-            this.button_danhsachphong.Name = "button_danhsachphong";
-            this.button_danhsachphong.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
-            this.button_danhsachphong.Size = new System.Drawing.Size(326, 76);
-            this.button_danhsachphong.TabIndex = 3;
-            this.button_danhsachphong.Text = "Danh Sách Nhà";
-            this.button_danhsachphong.UseVisualStyleBackColor = false;
+            this.button_danhsachnha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.button_danhsachnha.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_danhsachnha.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button_danhsachnha.Image = ((System.Drawing.Image)(resources.GetObject("button_danhsachnha.Image")));
+            this.button_danhsachnha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_danhsachnha.Location = new System.Drawing.Point(-12, -8);
+            this.button_danhsachnha.Name = "button_danhsachnha";
+            this.button_danhsachnha.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.button_danhsachnha.Size = new System.Drawing.Size(326, 76);
+            this.button_danhsachnha.TabIndex = 3;
+            this.button_danhsachnha.Text = "Danh Sách Nhà";
+            this.button_danhsachnha.UseVisualStyleBackColor = false;
             // 
             // panel_phong
             // 
@@ -316,14 +316,6 @@
             this.panel1.Size = new System.Drawing.Size(1141, 47);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(273, 47);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(868, 530);
-            this.panel2.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -334,12 +326,20 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "VĂN TÚ | NGỌC THỊNH | ĐĂNG KHOA";
             // 
+            // panel_container_main
+            // 
+            this.panel_container_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_container_main.Location = new System.Drawing.Point(273, 47);
+            this.panel_container_main.Name = "panel_container_main";
+            this.panel_container_main.Size = new System.Drawing.Size(868, 530);
+            this.panel_container_main.TabIndex = 2;
+            // 
             // FormMainTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1141, 577);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel_container_main);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -368,7 +368,7 @@
         private System.Windows.Forms.Panel panel_taikhoan;
         private System.Windows.Forms.Button button_taikhoan;
         private System.Windows.Forms.Panel panel_danhsachnha;
-        private System.Windows.Forms.Button button_danhsachphong;
+        private System.Windows.Forms.Button button_danhsachnha;
         private System.Windows.Forms.Panel panel_thongke;
         private System.Windows.Forms.Button button_thongke;
         private System.Windows.Forms.Panel panel4;
@@ -387,6 +387,6 @@
         private System.Windows.Forms.PictureBox btn_ThuGon;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_container_main;
     }
 }
