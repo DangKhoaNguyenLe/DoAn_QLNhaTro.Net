@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,5 +33,62 @@ namespace DAL
             }
             return phongTros;
         }
+
+        public bool Add(PhongTroDTO p)
+        {
+            try
+            {
+                room.Insert(p.HostelID
+                    , p.RoomName
+                    , p.Floor
+                    , p.Area
+                    , p.Capacity
+                    , p.soNguoiDaThue
+                    , p.Price
+                    , p.Deposit
+                    , p.Status);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL: " + ex.Message, ex);
+            }
+        }
+
+        public bool update(PhongTroDTO p)
+        {
+            try
+            {
+                room.UpdateRoom(
+                    p.HostelID
+                    ,p.RoomName
+                    ,p.Floor
+                    ,p.Area
+                    ,p.Capacity
+                    ,p.soNguoiDaThue
+                    ,p.Price
+                    ,p.Deposit
+                    ,p.Status, p.RoomID);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL: " + ex.Message, ex);
+            }
+        }
+
+        public bool delete(int id)
+        {
+            try
+            {
+                room.DeleteRoom(id);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL: " + ex.Message, ex);
+            }
+        }
+
     }
 }
