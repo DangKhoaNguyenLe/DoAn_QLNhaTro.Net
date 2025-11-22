@@ -1,5 +1,0 @@
-# Bỏ qua các file Cơ sở dữ liệu SQL Server LocalDB/MDF
-DAL/Datatabse/QL_nhaTro.mdf
-DAL/Datatabse/QL_nhaTro_log.ldf # Thường đi kèm với .mdf
-*.mdf
-*.ldf
