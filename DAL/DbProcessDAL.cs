@@ -15,14 +15,14 @@ namespace DAL
         protected USERSTableAdapter user;
         protected GIADIENNUOCTableAdapter GiaDienNuoc;
         protected CONTRACTTableAdapter hopdong;
-        protected DanhSachHopDongTableAdapter dshopdong;
+        protected DanhSachHopDong1TableAdapter dshopdong1;
 
         public DbProcessDAL() {
             hostel = new HOSTELTableAdapter();
             user = new USERSTableAdapter();
             GiaDienNuoc = new GIADIENNUOCTableAdapter();
             hopdong = new CONTRACTTableAdapter();
-            dshopdong = new DanhSachHopDongTableAdapter();
+            dshopdong1 = new DanhSachHopDong1TableAdapter();
         }
     }
 }

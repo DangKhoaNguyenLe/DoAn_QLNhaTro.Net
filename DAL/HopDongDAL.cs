@@ -12,7 +12,7 @@ namespace DAL
         {
             List<HopDongDTO> list = new List<HopDongDTO>();
 
-            DataTable dt = dshopdong.GetData();   
+            DataTable dt = dshopdong1.GetData();   
 
             foreach (DataRow dr in dt.Rows)
             {

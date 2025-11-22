@@ -13,6 +13,13 @@ namespace BLL
     {
         UserDAL userDAL = new UserDAL();
 
+        public string LayMatKhau(string username, string email)
+        {
+            return userDAL.GetPasswordByUserAndEmail(username, email);
+        }
+
+
+
         public UserDTO getUserAdminLogin()
         {
             List<UserDTO> users = userDAL.GetListUser();

@@ -102,7 +102,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1397, 70);
+            this.panel1.Size = new System.Drawing.Size(1358, 70);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -113,7 +113,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1397, 50);
+            this.panel2.Size = new System.Drawing.Size(1358, 50);
             this.panel2.TabIndex = 3;
             // 
             // panel3
@@ -124,7 +124,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1397, 50);
+            this.panel3.Size = new System.Drawing.Size(1358, 50);
             this.panel3.TabIndex = 4;
             // 
             // panel4
@@ -134,7 +134,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1397, 50);
+            this.panel4.Size = new System.Drawing.Size(1358, 50);
             this.panel4.TabIndex = 5;
             // 
             // label3
@@ -180,7 +180,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 120);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1397, 309);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1358, 309);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // panel5
@@ -190,7 +190,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 429);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1397, 50);
+            this.panel5.Size = new System.Drawing.Size(1358, 50);
             this.panel5.TabIndex = 6;
             // 
             // label4
@@ -214,7 +214,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 479);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1397, 55);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1358, 55);
             this.flowLayoutPanel2.TabIndex = 7;
             // 
             // button2
@@ -275,7 +275,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 534);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1397, 145);
+            this.panel6.Size = new System.Drawing.Size(1358, 145);
             this.panel6.TabIndex = 10;
             // 
             // dataGridView1
@@ -286,7 +286,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1397, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1358, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // PhongTro
@@ -295,6 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1379, 636);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -303,7 +304,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PhongTro";
-            this.Size = new System.Drawing.Size(1397, 683);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

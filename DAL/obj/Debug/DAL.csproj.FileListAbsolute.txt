@@ -8,3 +8,23 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\New folder\DAL\obj\Debug\DAL.csproj.Co
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\New folder\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\New folder\DAL\obj\Debug\DAL.dll
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\New folder\DAL\obj\Debug\DAL.pdb
+C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DAL\bin\Debug\DAL.dll.config
+C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DAL\bin\Debug\DAL.dll
+C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DAL\bin\Debug\DAL.pdb
+C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DAL\bin\Debug\DTO.dll
+C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DAL\bin\Debug\DTO.pdb
+C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DAL\obj\Debug\DAL.dll
+C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DAL\obj\Debug\DAL.pdb
+C:\Users\phamv\Congnghe.net\DAL\bin\Debug\DAL.dll.config
+C:\Users\phamv\Congnghe.net\DAL\bin\Debug\DAL.dll
+C:\Users\phamv\Congnghe.net\DAL\bin\Debug\DAL.pdb
+C:\Users\phamv\Congnghe.net\DAL\bin\Debug\DTO.dll
+C:\Users\phamv\Congnghe.net\DAL\bin\Debug\DTO.pdb
+C:\Users\phamv\Congnghe.net\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\phamv\Congnghe.net\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\phamv\Congnghe.net\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\phamv\Congnghe.net\DAL\obj\Debug\DAL.dll
+C:\Users\phamv\Congnghe.net\DAL\obj\Debug\DAL.pdb

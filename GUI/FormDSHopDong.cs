@@ -21,13 +21,10 @@ namespace GUI
             dataGridView_dshopdong.AutoGenerateColumns = false;
             this.Dock = DockStyle.Fill;      
             this.AutoSize = false;           
-            this.Resize += FormDSHopDong_Resize;
-
             this.Shown += (s, e) =>
             {
                 LoadHopDong();
                 AddSTT();
-                FormDSHopDong_Resize(null, null); 
             };
         }
         public void LoadHopDong()
@@ -41,13 +38,6 @@ namespace GUI
             {
                 dataGridView_dshopdong.Rows[i].Cells["STT"].Value = i + 1;
             }
-        }
-
-        private void FormDSHopDong_Resize(object sender, EventArgs e)
-        {
-            dataGridView_dshopdong.Width = this.ClientSize.Width;
-            dataGridView_dshopdong.Height =
-                this.ClientSize.Height - panel_title.Height - panel_bottom.Height;
         }
 
 

@@ -52,8 +52,8 @@
             this.btn_ThuGon = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel_container_main = new System.Windows.Forms.Panel();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel_container_main = new System.Windows.Forms.Panel();
             this.panel_trangchu.SuspendLayout();
             this.panel_thongke.SuspendLayout();
             this.panel_danhsachnha.SuspendLayout();
@@ -307,14 +307,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "VĂN TÚ | NGỌC THỊNH | ĐĂNG KHOA";
             // 
-            // panel_container_main
-            // 
-            this.panel_container_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_container_main.Location = new System.Drawing.Point(273, 47);
-            this.panel_container_main.Name = "panel_container_main";
-            this.panel_container_main.Size = new System.Drawing.Size(868, 530);
-            this.panel_container_main.TabIndex = 2;
-            // 
             // sidebar
             // 
             this.sidebar.AutoScroll = true;
@@ -333,6 +325,15 @@
             this.sidebar.Size = new System.Drawing.Size(273, 530);
             this.sidebar.TabIndex = 1;
             this.sidebar.WrapContents = false;
+            // 
+            // panel_container_main
+            // 
+            this.panel_container_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_container_main.Location = new System.Drawing.Point(273, 47);
+            this.panel_container_main.Margin = new System.Windows.Forms.Padding(0);
+            this.panel_container_main.Name = "panel_container_main";
+            this.panel_container_main.Size = new System.Drawing.Size(868, 530);
+            this.panel_container_main.TabIndex = 2;
             // 
             // FormMainTu
             // 
@@ -384,7 +385,7 @@
         private System.Windows.Forms.PictureBox btn_ThuGon;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel_container_main;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
+        private System.Windows.Forms.Panel panel_container_main;
     }
 }

@@ -171,9 +171,5 @@ namespace GUI
             childForm.Show();
         }
 
-
-
-
-
     }
 }
