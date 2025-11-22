@@ -22,7 +22,7 @@ namespace GUI
             DayNhaBLL = new DayNhaBLL();
             PhongTroBLL = new PhongTroBLL();
             this.Load += PhongTro_Load;
-            this.cmbDayNha.SelectionChangeCommitted += CmbDayNha_SelectionChangeCommitted; ;
+            this.cmbDayNha.SelectionChangeCommitted += CmbDayNha_SelectionChangeCommitted;
 
         }
 
@@ -39,12 +39,32 @@ namespace GUI
             foreach (var i in phongTros)
             {
                 Button btn = new Button();
+                btn.BackColor = SystemColors.Control;
                 btn.Text = "Phòng " + i.RoomID;
+                btn.Name = i.RoomID.ToString();
                 btn.Size = new Size(100, 120);
+                btn.Click += PhongButton_Click;
                 flowLayoutPanel1.Controls.Add(btn);
             }
         }
 
+        private void PhongButton_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            int roomId = int.Parse(btn.Name);
+            ClearButtonSelection();
+            btn.BackColor = Color.LightBlue;
+
+            MessageBox.Show("Bạn chọn phòng: " + roomId);
+        }
+
+        private void ClearButtonSelection()
+        {
+            foreach (Button b in flowLayoutPanel1.Controls.OfType<Button>())
+            {
+                b.BackColor = SystemColors.Control;
+            }
+        }
 
 
         private void PhongTro_Load(object sender, EventArgs e)
@@ -52,6 +72,7 @@ namespace GUI
             cmbDayNha.DataSource = DayNhaBLL.getList();
             cmbDayNha.DisplayMember = "HostelName";
             cmbDayNha.ValueMember = "HostelID"; 
+            cmbDayNha.Text = "Chọn dãy nhà";
             cmbDayNha.SelectedIndex = 0;
 
 
