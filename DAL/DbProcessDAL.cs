@@ -15,6 +15,7 @@ namespace DAL
         protected USERSTableAdapter user;
         protected GIADIENNUOCTableAdapter GiaDienNuoc;
         protected CONTRACTTableAdapter hopdong;
+        protected ROOMTableAdapter room;
         protected DanhSachHopDongTableAdapter dshopdong;
 
         public DbProcessDAL() {
@@ -22,6 +23,7 @@ namespace DAL
             user = new USERSTableAdapter();
             GiaDienNuoc = new GIADIENNUOCTableAdapter();
             hopdong = new CONTRACTTableAdapter();
+            room = new ROOMTableAdapter();
             dshopdong = new DanhSachHopDongTableAdapter();
         }
     }
