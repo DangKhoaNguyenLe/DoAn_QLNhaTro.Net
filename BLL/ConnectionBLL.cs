@@ -12,10 +12,12 @@ namespace BLL
         protected UserDAL user;
         protected GiaDienNuocDAL giaDienNuoc;
         protected HopDongDAL hopDongDAL;
+        protected PhongTroDAL phongTroDAL;
         public ConnectionBLL() { 
             dayNha = new DayNhaDAL();
             user = new UserDAL();
             giaDienNuoc = new GiaDienNuocDAL();
+            phongTroDAL = new PhongTroDAL();
         }
     }
 }
