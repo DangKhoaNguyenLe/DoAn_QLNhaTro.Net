@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbDayNha = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -62,7 +62,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbDayNha);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 6);
             this.groupBox1.Name = "groupBox1";
@@ -71,14 +71,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn dãy nhà";
             // 
-            // comboBox1
+            // cmbDayNha
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(247, 28);
-            this.comboBox1.TabIndex = 0;
+            this.cmbDayNha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDayNha.FormattingEnabled = true;
+            this.cmbDayNha.Location = new System.Drawing.Point(6, 27);
+            this.cmbDayNha.Name = "cmbDayNha";
+            this.cmbDayNha.Size = new System.Drawing.Size(247, 28);
+            this.cmbDayNha.TabIndex = 0;
             // 
             // button1
             // 
@@ -102,7 +102,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1397, 70);
+            this.panel1.Size = new System.Drawing.Size(1358, 70);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -113,7 +113,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1397, 50);
+            this.panel2.Size = new System.Drawing.Size(1358, 50);
             this.panel2.TabIndex = 3;
             // 
             // panel3
@@ -124,7 +124,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1397, 50);
+            this.panel3.Size = new System.Drawing.Size(1358, 50);
             this.panel3.TabIndex = 4;
             // 
             // panel4
@@ -134,7 +134,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1397, 50);
+            this.panel4.Size = new System.Drawing.Size(1358, 50);
             this.panel4.TabIndex = 5;
             // 
             // label3
@@ -180,7 +180,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 120);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1397, 309);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1358, 309);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // panel5
@@ -190,7 +190,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 429);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1397, 50);
+            this.panel5.Size = new System.Drawing.Size(1358, 50);
             this.panel5.TabIndex = 6;
             // 
             // label4
@@ -214,7 +214,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 479);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1397, 55);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1358, 55);
             this.flowLayoutPanel2.TabIndex = 7;
             // 
             // button2
@@ -275,7 +275,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 534);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1397, 145);
+            this.panel6.Size = new System.Drawing.Size(1358, 145);
             this.panel6.TabIndex = 10;
             // 
             // dataGridView1
@@ -286,7 +286,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1397, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1358, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // PhongTro
@@ -295,6 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1379, 636);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -303,7 +304,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PhongTro";
-            this.Size = new System.Drawing.Size(1397, 683);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -325,7 +325,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbDayNha;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
