@@ -39,7 +39,7 @@ namespace GUI
         {
             DialogResult result = MessageBox.Show("Bạn có muốn thoát chương trình không?","Xác nhận thoát",
                 MessageBoxButtons.YesNo,MessageBoxIcon.Question
-        );
+         );
 
             if (result == DialogResult.No)
             {

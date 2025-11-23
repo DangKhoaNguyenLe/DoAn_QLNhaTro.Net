@@ -46,6 +46,7 @@
     <Compile Include="DayNhaDTO.cs" />
     <Compile Include="GiaDienNuocDTO.cs" />
     <Compile Include="NhaTroDTO.cs" />
+    <Compile Include="PhongTroDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDTO.cs" />
   </ItemGroup>

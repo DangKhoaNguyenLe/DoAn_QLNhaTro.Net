@@ -1,18 +1,6 @@
-C:\Users\nguye\Documents\CaNhan\QL_NhaTro\New folder\DTO\bin\Debug\DTO.dll
-C:\Users\nguye\Documents\CaNhan\QL_NhaTro\New folder\DTO\bin\Debug\DTO.pdb
-C:\Users\nguye\Documents\CaNhan\QL_NhaTro\New folder\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
-C:\Users\nguye\Documents\CaNhan\QL_NhaTro\New folder\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-C:\Users\nguye\Documents\CaNhan\QL_NhaTro\New folder\DTO\obj\Debug\DTO.dll
-C:\Users\nguye\Documents\CaNhan\QL_NhaTro\New folder\DTO\obj\Debug\DTO.pdb
-C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DTO\bin\Debug\DTO.dll
-C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DTO\bin\Debug\DTO.pdb
-C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
-C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DTO\obj\Debug\DTO.dll
-C:\Users\phamv\OneDrive\Desktop\Congnghe.net\DTO\obj\Debug\DTO.pdb
-C:\Users\phamv\Congnghe.net\DTO\bin\Debug\DTO.dll
-C:\Users\phamv\Congnghe.net\DTO\bin\Debug\DTO.pdb
-C:\Users\phamv\Congnghe.net\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
-C:\Users\phamv\Congnghe.net\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-C:\Users\phamv\Congnghe.net\DTO\obj\Debug\DTO.dll
-C:\Users\phamv\Congnghe.net\DTO\obj\Debug\DTO.pdb
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\Congnghe.net\DTO\bin\Debug\DTO.dll
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\Congnghe.net\DTO\bin\Debug\DTO.pdb
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\Congnghe.net\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\Congnghe.net\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\Congnghe.net\DTO\obj\Debug\DTO.dll
+C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\Congnghe.net\DTO\obj\Debug\DTO.pdb
