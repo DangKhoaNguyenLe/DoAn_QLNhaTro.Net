@@ -1,1 +1,13 @@
 .vs/ 
+# build
+bin/
+obj/
+
+# Visual Studio
+*.dll
+*.pdb
+*.cache
+
+
+# Others
+*.log
