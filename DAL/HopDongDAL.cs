@@ -8,26 +8,30 @@ namespace DAL
 {
     public class HopDongDAL : DbProcessDAL
     {
-        public List<HopDongDTO> GetDanhSachHopDong()
+        public List<DanhSachHopDongDTO> GetDanhSachHopDong()
         {
-            List<HopDongDTO> list = new List<HopDongDTO>();
+            List<DanhSachHopDongDTO> list = new List<DanhSachHopDongDTO>();
 
-            DataTable dt = dshopdong.GetData();   
+            DataTable dt = dshopdong1.GetData();
 
             foreach (DataRow dr in dt.Rows)
             {
-                var row = dr as DataNhaTro.DanhSachHopDongRow;
+                var row = dr as DataNhaTro.DanhSachHopDong1Row;
                 if (row == null) continue;
 
-                HopDongDTO c = new HopDongDTO();
-                c.ContractCode = row.ContractCode;
-                c.RoomName = row.RoomName;
-                c.TenantName = row.FullName;
-                c.NgayBatDau = row.NgayBatDau;
-                c.NgayKetThuc = row.NgayKetThuc;
-                c.TienPhong = row.TienPhong;
-                c.TienCoc = row.TienCoc;
-                c.TrangThai = row.TrangThai;
+                DanhSachHopDongDTO c = new DanhSachHopDongDTO(
+                    row.ContractID,
+                    row.ContractCode,
+                    row.HostelName,
+                    row.RoomName,
+                    row.FullName,
+                    row.NgayBatDau,
+                    row.NgayKetThuc,
+                    row.TienPhong,
+                    row.TienCoc,
+                    row.TrangThai,
+                    row.CreatedDate
+                );
 
                 list.Add(c);
             }
@@ -35,40 +39,39 @@ namespace DAL
             return list;
         }
 
-
-
-        //// Thêm hợp đồng
-        //public bool Insert(HopDongDTO c)
-        //{
-        //    try
-        //    {
-        //        contract.Insert(
-        //            c.ContractCode,
-        //            c.HostelID,
-        //            c.RoomID,
-        //            c.TenantID,
-        //            c.NgayBatDau,
-        //            c.NgayKetThuc,
-        //            c.TienPhong,
-        //            c.TienCoc,
-        //            c.KyThanhToan,
-        //            c.NgayChotTien,
-        //            c.TrangThai
-        //        );
-        //        return true;
-        //    }
-        //    catch
-        //    {
-        //        return false;
-        //    }
-        //}
+        // Thêm hợp đồng
+        public bool Insert(HopDongDTO c)
+        {
+            try
+            {
+                hopdong.Insert(
+                    c.ContractCode,
+                    c.HostelID,
+                    c.RoomID,
+                    c.TenantID,
+                    c.NgayBatDau,
+                    c.NgayKetThuc,
+                    c.TienPhong,
+                    c.TienCoc,
+                    c.KyThanhToan,
+                    c.NgayChotTien,
+                    c.TrangThai,
+                    c.CreatedDate
+                );
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         //// Sửa hợp đồng
-        //public bool Update(ContractDTO c)
+        //public bool Update(HopDongDTO c)
         //{
         //    try
         //    {
-        //        contract.Update(
+        //        hopdong.Update(
         //            c.ContractCode,
         //            c.HostelID,
         //            c.RoomID,

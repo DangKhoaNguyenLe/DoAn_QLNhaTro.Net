@@ -2,21 +2,20 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DAL.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="QL_NHATROConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Data Source=;AttachDbFilename=|DataDirectory|\QL_nhaTro.mdf;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=;AttachDbFilename=|DataDirectory|\QL_nhaTro.mdf;Integrated Security=True</Value>
-    </Setting>
     <Setting Name="QL_nhaTroConnectionString1" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+<<<<<<< HEAD
+  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\Congnghe.net\DAL\Datatabse\QL_nhaTro.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nguye\Documents\CaNhan\.Net\DoAn\QuanLyNhaTro\Congnghe.net\DAL\Datatabse\QL_nhaTro.mdf;Integrated Security=True;Connect Timeout=30</Value>
+=======
   &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\Datatabse\QL_nhaTro.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\Datatabse\QL_nhaTro.mdf;Integrated Security=True;Connect Timeout=30</Value>
+>>>>>>> origin/main
     </Setting>
   </Settings>
 </SettingsFile>

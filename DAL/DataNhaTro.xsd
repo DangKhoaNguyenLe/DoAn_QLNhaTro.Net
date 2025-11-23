@@ -2,10 +2,11 @@
 <xs:schema id="DataNhaTro" targetNamespace="http://tempuri.org/DataNhaTro.xsd" xmlns:mstns="http://tempuri.org/DataNhaTro.xsd" xmlns="http://tempuri.org/DataNhaTro.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QL_NHATROConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QL_NHATROConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DAL.Properties.Settings.GlobalReference.Default.QL_NHATROConnectionString" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QL_nhaTroConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QL_nhaTroConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DAL.Properties.Settings.GlobalReference.Default.QL_nhaTroConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QL_NHATROConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="QL_NHATROConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DAL.Properties.Settings.GlobalReference.Default.QL_NHATROConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QL_nhaTroConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="QL_nhaTroConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DAL.Properties.Settings.GlobalReference.Default.QL_nhaTroConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QL_nhaTroConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QL_nhaTroConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DAL.Properties.Settings.GlobalReference.Default.QL_nhaTroConnectionString2" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BILLTableAdapter" GeneratorDataComponentClassName="BILLTableAdapter" Name="BILL" UserDataComponentName="BILLTableAdapter">
@@ -1277,6 +1278,32 @@ FROM     CONTRACT INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DanhSachHopDong1TableAdapter" GeneratorDataComponentClassName="DanhSachHopDong1TableAdapter" Name="DanhSachHopDong1" UserDataComponentName="DanhSachHopDong1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QL_nhaTroConnectionString2 (Settings)" DbObjectName="dbo.DanhSachHopDong" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ContractID, ContractCode, HostelName, RoomName, FullName, NgayBatDau, NgayKetThuc, TienPhong, TienCoc, TrangThai, CreatedDate FROM dbo.DanhSachHopDong</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ContractID" DataSetColumn="ContractID" />
+              <Mapping SourceColumn="ContractCode" DataSetColumn="ContractCode" />
+              <Mapping SourceColumn="HostelName" DataSetColumn="HostelName" />
+              <Mapping SourceColumn="RoomName" DataSetColumn="RoomName" />
+              <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
+              <Mapping SourceColumn="NgayBatDau" DataSetColumn="NgayBatDau" />
+              <Mapping SourceColumn="NgayKetThuc" DataSetColumn="NgayKetThuc" />
+              <Mapping SourceColumn="TienPhong" DataSetColumn="TienPhong" />
+              <Mapping SourceColumn="TienCoc" DataSetColumn="TienCoc" />
+              <Mapping SourceColumn="TrangThai" DataSetColumn="TrangThai" />
+              <Mapping SourceColumn="CreatedDate" DataSetColumn="CreatedDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1729,6 +1756,53 @@ FROM     CONTRACT INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DanhSachHopDong1" msprop:Generator_RowEvHandlerName="DanhSachHopDong1RowChangeEventHandler" msprop:Generator_RowDeletedName="DanhSachHopDong1RowDeleted" msprop:Generator_RowDeletingName="DanhSachHopDong1RowDeleting" msprop:Generator_RowEvArgName="DanhSachHopDong1RowChangeEvent" msprop:Generator_TablePropName="DanhSachHopDong1" msprop:Generator_RowChangedName="DanhSachHopDong1RowChanged" msprop:Generator_RowChangingName="DanhSachHopDong1RowChanging" msprop:Generator_TableClassName="DanhSachHopDong1DataTable" msprop:Generator_RowClassName="DanhSachHopDong1Row" msprop:Generator_TableVarName="tableDanhSachHopDong1" msprop:Generator_UserTableName="DanhSachHopDong1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ContractID" msprop:Generator_ColumnPropNameInRow="ContractID" msprop:Generator_ColumnPropNameInTable="ContractIDColumn" msprop:Generator_ColumnVarNameInTable="columnContractID" msprop:Generator_UserColumnName="ContractID" type="xs:int" />
+              <xs:element name="ContractCode" msprop:Generator_ColumnPropNameInRow="ContractCode" msprop:Generator_ColumnPropNameInTable="ContractCodeColumn" msprop:Generator_ColumnVarNameInTable="columnContractCode" msprop:Generator_UserColumnName="ContractCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HostelName" msprop:Generator_ColumnPropNameInRow="HostelName" msprop:Generator_ColumnPropNameInTable="HostelNameColumn" msprop:Generator_ColumnVarNameInTable="columnHostelName" msprop:Generator_UserColumnName="HostelName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RoomName" msprop:Generator_ColumnPropNameInRow="RoomName" msprop:Generator_ColumnPropNameInTable="RoomNameColumn" msprop:Generator_ColumnVarNameInTable="columnRoomName" msprop:Generator_UserColumnName="RoomName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_UserColumnName="FullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NgayBatDau" msprop:Generator_ColumnPropNameInRow="NgayBatDau" msprop:Generator_ColumnPropNameInTable="NgayBatDauColumn" msprop:Generator_ColumnVarNameInTable="columnNgayBatDau" msprop:Generator_UserColumnName="NgayBatDau" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NgayKetThuc" msprop:Generator_ColumnPropNameInRow="NgayKetThuc" msprop:Generator_ColumnPropNameInTable="NgayKetThucColumn" msprop:Generator_ColumnVarNameInTable="columnNgayKetThuc" msprop:Generator_UserColumnName="NgayKetThuc" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TienPhong" msprop:Generator_ColumnPropNameInRow="TienPhong" msprop:Generator_ColumnPropNameInTable="TienPhongColumn" msprop:Generator_ColumnVarNameInTable="columnTienPhong" msprop:Generator_UserColumnName="TienPhong" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TienCoc" msprop:Generator_ColumnPropNameInRow="TienCoc" msprop:Generator_ColumnPropNameInTable="TienCocColumn" msprop:Generator_ColumnVarNameInTable="columnTienCoc" msprop:Generator_UserColumnName="TienCoc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TrangThai" msprop:Generator_ColumnPropNameInRow="TrangThai" msprop:Generator_ColumnPropNameInTable="TrangThaiColumn" msprop:Generator_ColumnVarNameInTable="columnTrangThai" msprop:Generator_UserColumnName="TrangThai" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1774,6 +1848,10 @@ FROM     CONTRACT INNER JOIN
     <xs:unique name="TENANT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:TENANT" />
       <xs:field xpath="mstns:TenantID" />
+    </xs:unique>
+    <xs:unique name="DanhSachHopDong1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DanhSachHopDong1" />
+      <xs:field xpath="mstns:ContractID" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

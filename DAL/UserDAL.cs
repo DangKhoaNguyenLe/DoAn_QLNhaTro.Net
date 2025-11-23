@@ -11,6 +11,24 @@ namespace DAL
 {
     public class UserDAL : DbProcessDAL
     {
+
+        public string GetPasswordByUserAndEmail(string username, string email)
+        {
+            DataNhaTro.USERSDataTable dt = user.GetData();
+
+            foreach (DataNhaTro.USERSRow row in dt.Rows)
+            {
+                if (row.UserName.Equals(username, StringComparison.OrdinalIgnoreCase) &&
+                    row.Email.Equals(email, StringComparison.OrdinalIgnoreCase))
+                {
+                    return row.PasswordHash;   // lấy mật khẩu
+                }
+            }
+
+            return null; // không đúng username + email
+        }
+
+
         public List<UserDTO> GetListUser()
         {
             List<UserDTO> users = new List<UserDTO>();
