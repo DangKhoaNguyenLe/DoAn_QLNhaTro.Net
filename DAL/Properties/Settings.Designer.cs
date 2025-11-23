@@ -27,8 +27,13 @@ namespace DAL.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\nguye\\Documents\\CaNh" +
+<<<<<<< HEAD
             "an\\.Net\\DoAn\\QuanLyNhaTro\\Congnghe.net\\DAL\\Datatabse\\QL_nhaTro.mdf;Integrated Se" +
             "curity=True;Connect Timeout=30")]
+=======
+            "an\\QL_NhaTro\\Clone\\DAL\\Datatabse\\QL_nhaTro.mdf;Integrated Security=True;Connect " +
+            "Timeout=30")]
+>>>>>>> origin/main
         public string QL_nhaTroConnectionString1 {
             get {
                 return ((string)(this["QL_nhaTroConnectionString1"]));
