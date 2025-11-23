@@ -2,7 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq;  
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -12,6 +12,13 @@ namespace BLL
     public class UserBLL
     {
         UserDAL userDAL = new UserDAL();
+
+        public string LayMatKhau(string username, string email)
+        {
+            return userDAL.GetPasswordByUserAndEmail(username, email);
+        }
+
+
 
         public UserDTO getUserAdminLogin()
         {

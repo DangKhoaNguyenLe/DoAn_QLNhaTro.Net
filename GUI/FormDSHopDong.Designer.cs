@@ -25,20 +25,38 @@ namespace GUI
 
         private void InitializeComponent()
         {
+            this.panel_title = new System.Windows.Forms.Panel();
+            this.panel_bottom = new System.Windows.Forms.Panel();
             this.dataGridView_dshopdong = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ContractCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HostelName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TienPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TienCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel_title = new System.Windows.Forms.Panel();
-            this.panel_bottom = new System.Windows.Forms.Panel();
+            this.CreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_dshopdong)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel_title
+            // 
+            this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_title.Location = new System.Drawing.Point(0, 0);
+            this.panel_title.Name = "panel_title";
+            this.panel_title.Size = new System.Drawing.Size(1430, 60);
+            this.panel_title.TabIndex = 4;
+            // 
+            // panel_bottom
+            // 
+            this.panel_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_bottom.Location = new System.Drawing.Point(0, 517);
+            this.panel_bottom.Name = "panel_bottom";
+            this.panel_bottom.Size = new System.Drawing.Size(1430, 52);
+            this.panel_bottom.TabIndex = 5;
             // 
             // dataGridView_dshopdong
             // 
@@ -46,27 +64,30 @@ namespace GUI
             this.dataGridView_dshopdong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.ContractCode,
+            this.HostelName,
             this.RoomName,
-            this.TenantName,
+            this.FullName,
             this.NgayBatDau,
             this.NgayKetThuc,
             this.TienPhong,
             this.TienCoc,
-            this.TrangThai});
+            this.TrangThai,
+            this.CreatedDate});
             this.dataGridView_dshopdong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_dshopdong.Location = new System.Drawing.Point(0, 60);
             this.dataGridView_dshopdong.Name = "dataGridView_dshopdong";
             this.dataGridView_dshopdong.RowHeadersWidth = 51;
             this.dataGridView_dshopdong.RowTemplate.Height = 24;
-            this.dataGridView_dshopdong.Size = new System.Drawing.Size(750, 474);
-            this.dataGridView_dshopdong.TabIndex = 3;
+            this.dataGridView_dshopdong.Size = new System.Drawing.Size(1430, 457);
+            this.dataGridView_dshopdong.TabIndex = 6;
             // 
             // STT
             // 
             this.STT.HeaderText = "STT";
             this.STT.MinimumWidth = 6;
             this.STT.Name = "STT";
-            this.STT.Width = 80;
+            this.STT.ReadOnly = true;
+            this.STT.Width = 125;
             // 
             // ContractCode
             // 
@@ -74,7 +95,17 @@ namespace GUI
             this.ContractCode.HeaderText = "Mã hợp đồng";
             this.ContractCode.MinimumWidth = 6;
             this.ContractCode.Name = "ContractCode";
+            this.ContractCode.ReadOnly = true;
             this.ContractCode.Width = 125;
+            // 
+            // HostelName
+            // 
+            this.HostelName.DataPropertyName = "HostelName";
+            this.HostelName.HeaderText = "Nhà trọ";
+            this.HostelName.MinimumWidth = 6;
+            this.HostelName.Name = "HostelName";
+            this.HostelName.ReadOnly = true;
+            this.HostelName.Width = 125;
             // 
             // RoomName
             // 
@@ -82,15 +113,17 @@ namespace GUI
             this.RoomName.HeaderText = "Phòng";
             this.RoomName.MinimumWidth = 6;
             this.RoomName.Name = "RoomName";
+            this.RoomName.ReadOnly = true;
             this.RoomName.Width = 125;
             // 
-            // TenantName
+            // FullName
             // 
-            this.TenantName.DataPropertyName = "TenantName";
-            this.TenantName.HeaderText = "Khách thuê";
-            this.TenantName.MinimumWidth = 6;
-            this.TenantName.Name = "TenantName";
-            this.TenantName.Width = 140;
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.HeaderText = "Khách thuê";
+            this.FullName.MinimumWidth = 6;
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Width = 125;
             // 
             // NgayBatDau
             // 
@@ -98,7 +131,8 @@ namespace GUI
             this.NgayBatDau.HeaderText = "Ngày bắt đầu";
             this.NgayBatDau.MinimumWidth = 6;
             this.NgayBatDau.Name = "NgayBatDau";
-            this.NgayBatDau.Width = 120;
+            this.NgayBatDau.ReadOnly = true;
+            this.NgayBatDau.Width = 125;
             // 
             // NgayKetThuc
             // 
@@ -106,7 +140,8 @@ namespace GUI
             this.NgayKetThuc.HeaderText = "Ngày kết thúc";
             this.NgayKetThuc.MinimumWidth = 6;
             this.NgayKetThuc.Name = "NgayKetThuc";
-            this.NgayKetThuc.Width = 120;
+            this.NgayKetThuc.ReadOnly = true;
+            this.NgayKetThuc.Width = 125;
             // 
             // TienPhong
             // 
@@ -114,7 +149,8 @@ namespace GUI
             this.TienPhong.HeaderText = "Tiền phòng";
             this.TienPhong.MinimumWidth = 6;
             this.TienPhong.Name = "TienPhong";
-            this.TienPhong.Width = 110;
+            this.TienPhong.ReadOnly = true;
+            this.TienPhong.Width = 125;
             // 
             // TienCoc
             // 
@@ -122,7 +158,8 @@ namespace GUI
             this.TienCoc.HeaderText = "Tiền cọc";
             this.TienCoc.MinimumWidth = 6;
             this.TienCoc.Name = "TienCoc";
-            this.TienCoc.Width = 110;
+            this.TienCoc.ReadOnly = true;
+            this.TienCoc.Width = 125;
             // 
             // TrangThai
             // 
@@ -130,29 +167,23 @@ namespace GUI
             this.TrangThai.HeaderText = "Trạng thái";
             this.TrangThai.MinimumWidth = 6;
             this.TrangThai.Name = "TrangThai";
-            this.TrangThai.Width = 120;
+            this.TrangThai.ReadOnly = true;
+            this.TrangThai.Width = 125;
             // 
-            // panel_title
+            // CreatedDate
             // 
-            this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_title.Location = new System.Drawing.Point(0, 0);
-            this.panel_title.Name = "panel_title";
-            this.panel_title.Size = new System.Drawing.Size(750, 60);
-            this.panel_title.TabIndex = 4;
-            // 
-            // panel_bottom
-            // 
-            this.panel_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_bottom.Location = new System.Drawing.Point(0, 534);
-            this.panel_bottom.Name = "panel_bottom";
-            this.panel_bottom.Size = new System.Drawing.Size(750, 52);
-            this.panel_bottom.TabIndex = 5;
+            this.CreatedDate.DataPropertyName = "CreatedDate";
+            this.CreatedDate.HeaderText = "Ngày tạo";
+            this.CreatedDate.MinimumWidth = 6;
+            this.CreatedDate.Name = "CreatedDate";
+            this.CreatedDate.ReadOnly = true;
+            this.CreatedDate.Width = 125;
             // 
             // FormDSHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 586);
+            this.ClientSize = new System.Drawing.Size(1430, 569);
             this.Controls.Add(this.dataGridView_dshopdong);
             this.Controls.Add(this.panel_bottom);
             this.Controls.Add(this.panel_title);
@@ -165,17 +196,19 @@ namespace GUI
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView_dshopdong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ContractCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenantName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayBatDau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKetThuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TienPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TienCoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.Panel panel_title;
         private System.Windows.Forms.Panel panel_bottom;
+        private DataGridView dataGridView_dshopdong;
+        private DataGridViewTextBoxColumn STT;
+        private DataGridViewTextBoxColumn ContractCode;
+        private DataGridViewTextBoxColumn HostelName;
+        private DataGridViewTextBoxColumn RoomName;
+        private DataGridViewTextBoxColumn FullName;
+        private DataGridViewTextBoxColumn NgayBatDau;
+        private DataGridViewTextBoxColumn NgayKetThuc;
+        private DataGridViewTextBoxColumn TienPhong;
+        private DataGridViewTextBoxColumn TienCoc;
+        private DataGridViewTextBoxColumn TrangThai;
+        private DataGridViewTextBoxColumn CreatedDate;
     }
 }

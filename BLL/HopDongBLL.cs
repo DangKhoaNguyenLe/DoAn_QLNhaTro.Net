@@ -12,27 +12,20 @@ namespace BLL
     {
         private HopDongDAL dal = new HopDongDAL();
 
-        public List<HopDongDTO> GetDanhSachHopDong()
+        public List<DanhSachHopDongDTO> GetDanhSachHopDong()
         {
             return dal.GetDanhSachHopDong();
         }
+
+
+        //public List<HopDongDTO> GetDanhSachHopDong()
+        //{
+        //    return dal.GetDanhSachHopDong();
+        //}
+
     }
+
 }
-
-
-
-
-
-
-//public class HopDongBLL
-//{
-//    private HopDongDAL dal = new HopDongDAL();
-
-//    public List<ContractDTO> GetDanhSachHopDong()
-//    {
-//        return dal.GetDanhSachHopDong();
-//    }
-
 //    public string Insert(ContractDTO c)
 //    {
 //        if (c.NgayBatDau >= c.NgayKetThuc)

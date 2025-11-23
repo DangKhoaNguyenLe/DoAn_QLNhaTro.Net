@@ -25,7 +25,7 @@ namespace DTO
             private int _ngayChotTien;
             private string _trangThai;
             private DateTime _createdDate;
-
+            
             public string RoomName { get; set; }
             public string TenantName { get; set; }
 
