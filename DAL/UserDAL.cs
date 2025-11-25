@@ -98,7 +98,7 @@ namespace DAL
         {
             try
             {
-                user.DangKy(userDTO.Username, userDTO.PasswordHash, userDTO.FullName, userDTO.Email);
+                user.DangKy(userDTO.Username, userDTO.PasswordHash, userDTO.FullName,userDTO.Phone, userDTO.Email);
                 return true;
             }
             catch

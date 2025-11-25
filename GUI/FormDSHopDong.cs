@@ -30,7 +30,7 @@ namespace GUI
         public void LoadHopDong()
         {
             HopDongBLL hopDongBLL = new HopDongBLL();
-            dataGridView_dshopdong.DataSource = hopDongBLL.GetDanhSachHopDong();
+            dataGridView_dshopdong.DataSource = hopDongBLL.LayDanhSachHopDong();
         }
         private void AddSTT()
         {
