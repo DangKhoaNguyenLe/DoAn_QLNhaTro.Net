@@ -43,7 +43,7 @@
             this.button_khachthue = new System.Windows.Forms.Button();
             this.panel_dshopdong = new System.Windows.Forms.Panel();
             this.button_dshopdong = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel_dskhachthue = new System.Windows.Forms.Panel();
             this.Button_dskhachthue = new System.Windows.Forms.Button();
             this.panel_taichinh = new System.Windows.Forms.Panel();
             this.button_taichinh = new System.Windows.Forms.Button();
@@ -53,7 +53,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel_taichinh = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button_phieuthu = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button_phieuchi = new System.Windows.Forms.Button();
             this.panel_container_main = new System.Windows.Forms.Panel();
+            this.taiChinhTransition = new System.Windows.Forms.Timer(this.components);
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button_diennuoc = new System.Windows.Forms.Button();
             this.panel_trangchu.SuspendLayout();
             this.panel_thongke.SuspendLayout();
             this.panel_danhsachnha.SuspendLayout();
@@ -61,11 +69,15 @@
             this.menuContainer.SuspendLayout();
             this.panel_khachthue.SuspendLayout();
             this.panel_dshopdong.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.panel_dskhachthue.SuspendLayout();
             this.panel_taichinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ThuGon)).BeginInit();
             this.panel1.SuspendLayout();
             this.sidebar.SuspendLayout();
+            this.flowLayoutPanel_taichinh.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_trangchu
@@ -165,7 +177,7 @@
             this.menuContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.menuContainer.Controls.Add(this.panel_khachthue);
             this.menuContainer.Controls.Add(this.panel_dshopdong);
-            this.menuContainer.Controls.Add(this.panel7);
+            this.menuContainer.Controls.Add(this.panel_dskhachthue);
             this.menuContainer.Location = new System.Drawing.Point(0, 284);
             this.menuContainer.Margin = new System.Windows.Forms.Padding(0);
             this.menuContainer.Name = "menuContainer";
@@ -220,13 +232,13 @@
             this.button_dshopdong.Text = "DS Hợp Đồng";
             this.button_dshopdong.UseVisualStyleBackColor = false;
             // 
-            // panel7
+            // panel_dskhachthue
             // 
-            this.panel7.Controls.Add(this.Button_dskhachthue);
-            this.panel7.Location = new System.Drawing.Point(3, 146);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(261, 65);
-            this.panel7.TabIndex = 6;
+            this.panel_dskhachthue.Controls.Add(this.Button_dskhachthue);
+            this.panel_dskhachthue.Location = new System.Drawing.Point(3, 146);
+            this.panel_dskhachthue.Name = "panel_dskhachthue";
+            this.panel_dskhachthue.Size = new System.Drawing.Size(261, 65);
+            this.panel_dskhachthue.TabIndex = 6;
             // 
             // Button_dskhachthue
             // 
@@ -247,7 +259,7 @@
             // panel_taichinh
             // 
             this.panel_taichinh.Controls.Add(this.button_taichinh);
-            this.panel_taichinh.Location = new System.Drawing.Point(3, 357);
+            this.panel_taichinh.Location = new System.Drawing.Point(3, 3);
             this.panel_taichinh.Name = "panel_taichinh";
             this.panel_taichinh.Size = new System.Drawing.Size(261, 65);
             this.panel_taichinh.TabIndex = 4;
@@ -269,11 +281,11 @@
             // 
             // menuTransition
             // 
-            this.menuTransition.Interval = 20;
+            this.menuTransition.Interval = 15;
             // 
             // slidebarTransition
             // 
-            this.slidebarTransition.Interval = 20;
+            this.slidebarTransition.Interval = 15;
             // 
             // btn_ThuGon
             // 
@@ -316,15 +328,76 @@
             this.sidebar.Controls.Add(this.panel_danhsachnha);
             this.sidebar.Controls.Add(this.panel_phong);
             this.sidebar.Controls.Add(this.menuContainer);
-            this.sidebar.Controls.Add(this.panel_taichinh);
+            this.sidebar.Controls.Add(this.flowLayoutPanel_taichinh);
+            this.sidebar.Controls.Add(this.panel7);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sidebar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.sidebar.Location = new System.Drawing.Point(0, 47);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(273, 530);
+            this.sidebar.Size = new System.Drawing.Size(273, 697);
             this.sidebar.TabIndex = 1;
             this.sidebar.WrapContents = false;
+            // 
+            // flowLayoutPanel_taichinh
+            // 
+            this.flowLayoutPanel_taichinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.flowLayoutPanel_taichinh.Controls.Add(this.panel_taichinh);
+            this.flowLayoutPanel_taichinh.Controls.Add(this.panel4);
+            this.flowLayoutPanel_taichinh.Controls.Add(this.panel5);
+            this.flowLayoutPanel_taichinh.Location = new System.Drawing.Point(0, 354);
+            this.flowLayoutPanel_taichinh.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel_taichinh.Name = "flowLayoutPanel_taichinh";
+            this.flowLayoutPanel_taichinh.Size = new System.Drawing.Size(264, 70);
+            this.flowLayoutPanel_taichinh.TabIndex = 7;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button_phieuthu);
+            this.panel4.Location = new System.Drawing.Point(3, 74);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(261, 65);
+            this.panel4.TabIndex = 5;
+            // 
+            // button_phieuthu
+            // 
+            this.button_phieuthu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.button_phieuthu.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_phieuthu.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button_phieuthu.Image = ((System.Drawing.Image)(resources.GetObject("button_phieuthu.Image")));
+            this.button_phieuthu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_phieuthu.Location = new System.Drawing.Point(-12, -8);
+            this.button_phieuthu.Margin = new System.Windows.Forms.Padding(0);
+            this.button_phieuthu.Name = "button_phieuthu";
+            this.button_phieuthu.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button_phieuthu.Size = new System.Drawing.Size(292, 76);
+            this.button_phieuthu.TabIndex = 3;
+            this.button_phieuthu.Text = "Phiếu Thu";
+            this.button_phieuthu.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button_phieuchi);
+            this.panel5.Location = new System.Drawing.Point(3, 145);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(261, 65);
+            this.panel5.TabIndex = 6;
+            // 
+            // button_phieuchi
+            // 
+            this.button_phieuchi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.button_phieuchi.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_phieuchi.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button_phieuchi.Image = ((System.Drawing.Image)(resources.GetObject("button_phieuchi.Image")));
+            this.button_phieuchi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_phieuchi.Location = new System.Drawing.Point(-12, -8);
+            this.button_phieuchi.Margin = new System.Windows.Forms.Padding(0);
+            this.button_phieuchi.Name = "button_phieuchi";
+            this.button_phieuchi.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button_phieuchi.Size = new System.Drawing.Size(292, 76);
+            this.button_phieuchi.TabIndex = 3;
+            this.button_phieuchi.Text = "Phiếu Chi";
+            this.button_phieuchi.UseVisualStyleBackColor = false;
             // 
             // panel_container_main
             // 
@@ -332,14 +405,42 @@
             this.panel_container_main.Location = new System.Drawing.Point(273, 47);
             this.panel_container_main.Margin = new System.Windows.Forms.Padding(0);
             this.panel_container_main.Name = "panel_container_main";
-            this.panel_container_main.Size = new System.Drawing.Size(868, 530);
+            this.panel_container_main.Size = new System.Drawing.Size(868, 697);
             this.panel_container_main.TabIndex = 2;
+            // 
+            // taiChinhTransition
+            // 
+            this.taiChinhTransition.Interval = 15;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.button_diennuoc);
+            this.panel7.Location = new System.Drawing.Point(3, 427);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(261, 65);
+            this.panel7.TabIndex = 7;
+            // 
+            // button_diennuoc
+            // 
+            this.button_diennuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.button_diennuoc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_diennuoc.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button_diennuoc.Image = ((System.Drawing.Image)(resources.GetObject("button_diennuoc.Image")));
+            this.button_diennuoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_diennuoc.Location = new System.Drawing.Point(-12, -8);
+            this.button_diennuoc.Margin = new System.Windows.Forms.Padding(0);
+            this.button_diennuoc.Name = "button_diennuoc";
+            this.button_diennuoc.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button_diennuoc.Size = new System.Drawing.Size(292, 76);
+            this.button_diennuoc.TabIndex = 3;
+            this.button_diennuoc.Text = "Điện Nước";
+            this.button_diennuoc.UseVisualStyleBackColor = false;
             // 
             // FormMainTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1141, 577);
+            this.ClientSize = new System.Drawing.Size(1141, 744);
             this.Controls.Add(this.panel_container_main);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
@@ -352,12 +453,16 @@
             this.menuContainer.ResumeLayout(false);
             this.panel_khachthue.ResumeLayout(false);
             this.panel_dshopdong.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
+            this.panel_dskhachthue.ResumeLayout(false);
             this.panel_taichinh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_ThuGon)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.sidebar.ResumeLayout(false);
+            this.flowLayoutPanel_taichinh.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -372,11 +477,10 @@
         private System.Windows.Forms.Panel panel_khachthue;
         private System.Windows.Forms.Button button_khachthue;
         private System.Windows.Forms.Panel panel_taichinh;
-        private System.Windows.Forms.Button button_taichinh;
         private System.Windows.Forms.FlowLayoutPanel menuContainer;
         private System.Windows.Forms.Panel panel_dshopdong;
         private System.Windows.Forms.Button button_dshopdong;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel_dskhachthue;
         private System.Windows.Forms.Button Button_dskhachthue;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.Panel panel_phong;
@@ -387,5 +491,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel_container_main;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_taichinh;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button_phieuthu;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button_phieuchi;
+        private System.Windows.Forms.Button button_taichinh;
+        private System.Windows.Forms.Timer taiChinhTransition;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button_diennuoc;
     }
 }

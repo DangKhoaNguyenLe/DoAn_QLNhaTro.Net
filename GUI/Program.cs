@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,8 +15,9 @@ namespace GUI
         [STAThread]
         static void Main()
         {
-            string dataPath = Application.StartupPath + @"\..\..\DAL\Datatabse";
-            AppDomain.CurrentDomain.SetData("DataDirectory", dataPath);
+            AppDomain.CurrentDomain.SetData("DataDirectory",
+            Path.Combine(Application.StartupPath, "Database"));
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormDangNhap());

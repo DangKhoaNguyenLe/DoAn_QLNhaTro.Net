@@ -15,14 +15,25 @@ namespace GUI
     {
         private Form currentChildForm;
         private UserBLL userBLL;
+        bool sidebarExpand = false;
+        int taiChinhExpandedHeight;
+        int taiChinhCollapsedHeight = 60;
+        bool taiChinhExpand = false;
+        bool menuExpand = false;
+        int menuExpandedHeight;
+        int menuCollapsedHeight = 60;
+
+
 
         public FormMainTu()
         {
             InitializeComponent();
             userBLL = new UserBLL();
+            this.taiChinhTransition.Tick += TaiChinhTransition_Tick;
             this.menuTransition.Tick += MenuTransition_Tick;
             this.slidebarTransition.Tick += SlidebarTransition_Tick;
             this.button_khachthue.Click += Button_khachthue_Click;
+            menuExpandedHeight = panel_khachthue.Height +panel_dshopdong.Height + panel_dskhachthue.Height + 10;
             this.btn_ThuGon.Click += Btn_ThuGon_Click;
             this.button_trangchu.Click += Button_taikhoan_Click;
             this.button_thongke.Click += Button_thongke_Click;
@@ -30,34 +41,33 @@ namespace GUI
             this.button_phong.Click += Button_phong_Click;
             this.button_dshopdong.Click += Button_dshopdong_Click;
             this.Button_dskhachthue.Click += Button_dskhachthue_Click;
+            this.button_taichinh.Click += Button_taichinh_Click;
+            taiChinhExpandedHeight = panel_taichinh.Height + panel4.Height + panel5.Height + 10;
+            this.button_phieuthu.Click += Button_phieuthu_Click;
             this.WindowState = FormWindowState.Maximized;
             this.FormClosing += FormMainTu_FormClosing;
 
+
         }
 
-        private void FormMainTu_FormClosing(object sender, FormClosingEventArgs e)
+        private void Button_phieuthu_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn thoát chương trình không?","Xác nhận thoát",
-                MessageBoxButtons.YesNo,MessageBoxIcon.Question
-         );
-
-            if (result == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                userBLL.getLogout();
-            }
+            OpenChildForm(new FormDSPhieuThu());
         }
+
+        private void Button_taichinh_Click(object sender, EventArgs e)
+        {
+            taiChinhTransition.Start();
+        }
+
+
 
         private void Button_dskhachthue_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new FormKhachThue());
+
         }
 
-        private void Button_dshopdong_Click1(object sender, EventArgs e)
-        {
-        }
 
         private void Button_dshopdong_Click(object sender, EventArgs e)
         {
@@ -94,7 +104,7 @@ namespace GUI
             slidebarTransition.Start();
         }
 
-        bool sidebarExpand = false;
+
         private void SlidebarTransition_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -124,32 +134,57 @@ namespace GUI
             menuTransition.Start();
         }
 
-        bool menuExpand = false;
 
         private void MenuTransition_Tick(object sender, EventArgs e)
         {
-            if (menuExpand == false)
+            if (!menuExpand)
             {
-                // Mở rộng
                 menuContainer.Height += 10;
-                if (menuContainer.Height >= 215)   // chiều cao menu mở
+
+                if (menuContainer.Height >= menuExpandedHeight)
                 {
                     menuTransition.Stop();
-                    menuExpand = true;             // Đánh dấu đang mở
+                    menuExpand = true;
                 }
             }
             else
             {
-                // Thu gọn
                 menuContainer.Height -= 10;
-                if (menuContainer.Height <= 70)    // chiều cao menu thu gọn
+
+                if (menuContainer.Height <= menuCollapsedHeight)
                 {
                     menuTransition.Stop();
-                    menuExpand = false;            // Đánh dấu đã thu
+                    menuExpand = false;
                 }
             }
         }
-        
+
+
+
+        private void TaiChinhTransition_Tick(object sender, EventArgs e)
+        {
+            if (!taiChinhExpand)
+            {
+                flowLayoutPanel_taichinh.Height += 10;
+                if (flowLayoutPanel_taichinh.Height >= taiChinhExpandedHeight)
+                {
+                    taiChinhTransition.Stop();
+                    taiChinhExpand = true;
+                }
+            }
+            else
+            {
+                flowLayoutPanel_taichinh.Height -= 10;
+                if (flowLayoutPanel_taichinh.Height <= taiChinhCollapsedHeight)
+                {
+                    taiChinhTransition.Stop();
+                    taiChinhExpand = false;
+                }
+            }
+        }
+
+
+
         //Hien thi form con
         private void OpenChildForm(Form childForm)
         {
@@ -169,6 +204,21 @@ namespace GUI
 
             childForm.BringToFront();
             childForm.Show();
+        }
+        private void FormMainTu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Xác nhận thoát",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question
+         );
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                userBLL.getLogout();
+            }
         }
 
     }

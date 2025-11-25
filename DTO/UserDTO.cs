@@ -33,11 +33,12 @@ namespace DTO
         public UserDTO() { }
 
         //PTKT có tham số
-        public UserDTO(string username, string passwordHash, string fullName, string email)
+        public UserDTO(string username, string passwordHash, string fullName,string phone, string email)
         {
             Username = username;
             PasswordHash = passwordHash;
             FullName = fullName;
+            Phone = phone;
             Email = email;
         }
 

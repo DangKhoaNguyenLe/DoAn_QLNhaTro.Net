@@ -45,10 +45,12 @@
     <Compile Include="HopDongDTO.cs" />
     <Compile Include="DayNhaDTO.cs" />
     <Compile Include="GiaDienNuocDTO.cs" />
+    <Compile Include="KhachThueDTO.cs" />
     <Compile Include="NhaTroDTO.cs" />
     <Compile Include="PhongTroDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDTO.cs" />
+    <Compile Include="ViewPhieuThuTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

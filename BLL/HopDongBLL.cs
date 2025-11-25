@@ -12,7 +12,7 @@ namespace BLL
     {
         private HopDongDAL dal = new HopDongDAL();
 
-        public List<DanhSachHopDongDTO> GetDanhSachHopDong()
+        public List<DanhSachHopDongDTO> LayDanhSachHopDong()
         {
             return dal.GetDanhSachHopDong();
         }
