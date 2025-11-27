@@ -53,6 +53,10 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txt_fullname_dangky = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.txt_phone = new System.Windows.Forms.TextBox();
             this.panel_taikhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_password.SuspendLayout();
@@ -65,6 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Thoat)).BeginInit();
             this.panel_fullname.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_taikhoan_dangky
@@ -74,7 +80,7 @@
             this.txt_taikhoan_dangky.Location = new System.Drawing.Point(54, 18);
             this.txt_taikhoan_dangky.Name = "txt_taikhoan_dangky";
             this.txt_taikhoan_dangky.Size = new System.Drawing.Size(246, 34);
-            this.txt_taikhoan_dangky.TabIndex = 0; // Tab đầu tiên trong panel_taikhoan
+            this.txt_taikhoan_dangky.TabIndex = 0;
             // 
             // panel_taikhoan
             // 
@@ -84,7 +90,7 @@
             this.panel_taikhoan.Location = new System.Drawing.Point(51, 267);
             this.panel_taikhoan.Name = "panel_taikhoan";
             this.panel_taikhoan.Size = new System.Drawing.Size(303, 70);
-            this.panel_taikhoan.TabIndex = 1; // Sau fullname
+            this.panel_taikhoan.TabIndex = 1;
             // 
             // panel3
             // 
@@ -93,7 +99,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(300, 2);
             this.panel3.TabIndex = 1;
-            this.panel3.TabStop = false; // không cho Tab vào gạch chân
             // 
             // pictureBox2
             // 
@@ -103,7 +108,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(48, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false; // không cho Tab vào icon
+            this.pictureBox2.TabStop = false;
             // 
             // panel_password
             // 
@@ -113,7 +118,7 @@
             this.panel_password.Location = new System.Drawing.Point(51, 339);
             this.panel_password.Name = "panel_password";
             this.panel_password.Size = new System.Drawing.Size(303, 75);
-            this.panel_password.TabIndex = 2; // sau tài khoản
+            this.panel_password.TabIndex = 2;
             // 
             // panel4
             // 
@@ -122,7 +127,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(300, 2);
             this.panel4.TabIndex = 1;
-            this.panel4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -149,22 +153,22 @@
             this.btn_dangky.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_dangky.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dangky.ForeColor = System.Drawing.Color.White;
-            this.btn_dangky.Location = new System.Drawing.Point(51, 571);
+            this.btn_dangky.Location = new System.Drawing.Point(51, 652);
             this.btn_dangky.Name = "btn_dangky";
             this.btn_dangky.Size = new System.Drawing.Size(303, 60);
-            this.btn_dangky.TabIndex = 5; // sau Email
+            this.btn_dangky.TabIndex = 5;
             this.btn_dangky.Text = "ĐĂNG KÝ";
             this.btn_dangky.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(131, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(105, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(195, 182);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false; // không cần Tab vào logo
+            this.pictureBox1.TabStop = false;
             // 
             // panel_XNpassword
             // 
@@ -174,7 +178,7 @@
             this.panel_XNpassword.Location = new System.Drawing.Point(51, 409);
             this.panel_XNpassword.Name = "panel_XNpassword";
             this.panel_XNpassword.Size = new System.Drawing.Size(303, 75);
-            this.panel_XNpassword.TabIndex = 3; // sau mật khẩu
+            this.panel_XNpassword.TabIndex = 3;
             // 
             // panel6
             // 
@@ -183,7 +187,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(300, 2);
             this.panel6.TabIndex = 1;
-            this.panel6.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -212,7 +215,7 @@
             this.panel_email.Location = new System.Drawing.Point(51, 490);
             this.panel_email.Name = "panel_email";
             this.panel_email.Size = new System.Drawing.Size(303, 75);
-            this.panel_email.TabIndex = 4; // sau XN mật khẩu
+            this.panel_email.TabIndex = 4;
             // 
             // panel8
             // 
@@ -221,7 +224,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(300, 2);
             this.panel8.TabIndex = 1;
-            this.panel8.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -245,21 +247,21 @@
             // pictureBox_Thoat
             // 
             this.pictureBox_Thoat.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Thoat.Image")));
-            this.pictureBox_Thoat.Location = new System.Drawing.Point(343, 2);
+            this.pictureBox_Thoat.Location = new System.Drawing.Point(343, 0);
             this.pictureBox_Thoat.Name = "pictureBox_Thoat";
             this.pictureBox_Thoat.Size = new System.Drawing.Size(65, 50);
             this.pictureBox_Thoat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_Thoat.TabIndex = 7;
-            this.pictureBox_Thoat.TabStop = false; // thường không cho Tab vào nút X
+            this.pictureBox_Thoat.TabStop = false;
             // 
             // linkLabel_quaylaiLogin
             // 
             this.linkLabel_quaylaiLogin.AutoSize = true;
             this.linkLabel_quaylaiLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel_quaylaiLogin.Location = new System.Drawing.Point(272, 644);
+            this.linkLabel_quaylaiLogin.Location = new System.Drawing.Point(272, 725);
             this.linkLabel_quaylaiLogin.Name = "linkLabel_quaylaiLogin";
             this.linkLabel_quaylaiLogin.Size = new System.Drawing.Size(82, 18);
-            this.linkLabel_quaylaiLogin.TabIndex = 6; // sau nút Đăng ký
+            this.linkLabel_quaylaiLogin.TabIndex = 6;
             this.linkLabel_quaylaiLogin.TabStop = true;
             this.linkLabel_quaylaiLogin.Text = "Đăng Nhập";
             // 
@@ -268,10 +270,10 @@
             this.panel_fullname.Controls.Add(this.panel10);
             this.panel_fullname.Controls.Add(this.pictureBox6);
             this.panel_fullname.Controls.Add(this.txt_fullname_dangky);
-            this.panel_fullname.Location = new System.Drawing.Point(51, 200);
+            this.panel_fullname.Location = new System.Drawing.Point(51, 191);
             this.panel_fullname.Name = "panel_fullname";
             this.panel_fullname.Size = new System.Drawing.Size(303, 70);
-            this.panel_fullname.TabIndex = 0; // đầu tiên trên Form
+            this.panel_fullname.TabIndex = 0;
             // 
             // panel10
             // 
@@ -280,7 +282,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(300, 2);
             this.panel10.TabIndex = 1;
-            this.panel10.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -300,12 +301,51 @@
             this.txt_fullname_dangky.Name = "txt_fullname_dangky";
             this.txt_fullname_dangky.Size = new System.Drawing.Size(246, 34);
             this.txt_fullname_dangky.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.txt_phone);
+            this.panel1.Location = new System.Drawing.Point(51, 571);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(303, 75);
+            this.panel1.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(3, 62);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(300, 2);
+            this.panel2.TabIndex = 1;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(3, 14);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(48, 47);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 2;
+            this.pictureBox7.TabStop = false;
+            // 
+            // txt_phone
+            // 
+            this.txt_phone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_phone.Location = new System.Drawing.Point(54, 22);
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Size = new System.Drawing.Size(246, 34);
+            this.txt_phone.TabIndex = 0;
+            // 
             // FormDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(410, 692);
+            this.ClientSize = new System.Drawing.Size(407, 783);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_fullname);
             this.Controls.Add(this.linkLabel_quaylaiLogin);
             this.Controls.Add(this.pictureBox_Thoat);
@@ -336,6 +376,9 @@
             this.panel_fullname.ResumeLayout(false);
             this.panel_fullname.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,6 +409,9 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TextBox txt_fullname_dangky;
-
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TextBox txt_phone;
     }
 }

@@ -70,13 +70,15 @@
     <Compile Include="DbProcessDAL.cs" />
     <Compile Include="GiaDienNuocDAL.cs" />
     <Compile Include="HopDongDAL.cs" />
-    <Compile Include="PhongTroDAL.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="KhachThueDAL.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ViewPhieuThuDAL.cs" />
+    <Compile Include="PhongTroDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDAL.cs" />
   </ItemGroup>
   <ItemGroup>

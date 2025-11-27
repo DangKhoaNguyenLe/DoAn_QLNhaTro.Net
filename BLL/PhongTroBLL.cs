@@ -14,6 +14,11 @@ namespace BLL
             return phongTroDAL.getList().Where(t => t.HostelID == id).ToList();
         }
 
+        public List<PhongTroDTO> getList()
+        {
+            return phongTroDAL.getList().ToList();
+        }
+
         public PhongTroDTO FindByID(int id)
         {
             return phongTroDAL.getList().FirstOrDefault(t => t.RoomID == id);

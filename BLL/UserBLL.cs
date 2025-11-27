@@ -46,31 +46,47 @@ namespace BLL
             return Regex.IsMatch(email, pattern, RegexOptions.IgnoreCase);
         }
 
+        public bool KiemTraSoDienThoai(string phone)
+        {
+            if (string.IsNullOrWhiteSpace(phone))
+                return false;
+
+            // Regex chuẩn 10 số, bắt đầu bằng 0
+            return System.Text.RegularExpressions.Regex.IsMatch(phone, @"^0\d{9}$");
+        }
+
         public int DangKy(UserDTO user)
         {
             if (user == null ||
                 string.IsNullOrWhiteSpace(user.Username) ||
                 string.IsNullOrWhiteSpace(user.PasswordHash) ||
                 string.IsNullOrWhiteSpace(user.FullName) ||
-                string.IsNullOrWhiteSpace(user.Email))
+                string.IsNullOrWhiteSpace(user.Email) ||
+                string.IsNullOrWhiteSpace(user.Phone))
             {
-                return 1; // thiếu dữ liệu
+                return 1; // Thiếu dữ liệu
             }
 
             if (userDAL.CheckUser(user.Username))
             {
-                return 2; // tài khoản tồn tại
+                return 2; // Tài khoản đã tồn tại
             }
 
             if (!IsValidEmail(user.Email))
             {
-                return 3; // email sai cấu trúc
+                return 3; // Email sai cấu trúc
+            }
+
+            // 🔥 THÊM KIỂM TRA SỐ ĐIỆN THOẠI
+            if (!KiemTraSoDienThoai(user.Phone))
+            {
+                return 4; // Số điện thoại không hợp lệ
             }
 
             bool success = userDAL.DangKy(user);
-
-            return success ? 4 : 0; // 4 thành công, 0 lỗi DB
+            return success ? 5 : 0; // 4 thành công, 0 lỗi DB
         }
+
 
         public void getLogout()
         {
