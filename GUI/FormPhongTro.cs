@@ -14,11 +14,12 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace GUI
 {
-    public partial class PhongTro : Form
+    public partial class FormPhongTro : Form
     {
         DayNhaBLL DayNhaBLL;
         PhongTroBLL PhongTroBLL;
-        public PhongTro()
+        InfoRoom uc;
+        public FormPhongTro()
         {
             InitializeComponent();
             DayNhaBLL = new DayNhaBLL();
@@ -29,7 +30,41 @@ namespace GUI
             this.btnSave.Click += BtnSave_Click;
             this.btnSua.Click += BtnSua_Click;
             this.btnXoa.Click += BtnXoa_Click;
+            this.btnInfo.Click += BtnInfo_Click;
+            this.btndsKhach.Click += BtndsKhach_Click;
+            this.btndsHoaDon.Click += BtndsHoaDon_Click;
 
+        }
+
+        private void LoadInfoRoom(int id) { 
+            uc = new InfoRoom(id);
+            uc.Dock = DockStyle.Fill;
+            pannelMain.Controls.Add(uc);
+        }
+
+        private void setEnableTag(bool i, bool ds)
+        {
+            tnplayoutInfoRoom.Visible = i;
+           
+
+        }
+
+        private void BtndsHoaDon_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void BtndsKhach_Click(object sender, EventArgs e)
+        {
+            setEnableTag(false, true);
+            LoadInfoRoom(int.Parse(txtIdRoom.Text));
+
+        }
+
+        private void BtnInfo_Click(object sender, EventArgs e)
+        {
+            tnplayoutInfoRoom.Visible = true;
+            uc.Visible = false;
         }
 
         private void BtnXoa_Click(object sender, EventArgs e)
@@ -165,6 +200,7 @@ namespace GUI
         {
             txtTenPhong.Clear();
             cmbDsDayNha.Text = "Chọn dãy nhà";
+            txtIdRoom.Text = (PhongTroBLL.getList().Max(t => t.RoomID) + 1).ToString();
             txtDaThue.Clear();
             txtDienTich.Clear();
             txtMaxNguoi.Clear();
@@ -183,8 +219,9 @@ namespace GUI
             btn.BackColor = Color.LightBlue;
             tnplayoutInfoRoom.Visible = true;
             showInfoPhong(roomId);
+            btndsKhach.Enabled = true;
 
-            
+
         }
 
         private void ClearButtonSelection()
@@ -209,7 +246,7 @@ namespace GUI
         }
         private void PhongTro_Load(object sender, EventArgs e)
         {
-            cmbDayNha.DataSource = cmbDsDayNha.DataSource = DayNhaBLL.getList();
+            cmbDayNha.DataSource = cmbDsDayNha.DataSource = DayNhaBLL.getListByAdmin();
             cmbDayNha.DisplayMember = cmbDsDayNha.DisplayMember = "HostelName";
             cmbDayNha.ValueMember = cmbDsDayNha.ValueMember = "HostelID"; 
             cmbDayNha.Text = "Chọn dãy nhà";
@@ -217,6 +254,8 @@ namespace GUI
             tnplayoutInfoRoom.Visible = false;
             setEnableTxtCmb(false); 
             btnSave.Visible = false;
+            setEnableTag(true, false);
+            btndsKhach.Enabled = false;
 
         }
     }

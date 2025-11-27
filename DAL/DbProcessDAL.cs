@@ -19,6 +19,7 @@ namespace DAL
         protected ROOMTableAdapter room;
         protected TENANTTableAdapter khachthue;
         protected RECEIPT_VOUCHERTableAdapter v_PhieuThu;
+        protected BILLTableAdapter Bill;
 
         public DbProcessDAL() {
             hostel = new HOSTELTableAdapter();
@@ -29,6 +30,7 @@ namespace DAL
             room = new ROOMTableAdapter();
             khachthue = new TENANTTableAdapter();
             v_PhieuThu = new RECEIPT_VOUCHERTableAdapter();
+            Bill = new BILLTableAdapter();  
         }
     }
 }

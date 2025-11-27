@@ -107,11 +107,17 @@
     <Compile Include="FormTaiKhoan.Designer.cs">
       <DependentUpon>FormTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="PhongTro.cs">
+    <Compile Include="InfoRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InfoRoom.Designer.cs">
+      <DependentUpon>InfoRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhongTro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PhongTro.Designer.cs">
-      <DependentUpon>PhongTro.cs</DependentUpon>
+    <Compile Include="FormPhongTro.Designer.cs">
+      <DependentUpon>FormPhongTro.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,8 +151,11 @@
     <EmbeddedResource Include="FormTaiKhoan.resx">
       <DependentUpon>FormTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PhongTro.resx">
-      <DependentUpon>PhongTro.cs</DependentUpon>
+    <EmbeddedResource Include="InfoRoom.resx">
+      <DependentUpon>InfoRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhongTro.resx">
+      <DependentUpon>FormPhongTro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -156,6 +165,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -179,6 +189,9 @@
       <Project>{4194efe2-36a5-4ba2-b596-825886107e4f}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Them.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

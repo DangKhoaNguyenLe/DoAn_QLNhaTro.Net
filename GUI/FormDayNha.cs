@@ -9,14 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BLL;
+using System.Runtime.InteropServices;
+
 namespace GUI
 {
     public partial class FormDayNha : Form
     {
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern Int32 SendMessage(IntPtr hWnd, int msg, int wParam, string lParam);
+
+        private const int EM_SETCUEBANNER = 0x1501;
         DayNhaBLL dayNha;
         UserBLL userBLL;
         public FormDayNha()
         {
+
             InitializeComponent();
             dayNha = new DayNhaBLL();
             userBLL = new UserBLL();
@@ -40,7 +47,7 @@ namespace GUI
             {
                 MessageBox.Show("Bạn chưa chọn dòng nào.", "Thông báo", MessageBoxButtons.OK);
             }
-            loadDataGridView(dayNha.getList());
+            loadDataGridView(dayNha.getListByAdmin());
         }
 
         private void BtnXoa_Click(object sender, EventArgs e)
@@ -57,8 +64,8 @@ namespace GUI
                     MessageBox.Show("Xóa thành công", "Thành công", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Information);
                 }
-                loadDataGridView(dayNha.getList());
-                CountDayNha(dayNha.getList());
+                loadDataGridView(dayNha.getListByAdmin());
+                CountDayNha(dayNha.getListByAdmin());
             }
             else
             {
@@ -70,8 +77,8 @@ namespace GUI
         {
             FormThemDayNha them = new FormThemDayNha(string.Empty, string.Empty, 0);
             them.ShowDialog();
-            loadDataGridView(dayNha.getList());
-            CountDayNha(dayNha.getList());
+            loadDataGridView(dayNha.getListByAdmin());
+            CountDayNha(dayNha.getListByAdmin());
         }
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)
@@ -106,10 +113,15 @@ namespace GUI
 
         private void DayNha_Load(object sender, EventArgs e)
         {
-            loadDataGridView(dayNha.getList());
-            CountDayNha(dayNha.getList());
+            SetPlaceholder(txtSearch, "Tìm kiếm");
+            loadDataGridView(dayNha.getListByAdmin());
+            CountDayNha(dayNha.getListByAdmin());
         }
 
+        private void SetPlaceholder(ToolStripTextBox t, string placeholder)
+        {
 
+            SendMessage(t.TextBox.Handle, EM_SETCUEBANNER, 0, placeholder);
+        }
     }
 }
