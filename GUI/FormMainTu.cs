@@ -81,7 +81,7 @@ namespace GUI
 
         private void Button_phong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new PhongTro());
+            OpenChildForm(new FormPhongTro());
         }
 
         private void Button_danhsachnha_Click(object sender, EventArgs e)

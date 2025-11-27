@@ -143,6 +143,7 @@
             this.txt_matkhau_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_matkhau_login.Location = new System.Drawing.Point(54, 22);
             this.txt_matkhau_login.Name = "txt_matkhau_login";
+            this.txt_matkhau_login.PasswordChar = '*';
             this.txt_matkhau_login.Size = new System.Drawing.Size(246, 34);
             this.txt_matkhau_login.TabIndex = 4;
             // 

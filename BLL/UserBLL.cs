@@ -19,7 +19,6 @@ namespace BLL
         }
 
 
-
         public UserDTO getUserAdminLogin()
         {
             List<UserDTO> users = userDAL.GetListUser();

@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using DAL;
+
 namespace BLL
 {
     public class DayNhaBLL : ConnectionBLL
@@ -13,6 +15,12 @@ namespace BLL
         public List<DayNhaDTO> getList()
         {
             return dayNha.GetList();
+        }
+
+        public List<DayNhaDTO> getListByAdmin()
+        {
+            UserBLL userBLL = new UserBLL();
+            return dayNha.GetList().Where(t => t.OwnerID == userBLL.getUserAdminLogin().UserID).ToList();
         }
 
         public List<DayNhaDTO> searchByName(string name)

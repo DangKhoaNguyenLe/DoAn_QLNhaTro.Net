@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using DAL.DataNhaTroTableAdapters;
+
 namespace BLL
 {
     public class ConnectionBLL
@@ -15,7 +17,7 @@ namespace BLL
         protected PhongTroDAL phongTroDAL;
         protected KhachThueDAL khachThueDAL;
         protected ViewPhieuThuDAL v_phieuThuDAL;
-
+        protected BillDAL billDAL;
         public ConnectionBLL() { 
             dayNha = new DayNhaDAL();
             user = new UserDAL();
@@ -23,6 +25,7 @@ namespace BLL
             phongTroDAL = new PhongTroDAL();
             khachThueDAL = new KhachThueDAL();
             v_phieuThuDAL = new ViewPhieuThuDAL();
+            billDAL = new BillDAL();
         }
     }
 }

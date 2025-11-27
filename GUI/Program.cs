@@ -15,8 +15,9 @@ namespace GUI
         [STAThread]
         static void Main()
         {
-            AppDomain.CurrentDomain.SetData("DataDirectory",
-            Path.Combine(Application.StartupPath, "Database"));
+            string dataDir = Path.GetFullPath(Path.Combine(Application.StartupPath, @"..\..\..\DAL"));
+            AppDomain.CurrentDomain.SetData("DataDirectory", dataDir);
+
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
