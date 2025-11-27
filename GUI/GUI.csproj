@@ -65,6 +65,18 @@
     <Compile Include="FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDSPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDSPhieuThu.Designer.cs">
+      <DependentUpon>FormDSPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKhachThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhachThue.Designer.cs">
+      <DependentUpon>FormKhachThue.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemDayNha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDSPhieuThu.resx">
+      <DependentUpon>FormDSPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhachThue.resx">
+      <DependentUpon>FormKhachThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemDayNha.resx">
       <DependentUpon>FormThemDayNha.cs</DependentUpon>

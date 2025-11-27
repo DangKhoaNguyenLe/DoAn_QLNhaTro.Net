@@ -17,7 +17,8 @@ namespace DAL
         protected CONTRACTTableAdapter hopdong;
         protected DanhSachHopDong1TableAdapter dshopdong1;
         protected ROOMTableAdapter room;
-        protected DanhSachHopDongTableAdapter dshopdong;
+        protected TENANTTableAdapter khachthue;
+        protected RECEIPT_VOUCHERTableAdapter v_PhieuThu;
 
         public DbProcessDAL() {
             hostel = new HOSTELTableAdapter();
@@ -26,7 +27,8 @@ namespace DAL
             hopdong = new CONTRACTTableAdapter();
             dshopdong1 = new DanhSachHopDong1TableAdapter();
             room = new ROOMTableAdapter();
-            dshopdong = new DanhSachHopDongTableAdapter();
+            khachthue = new TENANTTableAdapter();
+            v_PhieuThu = new RECEIPT_VOUCHERTableAdapter();
         }
     }
 }

@@ -34,7 +34,9 @@ namespace GUI
             string password = txt_matkhau_dangky.Text.Trim();
             string XNpassword = txt_XNmatkhau_dangky.Text.Trim();
             string fullName = txt_fullname_dangky.Text.Trim();
+            string phone = txt_phone.Text.Trim();
             string email = txt_email_dangky.Text.Trim();
+
 
             // Kiểm tra trống
             if (string.IsNullOrWhiteSpace(username) ||
@@ -61,6 +63,7 @@ namespace GUI
             user.Username = username;
             user.PasswordHash = password;
             user.FullName = fullName;
+            user.Phone = phone;
             user.Email = email;
 
             int result = userBLL.DangKy(user);
@@ -78,6 +81,11 @@ namespace GUI
                 MessageBox.Show("Email không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (result == 4)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ! (Phải 10 số, bắt đầu bằng 0)",
+                                "Lỗi số điện thoại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (result == 5)
             {
                 MessageBox.Show("Đăng ký thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
@@ -106,5 +114,7 @@ namespace GUI
                 Application.Exit();
             }
         }
+
+
     }
 }
