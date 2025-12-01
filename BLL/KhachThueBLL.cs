@@ -16,5 +16,10 @@ namespace BLL
         {
             return khachThueDAL.GetListTenant();
         }
+
+        public List<KhachThueDTO> getListById(int id)
+        {
+            return khachThueDAL.GetListTenant().Where(t => t.RoomId == id).ToList();
+        }
     }
 }

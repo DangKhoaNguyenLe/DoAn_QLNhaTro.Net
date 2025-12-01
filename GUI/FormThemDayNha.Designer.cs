@@ -62,7 +62,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.BackColor = System.Drawing.SystemColors.Desktop;
             this.panel1.Controls.Add(this.lbname);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -73,6 +73,7 @@
             // lbname
             // 
             this.lbname.AutoSize = true;
+            this.lbname.BackColor = System.Drawing.SystemColors.Desktop;
             this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbname.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbname.Location = new System.Drawing.Point(12, 9);
@@ -272,7 +273,7 @@
             // 
             // btnAddDayNha
             // 
-            this.btnAddDayNha.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnAddDayNha.BackColor = System.Drawing.SystemColors.InfoText;
             this.btnAddDayNha.FlatAppearance.BorderSize = 0;
             this.btnAddDayNha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddDayNha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -286,11 +287,11 @@
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.Color.Gold;
+            this.btnSua.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSua.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSua.Location = new System.Drawing.Point(297, 469);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(170, 57);

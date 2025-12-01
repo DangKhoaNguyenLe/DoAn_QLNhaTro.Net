@@ -28,7 +28,8 @@ namespace DAL
                     t.CCCD,
                     t.NgayCap,
                     t.NoiCap,
-                    t.Status
+                    t.Status,
+                    t.RoomID
                 );
 
                 list.Add(kt);

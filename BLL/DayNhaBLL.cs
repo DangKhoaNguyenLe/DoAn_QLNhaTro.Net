@@ -25,7 +25,7 @@ namespace BLL
 
         public List<DayNhaDTO> searchByName(string name)
         {
-            List<DayNhaDTO> dayNha = getList();
+            List<DayNhaDTO> dayNha = getListByAdmin();
             
             if(name == null)
             {

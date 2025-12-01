@@ -40,7 +40,7 @@
             this.dgvDsKH.Name = "dgvDsKH";
             this.dgvDsKH.RowHeadersWidth = 51;
             this.dgvDsKH.RowTemplate.Height = 24;
-            this.dgvDsKH.Size = new System.Drawing.Size(977, 401);
+            this.dgvDsKH.Size = new System.Drawing.Size(977, 554);
             this.dgvDsKH.TabIndex = 0;
             // 
             // InfoRoom
@@ -49,7 +49,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvDsKH);
             this.Name = "InfoRoom";
-            this.Size = new System.Drawing.Size(977, 401);
+            this.Size = new System.Drawing.Size(977, 554);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsKH)).EndInit();
             this.ResumeLayout(false);
 
