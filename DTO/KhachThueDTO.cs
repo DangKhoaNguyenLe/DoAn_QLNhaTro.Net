@@ -14,6 +14,7 @@ namespace DTO
         {
             // ===== PRIVATE FIELDS =====
             private int tenantID;
+            private int roomID;
             private int userID;
             private string fullName;
             private string phone;
@@ -31,7 +32,11 @@ namespace DTO
                 get { return tenantID; }
                 set { tenantID = value; }
             }
-
+            public int RoomId
+            {
+                get { return roomID; }
+                set { roomID = value; }
+            }
             public int UserID
             {
                 get { return userID; }
@@ -97,7 +102,7 @@ namespace DTO
             public KhachThueDTO() { }
 
             public KhachThueDTO( int tenantID,int userID,string fullName, string phone,string email, DateTime birthDate,
-                string address, string cccd,DateTime ngayCap,string noiCap, string status
+                string address, string cccd,DateTime ngayCap,string noiCap, string status, int RoomId
             )
             {
                 this.TenantID = tenantID;
@@ -111,6 +116,7 @@ namespace DTO
                 this.NgayCap = ngayCap;
                 this.NoiCap = noiCap;
                 this.Status = status;
+                this.roomID = RoomId;
             }
         }
     }

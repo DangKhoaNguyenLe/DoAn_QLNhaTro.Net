@@ -95,8 +95,7 @@
     <None Include="DataNhaTro.xss">
       <DependentUpon>DataNhaTro.xsd</DependentUpon>
 	<Generator>MSDataSetGenerator</Generator>
-  	<LastGenOutput>DataNhaTro.Designer.cs</LastGenOutput>
-    </None>
+    </None>	
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

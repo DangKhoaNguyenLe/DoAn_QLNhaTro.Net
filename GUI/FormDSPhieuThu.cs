@@ -24,6 +24,7 @@ namespace GUI
             InitializeComponent();
             dayNhaBLL = new DayNhaBLL();
             phongTroBLL = new PhongTroBLL();
+            khachThueBLL = new KhachThueBLL();
             dataGridView_dsphieuthu.AutoGenerateColumns = false;
             this.Shown += (s, e) =>
             {

@@ -33,43 +33,61 @@ namespace GUI
             this.btnInfo.Click += BtnInfo_Click;
             this.btndsKhach.Click += BtndsKhach_Click;
             this.btndsHoaDon.Click += BtndsHoaDon_Click;
+            this.btnHuy.Click += BtnHuy_Click;
 
         }
 
-        private void LoadInfoRoom(int id) { 
-            uc = new InfoRoom(id);
+        private void BtnHuy_Click(object sender, EventArgs e)
+        {
+            setSaveClose(false);
+            if (!btnSua.Enabled)
+            {
+                resetInfoPhong();
+            }
+            setButtonCUD(true, true, true);
+            setEnableTxtCmb(false);
+        }
+
+        private void LoadInfoRoom(int id, bool c) { 
+            uc = new InfoRoom(id, c);
             uc.Dock = DockStyle.Fill;
             pannelMain.Controls.Add(uc);
         }
 
-        private void setEnableTag(bool i, bool ds)
-        {
-            tnplayoutInfoRoom.Visible = i;
-           
-
-        }
 
         private void BtndsHoaDon_Click(object sender, EventArgs e)
         {
-         
+           if(uc != null) pannelMain.Controls.Remove(uc);
+            LoadInfoRoom(int.Parse(txtIdRoom.Text), false);
+            tnplayoutInfoRoom.Visible = false;
+            uc.Visible = true;
         }
 
         private void BtndsKhach_Click(object sender, EventArgs e)
         {
-            setEnableTag(false, true);
-            LoadInfoRoom(int.Parse(txtIdRoom.Text));
-
+            if (uc != null) pannelMain.Controls.Remove(uc);
+            LoadInfoRoom(int.Parse(txtIdRoom.Text), true);
+            tnplayoutInfoRoom.Visible = false;
+            uc.Visible = true;
         }
 
         private void BtnInfo_Click(object sender, EventArgs e)
         {
             tnplayoutInfoRoom.Visible = true;
-            uc.Visible = false;
+           
+            if(uc == null)
+            {
+                MessageBox.Show("Bạn chưa chọn phòng", "Lỗi");
+            }
+            else
+            {
+                uc.Visible = false;
+            }
         }
 
         private void BtnXoa_Click(object sender, EventArgs e)
         {
-            if (txtIdRoom.Text == string.Empty) {
+            if (txtTenPhong.Text == string.Empty) {
                 MessageBox.Show("Không thể xóa do bạn chưa chọn phòng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -80,13 +98,20 @@ namespace GUI
 
             if (result == DialogResult.Yes)
             {
-                PhongTroBLL.delete(int.Parse(txtIdRoom.Text));
+                PhongTroBLL.delete(int.Parse(txtTenPhong.Text));
                 loadPhong(int.Parse(cmbDsDayNha.SelectedValue.ToString()));
             }
         }
 
         private void BtnSua_Click(object sender, EventArgs e)
         {
+            if(txtIdRoom.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa chọn phòng.", "Vui lòng chọn phòng"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            setSaveClose(true);
             setEnableTxtCmb(true);
             btnSave.Visible = true;
             setButtonCUD(false, true, false);
@@ -103,7 +128,7 @@ namespace GUI
                     PhongTroDTO phong = new PhongTroDTO(
                         1
                         , int.Parse(cmbDsDayNha.SelectedValue.ToString())
-                        , txtTenPhong.Text
+                        , txtIdRoom.Text
                         , txtTang.Text
                         , decimal.Parse(txtDienTich.Text)
                         , int.Parse(txtMaxNguoi.Text)
@@ -118,9 +143,9 @@ namespace GUI
                 {
                     textmessage = "Update thành công";
                     PhongTroDTO phong = new PhongTroDTO(
-                        int.Parse(txtIdRoom.Text)
+                        int.Parse(txtTenPhong.Text)
                         , int.Parse(cmbDsDayNha.SelectedValue.ToString())
-                        , txtTenPhong.Text
+                        , txtIdRoom.Text
                         , txtTang.Text
                         , decimal.Parse(txtDienTich.Text)
                         , int.Parse(txtMaxNguoi.Text)
@@ -139,6 +164,7 @@ namespace GUI
                 MessageBox.Show("Thất bại: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             setButtonCUD(true, true, true);
+            setSaveClose(false);
         }
 
         private void setButtonCUD(bool c, bool u, bool d)
@@ -148,13 +174,24 @@ namespace GUI
             btnSua.Enabled = u;
         }
 
+        private void setSaveClose(bool i)
+        {
+            btnSave.Visible = i;
+            btnHuy.Visible  = i;
+
+        }
+
         private void BtnAddTro_Click(object sender, EventArgs e)
         {
+            setSaveClose(true);
             resetInfoPhong();
             tnplayoutInfoRoom.Visible = true;
             setEnableTxtCmb(true);
             btnSave.Visible = true;
+            txtTenPhong.Enabled = false;
             setButtonCUD(true, false, false);
+            pannelMain.Visible = true;
+            resetButtonPhong();
         }
 
         private void CmbDayNha_SelectionChangeCommitted(object sender, EventArgs e)
@@ -166,7 +203,7 @@ namespace GUI
         private void loadPhong(int id)
         {
            List<PhongTroDTO> phongTros = PhongTroBLL.getListByHostel(id);
-            flowLayoutPanel1.Controls.Clear();
+            flpPhong.Controls.Clear();
             foreach (var i in phongTros)
             {
                 Button btn = new Button();
@@ -175,7 +212,7 @@ namespace GUI
                 btn.Name = i.RoomID.ToString();
                 btn.Size = new Size(100, 120);
                 btn.Click += PhongButton_Click;
-                flowLayoutPanel1.Controls.Add(btn);
+                flpPhong.Controls.Add(btn);
             }
         }
 
@@ -185,7 +222,7 @@ namespace GUI
             DayNhaDTO daynha = DayNhaBLL.getList().FirstOrDefault(t => t.HostelID == phongTro.HostelID);
             txtIdRoom.Text = phongTro.RoomID.ToString();
             txtTenPhong.Text = phongTro.RoomName;
-            cmbDsDayNha.Text = daynha.HostelName;
+            cmbDsDayNha.SelectedItem = daynha;
             txtDaThue.Text = phongTro.soNguoiDaThue.ToString();
             txtDienTich.Text = phongTro.Area.ToString();
             txtMaxNguoi.Text = phongTro.Capacity.ToString();
@@ -198,9 +235,9 @@ namespace GUI
 
         private void resetInfoPhong()
         {
-            txtTenPhong.Clear();
+            txtIdRoom.Clear();
             cmbDsDayNha.Text = "Chọn dãy nhà";
-            txtIdRoom.Text = (PhongTroBLL.getList().Max(t => t.RoomID) + 1).ToString();
+            txtTenPhong.Clear();
             txtDaThue.Clear();
             txtDienTich.Clear();
             txtMaxNguoi.Clear();
@@ -211,22 +248,45 @@ namespace GUI
 
         }
 
+        private void resetButtonPhong()
+        {
+            foreach (Control c in flpPhong.Controls)
+            {
+                if (c is Button btn)
+                {
+                    if (btn.BackColor == Color.LightBlue)
+                    {
+                        btn.BackColor = SystemColors.Control;
+                    }
+
+                }
+            }
+        }
+
+
+        private void EnableInfoPhong(bool i)
+        {
+            btndsKhach.Enabled = i;
+            btnInfo.Enabled = i;
+            btndsHoaDon.Enabled = i;
+        }
+
         private void PhongButton_Click(object sender, EventArgs e)
         {
+            if(!btnSua.Enabled || !btnAddTro.Enabled) return;
             Button btn = sender as Button;
             int roomId = int.Parse(btn.Name);
             ClearButtonSelection();
             btn.BackColor = Color.LightBlue;
             tnplayoutInfoRoom.Visible = true;
             showInfoPhong(roomId);
-            btndsKhach.Enabled = true;
-
-
+            EnableInfoPhong(true);
+            pannelMain.Visible = true;
         }
 
         private void ClearButtonSelection()
         {
-            foreach (Button b in flowLayoutPanel1.Controls.OfType<Button>())
+            foreach (Button b in flpPhong.Controls.OfType<Button>())
             {
                 b.BackColor = SystemColors.Control;
             }
@@ -234,7 +294,8 @@ namespace GUI
 
         private void setEnableTxtCmb(bool enable)
         {
-            txtTenPhong.Enabled = enable;
+            txtIdRoom.Enabled = enable;
+            txtTenPhong.Enabled = enable;   
             cmbDsDayNha.Enabled = enable;
             txtDaThue.Enabled = enable;
             txtDienTich.Enabled = enable;
@@ -251,11 +312,12 @@ namespace GUI
             cmbDayNha.ValueMember = cmbDsDayNha.ValueMember = "HostelID"; 
             cmbDayNha.Text = "Chọn dãy nhà";
             cmbDayNha.SelectedIndex = 0;
-            tnplayoutInfoRoom.Visible = false;
             setEnableTxtCmb(false); 
             btnSave.Visible = false;
-            setEnableTag(true, false);
-            btndsKhach.Enabled = false;
+            tnplayoutInfoRoom.Visible = false;
+            EnableInfoPhong(false);
+            pannelMain.Visible = false;
+            setSaveClose(false);
 
         }
     }

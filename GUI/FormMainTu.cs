@@ -91,7 +91,7 @@ namespace GUI
 
         private void Button_thongke_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new FormThongKe());
         }
 
         private void Button_taikhoan_Click(object sender, EventArgs e)

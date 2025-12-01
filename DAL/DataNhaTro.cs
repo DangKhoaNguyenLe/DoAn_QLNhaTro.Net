@@ -1,7 +1,5 @@
 ﻿namespace DAL
 {
-
-
     partial class DataNhaTro
     {
     }
