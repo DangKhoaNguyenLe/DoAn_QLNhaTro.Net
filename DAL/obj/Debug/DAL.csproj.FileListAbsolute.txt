@@ -8,3 +8,15 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\obj\Debug\DAL.csproj.CoreCom
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\obj\Debug\DAL.dll
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\obj\Debug\DAL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\bin\Debug\DAL.dll.config
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\bin\Debug\DAL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\bin\Debug\DAL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\bin\Debug\DTO.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\bin\Debug\DTO.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\obj\Debug\DAL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\obj\Debug\DAL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\bin\Debug\Datatabse\QL_nhaTro.mdf
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DAL\bin\Debug\Datatabse\QL_nhaTro_log.ldf

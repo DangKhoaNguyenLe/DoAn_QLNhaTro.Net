@@ -4,3 +4,9 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DTO\obj\Debug\DTO.csproj.Assembl
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DTO\obj\Debug\DTO.dll
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DTO\obj\Debug\DTO.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DTO\bin\Debug\DTO.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DTO\bin\Debug\DTO.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DTO\obj\Debug\DTO.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\DTO\obj\Debug\DTO.pdb

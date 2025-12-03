@@ -10,3 +10,17 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.csproj.CoreCom
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.dll
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\bin\Debug\BLL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\bin\Debug\BLL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\bin\Debug\DAL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\bin\Debug\DTO.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\bin\Debug\DAL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\bin\Debug\DAL.dll.config
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\bin\Debug\DTO.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\obj\Debug\BLL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\obj\Debug\BLL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\bin\Debug\Datatabse\QL_nhaTro.mdf
+D:\Nguyen_Ngoc_Thinh\.NET\QuanLyNhaTro_Clone_MVC\BLL\bin\Debug\Datatabse\QL_nhaTro_log.ldf
