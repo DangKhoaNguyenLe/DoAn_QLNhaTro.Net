@@ -28,3 +28,4 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.csproj.CopyCom
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.exe
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.pdb
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.FormThongKe.resources
+C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.FormThemHopDong.resources
