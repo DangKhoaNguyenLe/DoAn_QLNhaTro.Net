@@ -3,11 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics.Contracts;
+using System.Linq;
 
 namespace DAL
 {
     public class HopDongDAL : DbProcessDAL
     {
+
+        public DataTable LayDSHD()
+        {
+            return hopdong.GetData();
+        }
         public List<DanhSachHopDongDTO> GetDanhSachHopDong()
         {
             List<DanhSachHopDongDTO> list = new List<DanhSachHopDongDTO>();
@@ -65,75 +71,26 @@ namespace DAL
                 return false;
             }
         }
+        // Xoá hợp đồng
+        public bool XoaHopDong(int id)
+        {
+            try
+            {
+                // Lấy RoomID từ Contract trước khi xóa
+                var r = hopdong.GetData().FirstOrDefault(c => c.ContractID == id);
+                int roomID = r.RoomID;
 
-        //// Sửa hợp đồng
-        //public bool Update(HopDongDTO c)
-        //{
-        //    try
-        //    {
-        //        hopdong.Update(
-        //            c.ContractCode,
-        //            c.HostelID,
-        //            c.RoomID,
-        //            c.TenantID,
-        //            c.NgayBatDau,
-        //            c.NgayKetThuc,
-        //            c.TienPhong,
-        //            c.TienCoc,
-        //            c.KyThanhToan,
-        //            c.NgayChotTien,
-        //            c.TrangThai,
-        //            c.ContractID       // WHERE ContractID
-        //        );
-        //        return true;
-        //    }
-        //    catch
-        //    {
-        //        return false;
-        //    }
-        //}
+                // Xóa hợp đồng
+                hopdong.DeleteHopDong(id);
 
-        //// Xoá hợp đồng
-        //public bool Delete(int id)
-        //{
-        //    try
-        //    {
-        //        contract.Delete(id);
-        //        return true;
-        //    }
-        //    catch
-        //    {
-        //        return false;
-        //    }
-        //}
-
-        //// Lấy hợp đồng theo ID
-        //public ContractDTO GetByID(int id)
-        //{
-        //    DataTable dt = contract.GetDataByID(id);
-
-        //    if (dt.Rows.Count == 0) return null;
-
-        //    DataNhaTro.CONTRACTRow row = dt.Rows[0] as DataNhaTro.CONTRACTRow;
-
-        //    ContractDTO c = new ContractDTO
-        //    {
-        //        ContractID = row.ContractID,
-        //        ContractCode = row.ContractCode,
-        //        HostelID = row.HostelID,
-        //        RoomID = row.RoomID,
-        //        TenantID = row.TenantID,
-        //        NgayBatDau = row.NgayBatDau,
-        //        NgayKetThuc = row.NgayKetThuc,
-        //        TienPhong = row.TienPhong,
-        //        TienCoc = row.TienCoc,
-        //        KyThanhToan = row.KyThanhToan,
-        //        NgayChotTien = row.NgayChotTien,
-        //        TrangThai = row.TrangThai,
-        //        CreatedDate = row.CreatedDate
-        //    };
-
-        //    return c;
-        //}
+                // Trừ số người thuê
+                room.UpdateSoNguoiDaThue(-1, roomID);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

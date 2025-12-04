@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
 namespace BLL
 {
     public class PhongTroBLL : ConnectionBLL
@@ -57,6 +58,29 @@ namespace BLL
             {
                 phongTroDAL.delete(id);
                 return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL " + ex.Message, ex);
+            }
+        }
+
+        public List<PhongTroDTO> GetPhongChuaDuNguoi(int hostelID)
+        {
+            // lấy danh sách phòng theo dãy đã có
+            var dsPhong = getListByHostel(hostelID);
+            return dsPhong.Where(p => p.soNguoiDaThue < 2).ToList();
+        }
+
+        public bool UpdateSoNguoiDaThue(int roomID, int soNguoi)
+        {
+            try
+            {
+                var phong = FindByID(roomID);
+                if (phong == null)
+                    throw new Exception("Phòng không tồn tại");
+                phong.soNguoiDaThue = soNguoi;
+                return update(phong);
             }
             catch (SqlException ex)
             {

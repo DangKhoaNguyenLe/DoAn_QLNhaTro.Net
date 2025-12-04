@@ -29,7 +29,6 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.exe
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.pdb
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.FormThongKe.resources
 D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
-D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\obj\Debug\GUI.exe.config
 D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\obj\Debug\GUI.FormDayNha.resources
 D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\obj\Debug\GUI.FormDangKy.resources
 D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\obj\Debug\GUI.FormDangNhap.resources
