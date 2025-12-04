@@ -372,7 +372,7 @@
             this.tnplayoutInfoRoom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.62025F));
             this.tnplayoutInfoRoom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
             this.tnplayoutInfoRoom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 223F));
-            this.tnplayoutInfoRoom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 514F));
+            this.tnplayoutInfoRoom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 515F));
             this.tnplayoutInfoRoom.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 500F));
             this.tnplayoutInfoRoom.Controls.Add(this.label5, 0, 0);
             this.tnplayoutInfoRoom.Controls.Add(this.txtIdRoom, 1, 0);
@@ -416,7 +416,7 @@
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 37);
+            this.label5.Size = new System.Drawing.Size(133, 37);
             this.label5.TabIndex = 0;
             this.label5.Text = "Mã phòng:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -425,7 +425,7 @@
             // 
             this.txtIdRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtIdRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdRoom.Location = new System.Drawing.Point(143, 3);
+            this.txtIdRoom.Location = new System.Drawing.Point(142, 3);
             this.txtIdRoom.Name = "txtIdRoom";
             this.txtIdRoom.Size = new System.Drawing.Size(314, 34);
             this.txtIdRoom.TabIndex = 1;
@@ -438,7 +438,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label10.Location = new System.Drawing.Point(644, 0);
+            this.label10.Location = new System.Drawing.Point(643, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(217, 37);
             this.label10.TabIndex = 7;
@@ -453,7 +453,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label11.Location = new System.Drawing.Point(644, 37);
+            this.label11.Location = new System.Drawing.Point(643, 37);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(217, 37);
             this.label11.TabIndex = 8;
@@ -468,7 +468,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label12.Location = new System.Drawing.Point(644, 74);
+            this.label12.Location = new System.Drawing.Point(643, 74);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(217, 39);
             this.label12.TabIndex = 9;
@@ -483,7 +483,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label13.Location = new System.Drawing.Point(644, 113);
+            this.label13.Location = new System.Drawing.Point(643, 113);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(217, 38);
             this.label13.TabIndex = 10;
@@ -498,7 +498,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label14.Location = new System.Drawing.Point(644, 151);
+            this.label14.Location = new System.Drawing.Point(643, 151);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(217, 35);
             this.label14.TabIndex = 11;
@@ -509,36 +509,36 @@
             // 
             this.txtMaxNguoi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtMaxNguoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaxNguoi.Location = new System.Drawing.Point(867, 40);
+            this.txtMaxNguoi.Location = new System.Drawing.Point(866, 40);
             this.txtMaxNguoi.Name = "txtMaxNguoi";
-            this.txtMaxNguoi.Size = new System.Drawing.Size(509, 34);
+            this.txtMaxNguoi.Size = new System.Drawing.Size(510, 34);
             this.txtMaxNguoi.TabIndex = 16;
             // 
             // txtDaThue
             // 
             this.txtDaThue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDaThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDaThue.Location = new System.Drawing.Point(867, 77);
+            this.txtDaThue.Location = new System.Drawing.Point(866, 77);
             this.txtDaThue.Name = "txtDaThue";
-            this.txtDaThue.Size = new System.Drawing.Size(509, 34);
+            this.txtDaThue.Size = new System.Drawing.Size(510, 34);
             this.txtDaThue.TabIndex = 17;
             // 
             // txtGiaPhong
             // 
             this.txtGiaPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtGiaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaPhong.Location = new System.Drawing.Point(867, 116);
+            this.txtGiaPhong.Location = new System.Drawing.Point(866, 116);
             this.txtGiaPhong.Name = "txtGiaPhong";
-            this.txtGiaPhong.Size = new System.Drawing.Size(509, 34);
+            this.txtGiaPhong.Size = new System.Drawing.Size(510, 34);
             this.txtGiaPhong.TabIndex = 18;
             // 
             // txtTienCoc
             // 
             this.txtTienCoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTienCoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTienCoc.Location = new System.Drawing.Point(867, 154);
+            this.txtTienCoc.Location = new System.Drawing.Point(866, 154);
             this.txtTienCoc.Name = "txtTienCoc";
-            this.txtTienCoc.Size = new System.Drawing.Size(509, 34);
+            this.txtTienCoc.Size = new System.Drawing.Size(510, 34);
             this.txtTienCoc.TabIndex = 19;
             // 
             // cmbDsDayNha
@@ -547,9 +547,9 @@
             this.cmbDsDayNha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDsDayNha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDsDayNha.FormattingEnabled = true;
-            this.cmbDsDayNha.Location = new System.Drawing.Point(867, 3);
+            this.cmbDsDayNha.Location = new System.Drawing.Point(866, 3);
             this.cmbDsDayNha.Name = "cmbDsDayNha";
-            this.cmbDsDayNha.Size = new System.Drawing.Size(509, 37);
+            this.cmbDsDayNha.Size = new System.Drawing.Size(510, 37);
             this.cmbDsDayNha.TabIndex = 20;
             // 
             // label9
@@ -562,7 +562,7 @@
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label9.Location = new System.Drawing.Point(3, 37);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 37);
+            this.label9.Size = new System.Drawing.Size(133, 37);
             this.label9.TabIndex = 6;
             this.label9.Text = "Tên phòng:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -577,7 +577,7 @@
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label8.Location = new System.Drawing.Point(3, 151);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(134, 35);
+            this.label8.Size = new System.Drawing.Size(133, 35);
             this.label8.TabIndex = 5;
             this.label8.Text = "Tình trạng:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -592,7 +592,7 @@
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label7.Location = new System.Drawing.Point(3, 113);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 38);
+            this.label7.Size = new System.Drawing.Size(133, 38);
             this.label7.TabIndex = 4;
             this.label7.Text = "Diện tích";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -607,7 +607,7 @@
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label6.Location = new System.Drawing.Point(3, 74);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 39);
+            this.label6.Size = new System.Drawing.Size(133, 39);
             this.label6.TabIndex = 3;
             this.label6.Text = "Tầng:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -616,7 +616,7 @@
             // 
             this.txtTenPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTenPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenPhong.Location = new System.Drawing.Point(143, 40);
+            this.txtTenPhong.Location = new System.Drawing.Point(142, 40);
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.Size = new System.Drawing.Size(314, 34);
             this.txtTenPhong.TabIndex = 14;
@@ -625,7 +625,7 @@
             // 
             this.txtTang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTang.Location = new System.Drawing.Point(143, 77);
+            this.txtTang.Location = new System.Drawing.Point(142, 77);
             this.txtTang.Name = "txtTang";
             this.txtTang.Size = new System.Drawing.Size(314, 34);
             this.txtTang.TabIndex = 2;
@@ -634,7 +634,7 @@
             // 
             this.txtTinhTrang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTinhTrang.Location = new System.Drawing.Point(143, 154);
+            this.txtTinhTrang.Location = new System.Drawing.Point(142, 154);
             this.txtTinhTrang.Name = "txtTinhTrang";
             this.txtTinhTrang.Size = new System.Drawing.Size(314, 34);
             this.txtTinhTrang.TabIndex = 13;
@@ -643,7 +643,7 @@
             // 
             this.txtDienTich.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDienTich.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDienTich.Location = new System.Drawing.Point(143, 116);
+            this.txtDienTich.Location = new System.Drawing.Point(142, 116);
             this.txtDienTich.Name = "txtDienTich";
             this.txtDienTich.Size = new System.Drawing.Size(314, 34);
             this.txtDienTich.TabIndex = 12;

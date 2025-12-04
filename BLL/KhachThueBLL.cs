@@ -21,6 +21,11 @@ namespace BLL
         {
             return khachThueDAL.GetListTenant().Where(t => t.RoomId == id).ToList();
         }
+        
+        public List<KhachThueDTO> getDsKhachChuaDK()
+        {
+            return LayDSKhachThue().Where(t => t.RoomId == 0).ToList();
+        }
 
         public bool add(KhachThueDTO kh)
         {

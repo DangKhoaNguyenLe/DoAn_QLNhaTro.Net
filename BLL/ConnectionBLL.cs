@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using DAL.DataNhaTroTableAdapters;
+using DTO;
 
 namespace BLL
 {
@@ -21,6 +22,7 @@ namespace BLL
         public ConnectionBLL() { 
             dayNha = new DayNhaDAL();
             user = new UserDAL();
+            hopDongDAL = new HopDongDAL();
             giaDienNuoc = new GiaDienNuocDAL();
             phongTroDAL = new PhongTroDAL();
             khachThueDAL = new KhachThueDAL();

@@ -45,6 +45,39 @@ namespace DAL
             return list;
         }
 
+        public List<HopDongDTO> GetDanhSachHD()
+        {
+            List<HopDongDTO> list = new List<HopDongDTO>();
+
+            DataTable dt = hopdong.GetData();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                var row = dr as DataNhaTro.CONTRACTRow;
+
+                HopDongDTO c = new HopDongDTO(
+                    row.ContractID,
+                    row.ContractCode,
+                    int.Parse(row.HostelID.ToString()),
+                    int.Parse(row.RoomID.ToString()),
+                    int.Parse(row.TenantID.ToString()),
+                    row.NgayBatDau,
+                    row.NgayKetThuc,
+                    row.TienPhong,
+                    row.TienCoc,
+                    row.KyThanhToan,
+                    int.Parse(row.NgayChotTien.ToString()),
+                    row.TrangThai,
+                    row.CreatedDate
+
+                );
+
+                list.Add(c);
+            }
+
+            return list;
+        }
+
         // Thêm hợp đồng
         public bool Insert(HopDongDTO c)
         {

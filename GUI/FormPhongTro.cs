@@ -98,7 +98,7 @@ namespace GUI
 
             if (result == DialogResult.Yes)
             {
-                PhongTroBLL.delete(int.Parse(txtTenPhong.Text));
+                PhongTroBLL.delete(int.Parse(txtIdRoom.Text));
                 loadPhong(int.Parse(cmbDsDayNha.SelectedValue.ToString()));
             }
         }
@@ -143,9 +143,9 @@ namespace GUI
                 {
                     textmessage = "Update thành công";
                     PhongTroDTO phong = new PhongTroDTO(
-                        int.Parse(txtTenPhong.Text)
+                        int.Parse(txtIdRoom.Text)
                         , int.Parse(cmbDsDayNha.SelectedValue.ToString())
-                        , txtIdRoom.Text
+                        , txtTenPhong.Text
                         , txtTang.Text
                         , decimal.Parse(txtDienTich.Text)
                         , int.Parse(txtMaxNguoi.Text)
@@ -156,15 +156,15 @@ namespace GUI
                     PhongTroBLL.update(phong);
                     loadPhong(phong.HostelID);
                 }
-
                 MessageBox.Show(textmessage, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                setSaveClose(false);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Thất bại: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            setEnableTxtCmb(false);
             setButtonCUD(true, true, true);
-            setSaveClose(false);
         }
 
         private void setButtonCUD(bool c, bool u, bool d)
@@ -188,7 +188,8 @@ namespace GUI
             tnplayoutInfoRoom.Visible = true;
             setEnableTxtCmb(true);
             btnSave.Visible = true;
-            txtTenPhong.Enabled = false;
+            txtIdRoom.Enabled = false;
+            txtIdRoom.Text = (PhongTroBLL.getList().Last().RoomID + 1).ToString() ;
             setButtonCUD(true, false, false);
             pannelMain.Visible = true;
             resetButtonPhong();
