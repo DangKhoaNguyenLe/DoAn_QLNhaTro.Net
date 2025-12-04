@@ -150,8 +150,8 @@ namespace GUI
         {
             btnAddDayNha.Visible = false;
             lbname.Text = nameLable;
-            lbname.ForeColor = Color.Black;
-            panel1.BackColor = Color.Gold;
+            lbname.ForeColor = Color.White;
+            panel1.BackColor = Color.Black;
             btnSua.Visible = true;
             loadDataFormEdit();
         }

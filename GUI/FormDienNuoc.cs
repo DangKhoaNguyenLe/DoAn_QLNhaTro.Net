@@ -196,6 +196,7 @@ namespace GUI
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.Message);
                 }
             }
             else
@@ -223,7 +224,9 @@ namespace GUI
                     cmbPhong.SelectedIndex = -1;
                     cmbHopDong.DataSource = null;
                 }
-                catch (Exception ex) { }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
             }
             else
             {
@@ -385,7 +388,7 @@ namespace GUI
                 }
                 catch (Exception ex)
                 {
-
+                    MessageBox.Show(ex.Message);
                 }
             }
             else

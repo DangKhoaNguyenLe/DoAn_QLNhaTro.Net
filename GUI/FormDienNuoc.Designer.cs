@@ -63,6 +63,10 @@
             this.cmbLocNha = new System.Windows.Forms.ComboBox();
             this.btnLoc = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.cardTongThuNuoc = new GUI.StatCard();
+            this.cardTongThuDien = new GUI.StatCard();
+            this.cardTongSoNuoc = new GUI.StatCard();
+            this.cardTongSoDien = new GUI.StatCard();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -88,10 +92,6 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.cardTongThuNuoc = new GUI.StatCard();
-            this.cardTongThuDien = new GUI.StatCard();
-            this.cardTongSoNuoc = new GUI.StatCard();
-            this.cardTongSoDien = new GUI.StatCard();
             this.tblLayout_DienNuoc.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -156,7 +156,7 @@
             this.cmbPhong.Location = new System.Drawing.Point(382, 100);
             this.cmbPhong.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPhong.Name = "cmbPhong";
-            this.cmbPhong.Size = new System.Drawing.Size(343, 33);
+            this.cmbPhong.Size = new System.Drawing.Size(343, 28);
             this.cmbPhong.TabIndex = 10;
             // 
             // label1
@@ -242,7 +242,7 @@
             this.cmbNha.Location = new System.Drawing.Point(4, 100);
             this.cmbNha.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNha.Name = "cmbNha";
-            this.cmbNha.Size = new System.Drawing.Size(343, 33);
+            this.cmbNha.Size = new System.Drawing.Size(343, 28);
             this.cmbNha.TabIndex = 9;
             // 
             // dtpMonth
@@ -251,7 +251,7 @@
             this.dtpMonth.Location = new System.Drawing.Point(760, 100);
             this.dtpMonth.Margin = new System.Windows.Forms.Padding(4);
             this.dtpMonth.Name = "dtpMonth";
-            this.dtpMonth.Size = new System.Drawing.Size(343, 30);
+            this.dtpMonth.Size = new System.Drawing.Size(343, 26);
             this.dtpMonth.TabIndex = 11;
             // 
             // dtpNgayChot
@@ -260,7 +260,7 @@
             this.dtpNgayChot.Location = new System.Drawing.Point(1516, 100);
             this.dtpNgayChot.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgayChot.Name = "dtpNgayChot";
-            this.dtpNgayChot.Size = new System.Drawing.Size(343, 30);
+            this.dtpNgayChot.Size = new System.Drawing.Size(343, 26);
             this.dtpNgayChot.TabIndex = 12;
             this.dtpNgayChot.Value = new System.DateTime(2025, 12, 3, 0, 0, 0, 0);
             // 
@@ -271,7 +271,7 @@
             this.cmbHopDong.Location = new System.Drawing.Point(1138, 100);
             this.cmbHopDong.Margin = new System.Windows.Forms.Padding(4);
             this.cmbHopDong.Name = "cmbHopDong";
-            this.cmbHopDong.Size = new System.Drawing.Size(343, 33);
+            this.cmbHopDong.Size = new System.Drawing.Size(343, 28);
             this.cmbHopDong.TabIndex = 13;
             // 
             // label4
@@ -304,7 +304,7 @@
             this.label9.Location = new System.Drawing.Point(355, 60);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 25);
+            this.label9.Size = new System.Drawing.Size(0, 20);
             this.label9.TabIndex = 16;
             // 
             // label10
@@ -337,7 +337,7 @@
             this.txtSoDienDau.Location = new System.Drawing.Point(4, 180);
             this.txtSoDienDau.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDienDau.Name = "txtSoDienDau";
-            this.txtSoDienDau.Size = new System.Drawing.Size(343, 30);
+            this.txtSoDienDau.Size = new System.Drawing.Size(343, 26);
             this.txtSoDienDau.TabIndex = 19;
             // 
             // txtSoDienCuoi
@@ -346,7 +346,7 @@
             this.txtSoDienCuoi.Location = new System.Drawing.Point(382, 180);
             this.txtSoDienCuoi.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDienCuoi.Name = "txtSoDienCuoi";
-            this.txtSoDienCuoi.Size = new System.Drawing.Size(343, 30);
+            this.txtSoDienCuoi.Size = new System.Drawing.Size(343, 26);
             this.txtSoDienCuoi.TabIndex = 20;
             // 
             // txtSoNuocDau
@@ -355,7 +355,7 @@
             this.txtSoNuocDau.Location = new System.Drawing.Point(760, 180);
             this.txtSoNuocDau.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoNuocDau.Name = "txtSoNuocDau";
-            this.txtSoNuocDau.Size = new System.Drawing.Size(343, 30);
+            this.txtSoNuocDau.Size = new System.Drawing.Size(343, 26);
             this.txtSoNuocDau.TabIndex = 21;
             // 
             // txtSoNuocCuoi
@@ -364,7 +364,7 @@
             this.txtSoNuocCuoi.Location = new System.Drawing.Point(1138, 180);
             this.txtSoNuocCuoi.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoNuocCuoi.Name = "txtSoNuocCuoi";
-            this.txtSoNuocCuoi.Size = new System.Drawing.Size(343, 30);
+            this.txtSoNuocCuoi.Size = new System.Drawing.Size(343, 26);
             this.txtSoNuocCuoi.TabIndex = 22;
             // 
             // btnHoanThanh
@@ -417,7 +417,7 @@
             this.dtpChonNgayKT.Location = new System.Drawing.Point(1510, 37);
             this.dtpChonNgayKT.Margin = new System.Windows.Forms.Padding(4);
             this.dtpChonNgayKT.Name = "dtpChonNgayKT";
-            this.dtpChonNgayKT.Size = new System.Drawing.Size(349, 30);
+            this.dtpChonNgayKT.Size = new System.Drawing.Size(349, 26);
             this.dtpChonNgayKT.TabIndex = 13;
             this.dtpChonNgayKT.Value = new System.DateTime(2025, 12, 3, 23, 24, 12, 0);
             // 
@@ -427,7 +427,7 @@
             this.dtpChonNgayBD.Location = new System.Drawing.Point(1068, 37);
             this.dtpChonNgayBD.Margin = new System.Windows.Forms.Padding(4);
             this.dtpChonNgayBD.Name = "dtpChonNgayBD";
-            this.dtpChonNgayBD.Size = new System.Drawing.Size(346, 30);
+            this.dtpChonNgayBD.Size = new System.Drawing.Size(346, 26);
             this.dtpChonNgayBD.TabIndex = 12;
             this.dtpChonNgayBD.Value = new System.DateTime(2025, 12, 3, 23, 24, 5, 0);
             // 
@@ -438,7 +438,7 @@
             this.cmbLocPhong.Location = new System.Drawing.Point(626, 37);
             this.cmbLocPhong.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLocPhong.Name = "cmbLocPhong";
-            this.cmbLocPhong.Size = new System.Drawing.Size(346, 33);
+            this.cmbLocPhong.Size = new System.Drawing.Size(346, 28);
             this.cmbLocPhong.TabIndex = 6;
             // 
             // label19
@@ -500,7 +500,7 @@
             this.cmbLocNha.Location = new System.Drawing.Point(184, 37);
             this.cmbLocNha.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLocNha.Name = "cmbLocNha";
-            this.cmbLocNha.Size = new System.Drawing.Size(346, 33);
+            this.cmbLocNha.Size = new System.Drawing.Size(346, 28);
             this.cmbLocNha.TabIndex = 4;
             // 
             // btnLoc
@@ -537,6 +537,50 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1863, 144);
             this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // cardTongThuNuoc
+            // 
+            this.cardTongThuNuoc.BackColor = System.Drawing.Color.White;
+            this.cardTongThuNuoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardTongThuNuoc.Location = new System.Drawing.Point(1399, 4);
+            this.cardTongThuNuoc.Margin = new System.Windows.Forms.Padding(4);
+            this.cardTongThuNuoc.Name = "cardTongThuNuoc";
+            this.cardTongThuNuoc.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
+            this.cardTongThuNuoc.Size = new System.Drawing.Size(460, 136);
+            this.cardTongThuNuoc.TabIndex = 3;
+            // 
+            // cardTongThuDien
+            // 
+            this.cardTongThuDien.BackColor = System.Drawing.Color.White;
+            this.cardTongThuDien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardTongThuDien.Location = new System.Drawing.Point(934, 4);
+            this.cardTongThuDien.Margin = new System.Windows.Forms.Padding(4);
+            this.cardTongThuDien.Name = "cardTongThuDien";
+            this.cardTongThuDien.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
+            this.cardTongThuDien.Size = new System.Drawing.Size(457, 136);
+            this.cardTongThuDien.TabIndex = 2;
+            // 
+            // cardTongSoNuoc
+            // 
+            this.cardTongSoNuoc.BackColor = System.Drawing.Color.White;
+            this.cardTongSoNuoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardTongSoNuoc.Location = new System.Drawing.Point(469, 4);
+            this.cardTongSoNuoc.Margin = new System.Windows.Forms.Padding(4);
+            this.cardTongSoNuoc.Name = "cardTongSoNuoc";
+            this.cardTongSoNuoc.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
+            this.cardTongSoNuoc.Size = new System.Drawing.Size(457, 136);
+            this.cardTongSoNuoc.TabIndex = 1;
+            // 
+            // cardTongSoDien
+            // 
+            this.cardTongSoDien.BackColor = System.Drawing.Color.White;
+            this.cardTongSoDien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardTongSoDien.Location = new System.Drawing.Point(4, 4);
+            this.cardTongSoDien.Margin = new System.Windows.Forms.Padding(4);
+            this.cardTongSoDien.Name = "cardTongSoDien";
+            this.cardTongSoDien.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
+            this.cardTongSoDien.Size = new System.Drawing.Size(457, 136);
+            this.cardTongSoDien.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
@@ -621,7 +665,7 @@
             this.txtTimNha.Location = new System.Drawing.Point(184, 35);
             this.txtTimNha.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimNha.Name = "txtTimNha";
-            this.txtTimNha.Size = new System.Drawing.Size(534, 30);
+            this.txtTimNha.Size = new System.Drawing.Size(534, 26);
             this.txtTimNha.TabIndex = 4;
             // 
             // txtTimPhong
@@ -630,7 +674,7 @@
             this.txtTimPhong.Location = new System.Drawing.Point(753, 35);
             this.txtTimPhong.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimPhong.Name = "txtTimPhong";
-            this.txtTimPhong.Size = new System.Drawing.Size(534, 30);
+            this.txtTimPhong.Size = new System.Drawing.Size(534, 26);
             this.txtTimPhong.TabIndex = 5;
             // 
             // txtTimHopDong
@@ -639,7 +683,7 @@
             this.txtTimHopDong.Location = new System.Drawing.Point(1322, 35);
             this.txtTimHopDong.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimHopDong.Name = "txtTimHopDong";
-            this.txtTimHopDong.Size = new System.Drawing.Size(537, 30);
+            this.txtTimHopDong.Size = new System.Drawing.Size(537, 26);
             this.txtTimHopDong.TabIndex = 6;
             // 
             // tableLayoutPanel4
@@ -657,7 +701,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
             this.tableLayoutPanel4.Controls.Add(this.dgvDienNuoc, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 500);
@@ -850,56 +894,12 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1863, 49);
             this.tableLayoutPanel5.TabIndex = 7;
             // 
-            // cardTongThuNuoc
-            // 
-            this.cardTongThuNuoc.BackColor = System.Drawing.Color.White;
-            this.cardTongThuNuoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardTongThuNuoc.Location = new System.Drawing.Point(1399, 4);
-            this.cardTongThuNuoc.Margin = new System.Windows.Forms.Padding(4);
-            this.cardTongThuNuoc.Name = "cardTongThuNuoc";
-            this.cardTongThuNuoc.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
-            this.cardTongThuNuoc.Size = new System.Drawing.Size(460, 136);
-            this.cardTongThuNuoc.TabIndex = 3;
-            // 
-            // cardTongThuDien
-            // 
-            this.cardTongThuDien.BackColor = System.Drawing.Color.White;
-            this.cardTongThuDien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardTongThuDien.Location = new System.Drawing.Point(934, 4);
-            this.cardTongThuDien.Margin = new System.Windows.Forms.Padding(4);
-            this.cardTongThuDien.Name = "cardTongThuDien";
-            this.cardTongThuDien.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
-            this.cardTongThuDien.Size = new System.Drawing.Size(457, 136);
-            this.cardTongThuDien.TabIndex = 2;
-            // 
-            // cardTongSoNuoc
-            // 
-            this.cardTongSoNuoc.BackColor = System.Drawing.Color.White;
-            this.cardTongSoNuoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardTongSoNuoc.Location = new System.Drawing.Point(469, 4);
-            this.cardTongSoNuoc.Margin = new System.Windows.Forms.Padding(4);
-            this.cardTongSoNuoc.Name = "cardTongSoNuoc";
-            this.cardTongSoNuoc.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
-            this.cardTongSoNuoc.Size = new System.Drawing.Size(457, 136);
-            this.cardTongSoNuoc.TabIndex = 1;
-            // 
-            // cardTongSoDien
-            // 
-            this.cardTongSoDien.BackColor = System.Drawing.Color.White;
-            this.cardTongSoDien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardTongSoDien.Location = new System.Drawing.Point(4, 4);
-            this.cardTongSoDien.Margin = new System.Windows.Forms.Padding(4);
-            this.cardTongSoDien.Name = "cardTongSoDien";
-            this.cardTongSoDien.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
-            this.cardTongSoDien.Size = new System.Drawing.Size(457, 136);
-            this.cardTongSoDien.TabIndex = 0;
-            // 
             // FormDienNuoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1863, 1191);
+            this.ClientSize = new System.Drawing.Size(1863, 1055);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);

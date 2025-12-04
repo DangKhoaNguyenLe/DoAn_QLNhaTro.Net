@@ -1,8 +1,10 @@
-﻿using DAL;
+﻿
+using DTO;
 using DTO.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace DAL
 {
@@ -37,5 +39,67 @@ namespace DAL
 
             return list;
         }
+        public bool Add(KhachThueDTO kh)
+        {
+            try
+            {
+                khachthue.Insert(
+                    kh.UserID,
+                    kh.FullName,
+                    kh.Phone,
+                    kh.Email,
+                    kh.BirthDate,
+                    kh.Address,
+                    kh.CCCD,
+                    kh.NgayCap,
+                    kh.NoiCap,
+                    "",
+                    kh.Status,
+                    kh.RoomId);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL: " + ex.Message, ex);
+            }
+        }
+
+        public bool delete(int id)
+        {
+            try
+            {
+                khachthue.DeleteKH(id);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL: " + ex.Message, ex);
+            }
+        }
+
+        public bool update(KhachThueDTO kh)
+        {
+            try
+            {
+                khachthue.UpdateKH(
+                    kh.FullName,
+                    kh.Phone,
+                    kh.Email,
+                    kh.BirthDate.ToString(),
+                    kh.Address,
+                    kh.CCCD,
+                    kh.NgayCap.ToString(),
+                    kh.NoiCap,
+                    kh.Status,
+                    kh.RoomId,
+                    kh.TenantID);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL: " + ex.Message, ex);
+            }
+        }
     }
+
 }

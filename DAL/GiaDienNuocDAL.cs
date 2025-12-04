@@ -53,11 +53,11 @@ namespace DAL
         {
             try
             {
-                /*GiaDienNuoc.UpdateGiaDienNuoc(
+                GiaDienNuoc.UpdateGiaDienNuoc(
                      gdn.GiaDien
                     , gdn.GiaNuoc
                     , gdn.TrangThai
-                    , gdn.HostelID);*/
+                    , gdn.HostelID);
                 return true;
             }
             catch (SqlException ex)
