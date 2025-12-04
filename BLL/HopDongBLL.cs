@@ -2,6 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,44 +12,47 @@ namespace BLL
     public class HopDongBLL
     {
         private HopDongDAL dal = new HopDongDAL();
+        private DayNhaBLL dayNhaBLL = new DayNhaBLL();
+
+        public bool XoaHopDong(int contractID)
+        {
+            return dal.XoaHopDong(contractID);
+        }
+
+        public DataTable LayDanhSachHD()
+        {
+            return dal.LayDSHD();
+        }
 
         public List<DanhSachHopDongDTO> LayDanhSachHopDong()
         {
-            return dal.GetDanhSachHopDong();
+            List<DayNhaDTO> danhSachDay = dayNhaBLL.getListByAdmin();
+
+            List<DanhSachHopDongDTO> all = dal.GetDanhSachHopDong();
+
+            List<string> tenDay = danhSachDay.Select(t => t.HostelName).ToList();
+
+            return all.Where(hd => tenDay.Contains(hd.HostelName)).ToList();
+
         }
 
+        public List<DanhSachHopDongDTO> LayHopDongTheoDay(string hostelName)
+        {
+            List<DanhSachHopDongDTO> dshd = dal.GetDanhSachHopDong();
+            return dshd.Where(t => t.HostelName == hostelName).ToList();
+        }
 
-        //public List<HopDongDTO> GetDanhSachHopDong()
-        //{
-        //    return dal.GetDanhSachHopDong();
-        //}
+        public List<DanhSachHopDongDTO> TimKiemTheoTen(string keyword, string tenDay)
+        {
+            List<DanhSachHopDongDTO> dsTheoDay = LayHopDongTheoDay(tenDay);
 
+            return dsTheoDay.Where(hd => hd.FullName != null &&hd.FullName.ToLower().Contains(keyword.ToLower())).ToList();
+        }
+
+        public bool ThemHopDong(HopDongDTO c)
+        {
+            return dal.Insert(c);
+        }
     }
 
 }
-//    public string Insert(ContractDTO c)
-//    {
-//        if (c.NgayBatDau >= c.NgayKetThuc)
-//            return "Ngày bắt đầu phải nhỏ hơn ngày kết thúc!";
-
-//        return dal.Insert(c) ? "OK" : "Lỗi khi thêm hợp đồng";
-//    }
-
-//    public string Update(ContractDTO c)
-//    {
-//        if (c.NgayBatDau >= c.NgayKetThuc)
-//            return "Ngày bắt đầu phải nhỏ hơn ngày kết thúc!";
-
-//        return dal.Update(c) ? "OK" : "Lỗi khi cập nhật hợp đồng";
-//    }
-
-//    public bool Delete(int id)
-//    {
-//        return dal.Delete(id);
-//    }
-
-//    public ContractDTO GetByID(int id)
-//    {
-//        return dal.GetByID(id);
-//    }
-//}

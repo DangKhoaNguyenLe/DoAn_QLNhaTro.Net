@@ -90,5 +90,17 @@ namespace DAL
             }
         }
 
+        public bool UpdateSoNguoiDaThue(int roomID, int soNguoiDaThue)
+        {
+            try
+            {
+                room.UpdateSoNguoiDaThue(soNguoiDaThue, roomID);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL: " + ex.Message, ex);
+            }
+        }
     }
 }
