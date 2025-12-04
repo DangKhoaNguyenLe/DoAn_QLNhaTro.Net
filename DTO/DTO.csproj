@@ -49,6 +49,7 @@
     <Compile Include="GiaDienNuocDTO.cs" />
     <Compile Include="KhachThueDTO.cs" />
     <Compile Include="NhaTroDTO.cs" />
+    <Compile Include="PhieuThuDTO.cs" />
     <Compile Include="PhongTroDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThongKeDienNuocDTO.cs" />

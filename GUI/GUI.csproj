@@ -83,6 +83,12 @@
     <Compile Include="FormKhachThue.Designer.cs">
       <DependentUpon>FormKhachThue.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhieuThu.Designer.cs">
+      <DependentUpon>FormPhieuThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemDayNha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     <EmbeddedResource Include="FormKhachThue.resx">
       <DependentUpon>FormKhachThue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPhieuThu.resx">
+      <DependentUpon>FormPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThemDayNha.resx">
       <DependentUpon>FormThemDayNha.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +223,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{598fb54a-c147-4470-b410-d0cb6d819ce9}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{5351C023-0432-4C2D-A20F-BC121510A5B1}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{4194efe2-36a5-4ba2-b596-825886107e4f}</Project>

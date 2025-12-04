@@ -49,6 +49,7 @@
     <Compile Include="GiaDienNuocBLL.cs" />
     <Compile Include="HopDongBLL.cs" />
     <Compile Include="KhachThueBLL.cs" />
+    <Compile Include="PhieuThuBLL.cs" />
     <Compile Include="PhongTroBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThongKeBLL.cs" />

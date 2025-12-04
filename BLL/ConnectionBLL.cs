@@ -18,6 +18,7 @@ namespace BLL
         protected KhachThueDAL khachThueDAL;
         protected ViewPhieuThuDAL v_phieuThuDAL;
         protected BillDAL billDAL;
+        protected PhieuThuDAL phieuThuDAL;
         public ConnectionBLL() { 
             dayNha = new DayNhaDAL();
             user = new UserDAL();
@@ -26,6 +27,7 @@ namespace BLL
             khachThueDAL = new KhachThueDAL();
             v_phieuThuDAL = new ViewPhieuThuDAL();
             billDAL = new BillDAL();
+            phieuThuDAL = new PhieuThuDAL();
         }
     }
 }

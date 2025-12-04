@@ -60,3 +60,5 @@ D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\bin\Debug\DTO.pdb
 D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\bin\Debug\DAL.pdb
 D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\bin\Debug\DAL.dll.config
 D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\obj\Debug\GUI.csproj.Up2Date
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\obj\Debug\GUI.exe.config
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\GUI\obj\Debug\GUI.FormPhieuThu.resources

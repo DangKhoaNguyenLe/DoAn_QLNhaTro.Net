@@ -57,7 +57,7 @@ namespace GUI
 
         private void Button_phieuthu_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormDSPhieuThu());
+            OpenChildForm(new FormPhieuThu());
         }
 
         private void Button_taichinh_Click(object sender, EventArgs e)

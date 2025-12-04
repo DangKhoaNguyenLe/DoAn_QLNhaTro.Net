@@ -63,6 +63,10 @@
             this.cmbLocNha = new System.Windows.Forms.ComboBox();
             this.btnLoc = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.cardTongThuNuoc = new GUI.StatCard();
+            this.cardTongThuDien = new GUI.StatCard();
+            this.cardTongSoNuoc = new GUI.StatCard();
+            this.cardTongSoDien = new GUI.StatCard();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -88,10 +92,6 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.cardTongThuNuoc = new GUI.StatCard();
-            this.cardTongThuDien = new GUI.StatCard();
-            this.cardTongSoNuoc = new GUI.StatCard();
-            this.cardTongSoDien = new GUI.StatCard();
             this.tblLayout_DienNuoc.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -538,6 +538,50 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1863, 144);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
+            // cardTongThuNuoc
+            // 
+            this.cardTongThuNuoc.BackColor = System.Drawing.Color.White;
+            this.cardTongThuNuoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardTongThuNuoc.Location = new System.Drawing.Point(1399, 4);
+            this.cardTongThuNuoc.Margin = new System.Windows.Forms.Padding(4);
+            this.cardTongThuNuoc.Name = "cardTongThuNuoc";
+            this.cardTongThuNuoc.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
+            this.cardTongThuNuoc.Size = new System.Drawing.Size(460, 136);
+            this.cardTongThuNuoc.TabIndex = 3;
+            // 
+            // cardTongThuDien
+            // 
+            this.cardTongThuDien.BackColor = System.Drawing.Color.White;
+            this.cardTongThuDien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardTongThuDien.Location = new System.Drawing.Point(934, 4);
+            this.cardTongThuDien.Margin = new System.Windows.Forms.Padding(4);
+            this.cardTongThuDien.Name = "cardTongThuDien";
+            this.cardTongThuDien.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
+            this.cardTongThuDien.Size = new System.Drawing.Size(457, 136);
+            this.cardTongThuDien.TabIndex = 2;
+            // 
+            // cardTongSoNuoc
+            // 
+            this.cardTongSoNuoc.BackColor = System.Drawing.Color.White;
+            this.cardTongSoNuoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardTongSoNuoc.Location = new System.Drawing.Point(469, 4);
+            this.cardTongSoNuoc.Margin = new System.Windows.Forms.Padding(4);
+            this.cardTongSoNuoc.Name = "cardTongSoNuoc";
+            this.cardTongSoNuoc.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
+            this.cardTongSoNuoc.Size = new System.Drawing.Size(457, 136);
+            this.cardTongSoNuoc.TabIndex = 1;
+            // 
+            // cardTongSoDien
+            // 
+            this.cardTongSoDien.BackColor = System.Drawing.Color.White;
+            this.cardTongSoDien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardTongSoDien.Location = new System.Drawing.Point(4, 4);
+            this.cardTongSoDien.Margin = new System.Windows.Forms.Padding(4);
+            this.cardTongSoDien.Name = "cardTongSoDien";
+            this.cardTongSoDien.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
+            this.cardTongSoDien.Size = new System.Drawing.Size(457, 136);
+            this.cardTongSoDien.TabIndex = 0;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 6;
@@ -657,7 +701,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
             this.tableLayoutPanel4.Controls.Add(this.dgvDienNuoc, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 500);
@@ -849,50 +893,6 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1863, 49);
             this.tableLayoutPanel5.TabIndex = 7;
-            // 
-            // cardTongThuNuoc
-            // 
-            this.cardTongThuNuoc.BackColor = System.Drawing.Color.White;
-            this.cardTongThuNuoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardTongThuNuoc.Location = new System.Drawing.Point(1399, 4);
-            this.cardTongThuNuoc.Margin = new System.Windows.Forms.Padding(4);
-            this.cardTongThuNuoc.Name = "cardTongThuNuoc";
-            this.cardTongThuNuoc.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
-            this.cardTongThuNuoc.Size = new System.Drawing.Size(460, 136);
-            this.cardTongThuNuoc.TabIndex = 3;
-            // 
-            // cardTongThuDien
-            // 
-            this.cardTongThuDien.BackColor = System.Drawing.Color.White;
-            this.cardTongThuDien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardTongThuDien.Location = new System.Drawing.Point(934, 4);
-            this.cardTongThuDien.Margin = new System.Windows.Forms.Padding(4);
-            this.cardTongThuDien.Name = "cardTongThuDien";
-            this.cardTongThuDien.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
-            this.cardTongThuDien.Size = new System.Drawing.Size(457, 136);
-            this.cardTongThuDien.TabIndex = 2;
-            // 
-            // cardTongSoNuoc
-            // 
-            this.cardTongSoNuoc.BackColor = System.Drawing.Color.White;
-            this.cardTongSoNuoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardTongSoNuoc.Location = new System.Drawing.Point(469, 4);
-            this.cardTongSoNuoc.Margin = new System.Windows.Forms.Padding(4);
-            this.cardTongSoNuoc.Name = "cardTongSoNuoc";
-            this.cardTongSoNuoc.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
-            this.cardTongSoNuoc.Size = new System.Drawing.Size(457, 136);
-            this.cardTongSoNuoc.TabIndex = 1;
-            // 
-            // cardTongSoDien
-            // 
-            this.cardTongSoDien.BackColor = System.Drawing.Color.White;
-            this.cardTongSoDien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardTongSoDien.Location = new System.Drawing.Point(4, 4);
-            this.cardTongSoDien.Margin = new System.Windows.Forms.Padding(4);
-            this.cardTongSoDien.Name = "cardTongSoDien";
-            this.cardTongSoDien.Padding = new System.Windows.Forms.Padding(20, 12, 20, 12);
-            this.cardTongSoDien.Size = new System.Drawing.Size(457, 136);
-            this.cardTongSoDien.TabIndex = 0;
             // 
             // FormDienNuoc
             // 
