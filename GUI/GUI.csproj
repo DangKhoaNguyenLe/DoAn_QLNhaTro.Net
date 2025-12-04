@@ -83,6 +83,12 @@
     <Compile Include="FormKhachThue.Designer.cs">
       <DependentUpon>FormKhachThue.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSuaHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaHopDong.Designer.cs">
+      <DependentUpon>FormSuaHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemDayNha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,17 +113,17 @@
     <Compile Include="FormQuenMatKhau.Designer.cs">
       <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTaiKhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTaiKhoan.Designer.cs">
-      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormThemHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormThemHopDong.Designer.cs">
       <DependentUpon>FormThemHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemKhachThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemKhachThue.Designer.cs">
+      <DependentUpon>FormThemKhachThue.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThongKe.cs">
       <SubType>Form</SubType>
@@ -160,6 +166,9 @@
     <EmbeddedResource Include="FormKhachThue.resx">
       <DependentUpon>FormKhachThue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaHopDong.resx">
+      <DependentUpon>FormSuaHopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThemDayNha.resx">
       <DependentUpon>FormThemDayNha.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,11 +181,11 @@
     <EmbeddedResource Include="FormQuenMatKhau.resx">
       <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTaiKhoan.resx">
-      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormThemHopDong.resx">
       <DependentUpon>FormThemHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemKhachThue.resx">
+      <DependentUpon>FormThemKhachThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
@@ -223,5 +232,6 @@
   <ItemGroup>
     <None Include="Resources\Them.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

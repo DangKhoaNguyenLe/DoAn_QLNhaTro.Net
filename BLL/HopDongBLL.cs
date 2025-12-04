@@ -23,10 +23,6 @@ namespace BLL
         {
             return dal.LayDSHD();
         }
-        public List<HopDongDTO> getList()
-        {
-            return dal.GetDanhSachHD();
-        }
 
         public List<DanhSachHopDongDTO> LayDanhSachHopDong()
         {
@@ -56,6 +52,22 @@ namespace BLL
         public bool ThemHopDong(HopDongDTO c)
         {
             return dal.Insert(c);
+        }
+
+        public bool CapNhatHopDong(HopDongDTO hd)
+        {
+            return dal.CapNhatHopDong(hd);
+        }
+
+        public HopDongDTO LayHopDongTheoID(int id)
+        {
+            return dal.LayHopDongTheoID(id);
+        }
+
+
+        public int LayMaxContractID()
+        {
+            return dal.GetMaxContractID();
         }
     }
 

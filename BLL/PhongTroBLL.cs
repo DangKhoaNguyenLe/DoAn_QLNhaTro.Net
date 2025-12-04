@@ -71,21 +71,5 @@ namespace BLL
             var dsPhong = getListByHostel(hostelID);
             return dsPhong.Where(p => p.soNguoiDaThue < 2).ToList();
         }
-
-        public bool UpdateSoNguoiDaThue(int roomID, int soNguoi)
-        {
-            try
-            {
-                var phong = FindByID(roomID);
-                if (phong == null)
-                    throw new Exception("Phòng không tồn tại");
-                phong.soNguoiDaThue = soNguoi;
-                return update(phong);
-            }
-            catch (SqlException ex)
-            {
-                throw new Exception("Lỗi CSDL " + ex.Message, ex);
-            }
-        }
     }
 }

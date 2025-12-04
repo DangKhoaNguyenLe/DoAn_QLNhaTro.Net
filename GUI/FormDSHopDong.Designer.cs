@@ -30,10 +30,21 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDSHopDong));
             this.panel_title = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_dshopdong = new System.Windows.Forms.DataGridView();
+            this.ContractCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContractID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TienPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TienCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox_daynha = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox_lammoi = new System.Windows.Forms.PictureBox();
@@ -50,16 +61,6 @@ namespace GUI
             this.panel_bottom = new System.Windows.Forms.Panel();
             this.panel_dtgv = new System.Windows.Forms.Panel();
             this.panel_timkiem = new System.Windows.Forms.Panel();
-            this.ContractCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContractID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TienPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TienCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_dshopdong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_lammoi)).BeginInit();
@@ -98,7 +99,7 @@ namespace GUI
             this.dataGridView_dshopdong.AllowUserToAddRows = false;
             this.dataGridView_dshopdong.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView_dshopdong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_dshopdong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -112,7 +113,7 @@ namespace GUI
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView_dshopdong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView_dshopdong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_dshopdong.ColumnHeadersHeight = 50;
             this.dataGridView_dshopdong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ContractCode,
             this.ContractID,
@@ -125,10 +126,10 @@ namespace GUI
             this.TrangThai,
             this.CreatedDate});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Bisque;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_dshopdong.DefaultCellStyle = dataGridViewCellStyle3;
@@ -138,15 +139,113 @@ namespace GUI
             this.dataGridView_dshopdong.MultiSelect = false;
             this.dataGridView_dshopdong.Name = "dataGridView_dshopdong";
             this.dataGridView_dshopdong.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_dshopdong.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_dshopdong.RowHeadersVisible = false;
             this.dataGridView_dshopdong.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView_dshopdong.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView_dshopdong.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_dshopdong.RowTemplate.Height = 40;
             this.dataGridView_dshopdong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_dshopdong.Size = new System.Drawing.Size(1015, 345);
             this.dataGridView_dshopdong.TabIndex = 6;
+            // 
+            // ContractCode
+            // 
+            this.ContractCode.DataPropertyName = "ContractCode";
+            this.ContractCode.FillWeight = 101.0934F;
+            this.ContractCode.HeaderText = "Mã hợp đồng";
+            this.ContractCode.MinimumWidth = 6;
+            this.ContractCode.Name = "ContractCode";
+            this.ContractCode.ReadOnly = true;
+            // 
+            // ContractID
+            // 
+            this.ContractID.DataPropertyName = "ContractID";
+            this.ContractID.HeaderText = "ContractID";
+            this.ContractID.MinimumWidth = 6;
+            this.ContractID.Name = "ContractID";
+            this.ContractID.ReadOnly = true;
+            this.ContractID.Visible = false;
+            // 
+            // RoomName
+            // 
+            this.RoomName.DataPropertyName = "RoomName";
+            this.RoomName.FillWeight = 100.1654F;
+            this.RoomName.HeaderText = "Phòng";
+            this.RoomName.MinimumWidth = 6;
+            this.RoomName.Name = "RoomName";
+            this.RoomName.ReadOnly = true;
+            // 
+            // FullName
+            // 
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.FillWeight = 101.1302F;
+            this.FullName.HeaderText = "Khách thuê";
+            this.FullName.MinimumWidth = 6;
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            // 
+            // NgayBatDau
+            // 
+            this.NgayBatDau.DataPropertyName = "NgayBatDau";
+            this.NgayBatDau.FillWeight = 101.0924F;
+            this.NgayBatDau.HeaderText = "Ngày bắt đầu";
+            this.NgayBatDau.MinimumWidth = 6;
+            this.NgayBatDau.Name = "NgayBatDau";
+            this.NgayBatDau.ReadOnly = true;
+            // 
+            // NgayKetThuc
+            // 
+            this.NgayKetThuc.DataPropertyName = "NgayKetThuc";
+            this.NgayKetThuc.FillWeight = 100.1644F;
+            this.NgayKetThuc.HeaderText = "Ngày kết thúc";
+            this.NgayKetThuc.MinimumWidth = 6;
+            this.NgayKetThuc.Name = "NgayKetThuc";
+            this.NgayKetThuc.ReadOnly = true;
+            // 
+            // TienPhong
+            // 
+            this.TienPhong.DataPropertyName = "TienPhong";
+            this.TienPhong.FillWeight = 101.1294F;
+            this.TienPhong.HeaderText = "Tiền phòng";
+            this.TienPhong.MinimumWidth = 6;
+            this.TienPhong.Name = "TienPhong";
+            this.TienPhong.ReadOnly = true;
+            // 
+            // TienCoc
+            // 
+            this.TienCoc.DataPropertyName = "TienCoc";
+            this.TienCoc.FillWeight = 101.0916F;
+            this.TienCoc.HeaderText = "Tiền cọc";
+            this.TienCoc.MinimumWidth = 6;
+            this.TienCoc.Name = "TienCoc";
+            this.TienCoc.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.FillWeight = 100.1638F;
+            this.TrangThai.HeaderText = "Trạng thái";
+            this.TrangThai.MinimumWidth = 6;
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
+            // CreatedDate
+            // 
+            this.CreatedDate.DataPropertyName = "CreatedDate";
+            this.CreatedDate.FillWeight = 93.96925F;
+            this.CreatedDate.HeaderText = "Ngày tạo";
+            this.CreatedDate.MinimumWidth = 6;
+            this.CreatedDate.Name = "CreatedDate";
+            this.CreatedDate.ReadOnly = true;
             // 
             // comboBox_daynha
             // 
@@ -176,7 +275,6 @@ namespace GUI
             this.pictureBox_lammoi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_lammoi.TabIndex = 10;
             this.pictureBox_lammoi.TabStop = false;
-            // 
             // pictureBox_timkiem
             // 
             this.pictureBox_timkiem.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_timkiem.Image")));
@@ -321,96 +419,6 @@ namespace GUI
             this.panel_timkiem.Name = "panel_timkiem";
             this.panel_timkiem.Size = new System.Drawing.Size(1019, 54);
             this.panel_timkiem.TabIndex = 9;
-            // 
-            // ContractCode
-            // 
-            this.ContractCode.DataPropertyName = "ContractCode";
-            this.ContractCode.FillWeight = 101.0934F;
-            this.ContractCode.HeaderText = "Mã hợp đồng";
-            this.ContractCode.MinimumWidth = 6;
-            this.ContractCode.Name = "ContractCode";
-            this.ContractCode.ReadOnly = true;
-            // 
-            // ContractID
-            // 
-            this.ContractID.DataPropertyName = "ContractID";
-            this.ContractID.HeaderText = "ContractID";
-            this.ContractID.MinimumWidth = 6;
-            this.ContractID.Name = "ContractID";
-            this.ContractID.ReadOnly = true;
-            this.ContractID.Visible = false;
-            // 
-            // RoomName
-            // 
-            this.RoomName.DataPropertyName = "RoomName";
-            this.RoomName.FillWeight = 100.1654F;
-            this.RoomName.HeaderText = "Phòng";
-            this.RoomName.MinimumWidth = 6;
-            this.RoomName.Name = "RoomName";
-            this.RoomName.ReadOnly = true;
-            // 
-            // FullName
-            // 
-            this.FullName.DataPropertyName = "FullName";
-            this.FullName.FillWeight = 101.1302F;
-            this.FullName.HeaderText = "Khách thuê";
-            this.FullName.MinimumWidth = 6;
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            // 
-            // NgayBatDau
-            // 
-            this.NgayBatDau.DataPropertyName = "NgayBatDau";
-            this.NgayBatDau.FillWeight = 101.0924F;
-            this.NgayBatDau.HeaderText = "Ngày bắt đầu";
-            this.NgayBatDau.MinimumWidth = 6;
-            this.NgayBatDau.Name = "NgayBatDau";
-            this.NgayBatDau.ReadOnly = true;
-            // 
-            // NgayKetThuc
-            // 
-            this.NgayKetThuc.DataPropertyName = "NgayKetThuc";
-            this.NgayKetThuc.FillWeight = 100.1644F;
-            this.NgayKetThuc.HeaderText = "Ngày kết thúc";
-            this.NgayKetThuc.MinimumWidth = 6;
-            this.NgayKetThuc.Name = "NgayKetThuc";
-            this.NgayKetThuc.ReadOnly = true;
-            // 
-            // TienPhong
-            // 
-            this.TienPhong.DataPropertyName = "TienPhong";
-            this.TienPhong.FillWeight = 101.1294F;
-            this.TienPhong.HeaderText = "Tiền phòng";
-            this.TienPhong.MinimumWidth = 6;
-            this.TienPhong.Name = "TienPhong";
-            this.TienPhong.ReadOnly = true;
-            // 
-            // TienCoc
-            // 
-            this.TienCoc.DataPropertyName = "TienCoc";
-            this.TienCoc.FillWeight = 101.0916F;
-            this.TienCoc.HeaderText = "Tiền cọc";
-            this.TienCoc.MinimumWidth = 6;
-            this.TienCoc.Name = "TienCoc";
-            this.TienCoc.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.FillWeight = 100.1638F;
-            this.TrangThai.HeaderText = "Trạng thái";
-            this.TrangThai.MinimumWidth = 6;
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            // 
-            // CreatedDate
-            // 
-            this.CreatedDate.DataPropertyName = "CreatedDate";
-            this.CreatedDate.FillWeight = 93.96925F;
-            this.CreatedDate.HeaderText = "Ngày tạo";
-            this.CreatedDate.MinimumWidth = 6;
-            this.CreatedDate.Name = "CreatedDate";
-            this.CreatedDate.ReadOnly = true;
             // 
             // FormDSHopDong
             // 

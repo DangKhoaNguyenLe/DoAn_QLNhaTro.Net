@@ -31,37 +31,37 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textbox_tienphong = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbname = new System.Windows.Forms.Label();
-            this.button_them = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox_tennhatro = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox_tenphong = new System.Windows.Forms.ComboBox();
             this.comboBox_kythanhtoan = new System.Windows.Forms.ComboBox();
-            this.comboBox_khachthue = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.comboBox_tennhatro = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker_ngaybatdau = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker_ngayketthuc = new System.Windows.Forms.DateTimePicker();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBox_khachthue = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox_tenphong = new System.Windows.Forms.ComboBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.textBox_tiencoc = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.numericUpDown_ngaychottien = new System.Windows.Forms.NumericUpDown();
-            this.dateTimePicker_ngaybatdau = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker_ngayketthuc = new System.Windows.Forms.DateTimePicker();
+            this.lbname = new System.Windows.Forms.Label();
+            this.button_them = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.label3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ngaychottien)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -97,6 +97,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kỳ thanh toán (*)";
             // 
+            // comboBox_kythanhtoan
+            // 
+            this.comboBox_kythanhtoan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_kythanhtoan.FormattingEnabled = true;
+            this.comboBox_kythanhtoan.Location = new System.Drawing.Point(3, 23);
+            this.comboBox_kythanhtoan.Name = "comboBox_kythanhtoan";
+            this.comboBox_kythanhtoan.Size = new System.Drawing.Size(237, 28);
+            this.comboBox_kythanhtoan.TabIndex = 13;
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.comboBox_tennhatro);
@@ -109,6 +118,15 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tên nhà trọ(*)";
             // 
+            // comboBox_tennhatro
+            // 
+            this.comboBox_tennhatro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_tennhatro.FormattingEnabled = true;
+            this.comboBox_tennhatro.Location = new System.Drawing.Point(3, 23);
+            this.comboBox_tennhatro.Name = "comboBox_tennhatro";
+            this.comboBox_tennhatro.Size = new System.Drawing.Size(237, 28);
+            this.comboBox_tennhatro.TabIndex = 0;
+            // 
             // label3
             // 
             this.label3.Controls.Add(this.dateTimePicker_ngaybatdau);
@@ -120,6 +138,16 @@
             this.label3.TabIndex = 5;
             this.label3.TabStop = false;
             this.label3.Text = "Ngày bắt đầu (*)";
+            // 
+            // dateTimePicker_ngaybatdau
+            // 
+            this.dateTimePicker_ngaybatdau.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker_ngaybatdau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker_ngaybatdau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_ngaybatdau.Location = new System.Drawing.Point(3, 23);
+            this.dateTimePicker_ngaybatdau.Name = "dateTimePicker_ngaybatdau";
+            this.dateTimePicker_ngaybatdau.Size = new System.Drawing.Size(237, 27);
+            this.dateTimePicker_ngaybatdau.TabIndex = 14;
             // 
             // tableLayoutPanel1
             // 
@@ -149,63 +177,28 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(489, 315);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
-            // lbname
+            // groupBox9
             // 
-            this.lbname.AutoSize = true;
-            this.lbname.BackColor = System.Drawing.Color.Navy;
-            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbname.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbname.Location = new System.Drawing.Point(105, 7);
-            this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(225, 32);
-            this.lbname.TabIndex = 0;
-            this.lbname.Text = "Thêm hợp đồng";
-            this.lbname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.groupBox9.Controls.Add(this.dateTimePicker_ngayketthuc);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(3, 193);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(243, 57);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Ngày kết thúc (*)";
             // 
-            // button_them
+            // dateTimePicker_ngayketthuc
             // 
-            this.button_them.BackColor = System.Drawing.Color.Navy;
-            this.button_them.FlatAppearance.BorderSize = 0;
-            this.button_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_them.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button_them.Location = new System.Drawing.Point(162, 383);
-            this.button_them.Name = "button_them";
-            this.button_them.Size = new System.Drawing.Size(170, 57);
-            this.button_them.TabIndex = 12;
-            this.button_them.Text = "Thêm";
-            this.button_them.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.lbname);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(489, 52);
-            this.panel1.TabIndex = 9;
-            // 
-            // comboBox_tennhatro
-            // 
-            this.comboBox_tennhatro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_tennhatro.FormattingEnabled = true;
-            this.comboBox_tennhatro.Location = new System.Drawing.Point(3, 23);
-            this.comboBox_tennhatro.Name = "comboBox_tennhatro";
-            this.comboBox_tennhatro.Size = new System.Drawing.Size(237, 28);
-            this.comboBox_tennhatro.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.comboBox_tenphong);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(252, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(234, 59);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tên phòng(*)";
+            this.dateTimePicker_ngayketthuc.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker_ngayketthuc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker_ngayketthuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_ngayketthuc.Location = new System.Drawing.Point(3, 23);
+            this.dateTimePicker_ngayketthuc.Name = "dateTimePicker_ngayketthuc";
+            this.dateTimePicker_ngayketthuc.Size = new System.Drawing.Size(237, 27);
+            this.dateTimePicker_ngayketthuc.TabIndex = 15;
+            this.dateTimePicker_ngayketthuc.Value = new System.DateTime(2025, 12, 4, 1, 15, 45, 0);
             // 
             // groupBox4
             // 
@@ -219,24 +212,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Khách thuê (*)";
             // 
-            // comboBox_tenphong
-            // 
-            this.comboBox_tenphong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_tenphong.FormattingEnabled = true;
-            this.comboBox_tenphong.Location = new System.Drawing.Point(3, 23);
-            this.comboBox_tenphong.Name = "comboBox_tenphong";
-            this.comboBox_tenphong.Size = new System.Drawing.Size(228, 28);
-            this.comboBox_tenphong.TabIndex = 0;
-            // 
-            // comboBox_kythanhtoan
-            // 
-            this.comboBox_kythanhtoan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_kythanhtoan.FormattingEnabled = true;
-            this.comboBox_kythanhtoan.Location = new System.Drawing.Point(3, 23);
-            this.comboBox_kythanhtoan.Name = "comboBox_kythanhtoan";
-            this.comboBox_kythanhtoan.Size = new System.Drawing.Size(237, 28);
-            this.comboBox_kythanhtoan.TabIndex = 13;
-            // 
             // comboBox_khachthue
             // 
             this.comboBox_khachthue.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -246,17 +221,25 @@
             this.comboBox_khachthue.Size = new System.Drawing.Size(237, 28);
             this.comboBox_khachthue.TabIndex = 14;
             // 
-            // groupBox9
+            // groupBox2
             // 
-            this.groupBox9.Controls.Add(this.dateTimePicker_ngayketthuc);
-            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(3, 193);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(243, 57);
-            this.groupBox9.TabIndex = 6;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Ngày kết thúc (*)";
+            this.groupBox2.Controls.Add(this.comboBox_tenphong);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(252, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(234, 59);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tên phòng(*)";
+            // 
+            // comboBox_tenphong
+            // 
+            this.comboBox_tenphong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_tenphong.FormattingEnabled = true;
+            this.comboBox_tenphong.Location = new System.Drawing.Point(3, 23);
+            this.comboBox_tenphong.Name = "comboBox_tenphong";
+            this.comboBox_tenphong.Size = new System.Drawing.Size(228, 28);
+            this.comboBox_tenphong.TabIndex = 0;
             // 
             // groupBox10
             // 
@@ -298,26 +281,43 @@
             this.numericUpDown_ngaychottien.Size = new System.Drawing.Size(228, 27);
             this.numericUpDown_ngaychottien.TabIndex = 19;
             // 
-            // dateTimePicker_ngaybatdau
+            // lbname
             // 
-            this.dateTimePicker_ngaybatdau.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker_ngaybatdau.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker_ngaybatdau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_ngaybatdau.Location = new System.Drawing.Point(3, 23);
-            this.dateTimePicker_ngaybatdau.Name = "dateTimePicker_ngaybatdau";
-            this.dateTimePicker_ngaybatdau.Size = new System.Drawing.Size(237, 27);
-            this.dateTimePicker_ngaybatdau.TabIndex = 14;
+            this.lbname.AutoSize = true;
+            this.lbname.BackColor = System.Drawing.Color.Navy;
+            this.lbname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbname.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbname.Location = new System.Drawing.Point(136, 7);
+            this.lbname.Name = "lbname";
+            this.lbname.Size = new System.Drawing.Size(225, 32);
+            this.lbname.TabIndex = 0;
+            this.lbname.Text = "Thêm hợp đồng";
+            this.lbname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dateTimePicker_ngayketthuc
+            // button_them
             // 
-            this.dateTimePicker_ngayketthuc.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker_ngayketthuc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker_ngayketthuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_ngayketthuc.Location = new System.Drawing.Point(3, 23);
-            this.dateTimePicker_ngayketthuc.Name = "dateTimePicker_ngayketthuc";
-            this.dateTimePicker_ngayketthuc.Size = new System.Drawing.Size(237, 27);
-            this.dateTimePicker_ngayketthuc.TabIndex = 15;
-            this.dateTimePicker_ngayketthuc.Value = new System.DateTime(2025, 12, 4, 1, 15, 45, 0);
+            this.button_them.BackColor = System.Drawing.Color.Navy;
+            this.button_them.FlatAppearance.BorderSize = 0;
+            this.button_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_them.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button_them.Location = new System.Drawing.Point(162, 383);
+            this.button_them.Name = "button_them";
+            this.button_them.Size = new System.Drawing.Size(170, 57);
+            this.button_them.TabIndex = 12;
+            this.button_them.Text = "Thêm";
+            this.button_them.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lbname);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(489, 52);
+            this.panel1.TabIndex = 9;
             // 
             // FormThemHopDong
             // 
@@ -336,15 +336,15 @@
             this.groupBox5.ResumeLayout(false);
             this.label3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ngaychottien)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

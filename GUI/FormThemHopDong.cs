@@ -58,12 +58,12 @@ namespace GUI
 
         private void LoadTenant()
         {
-            List<KhachThueDTO> list = tenantBLL.getDsKhachChuaDK();
-             // khách chưa ở phòng nào
+            List<KhachThueDTO> list = tenantBLL.LayDSKhachThue();
+            list = list.Where(t => t.RoomId == 0).ToList();  // khách chưa ở phòng nào
 
             comboBox_khachthue.DataSource = list;
-            comboBox_khachthue.DisplayMember = "fullName";
-            comboBox_khachthue.ValueMember = "tenantID";
+            comboBox_khachthue.DisplayMember = "FullName";
+            comboBox_khachthue.ValueMember = "TenantID";
         }
 
         private void comboBox_tennhatro_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,48 +128,105 @@ namespace GUI
         {
             comboBox_kythanhtoan.Items.Clear();
             comboBox_kythanhtoan.Items.Add("Tháng");
-            comboBox_kythanhtoan.Items.Add("Quý");
-            comboBox_kythanhtoan.Items.Add("6 tháng");
-            comboBox_kythanhtoan.Items.Add("1 năm");
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
-                HopDongDTO hd = new HopDongDTO();
 
-                // Tạo mã hợp đồng
-                DataTable danhSach = contractBLL.LayDanhSachHD();
-                int nextId = danhSach.Rows.Count + 1;
-                hd.ContractCode = "HD" + nextId.ToString("000");
+                if (comboBox_tennhatro.SelectedItem == null)
+                {
+                    MessageBox.Show("Vui lòng chọn Nhà trọ!");
+                    return;
+                }
 
-                // Mapping dữ liệu
-                hd.HostelID = (int)comboBox_tennhatro.SelectedValue;
-                hd.RoomID = (int)comboBox_tenphong.SelectedValue;
-                hd.TenantID = (int)comboBox_khachthue.SelectedValue;
+                if (comboBox_tenphong.SelectedItem == null)
+                {
+                    MessageBox.Show("Vui lòng chọn Phòng!");
+                    return;
+                }
 
-                hd.NgayBatDau = dateTimePicker_ngaybatdau.Value;
-                hd.NgayKetThuc = dateTimePicker_ngayketthuc.Value;
+                if (comboBox_khachthue.SelectedItem == null)
+                {
+                    MessageBox.Show("Vui lòng chọn Khách thuê!");
+                    return;
+                }
 
-                hd.TienPhong = decimal.Parse(textbox_tienphong.Text);
-                hd.TienCoc = decimal.Parse(textBox_tiencoc.Text);
+                if (string.IsNullOrWhiteSpace(comboBox_kythanhtoan.Text))
+                {
+                    MessageBox.Show("Vui lòng chọn Kỳ thanh toán!");
+                    return;
+                }
 
-                hd.KyThanhToan = comboBox_kythanhtoan.Text;
-                hd.NgayChotTien = (int)numericUpDown_ngaychottien.Value;
+                if (numericUpDown_ngaychottien.Value <= 0)
+                {
+                    MessageBox.Show("Ngày chốt tiền phải lớn hơn 0!");
+                    return;
+                }
 
-                hd.TrangThai = "Còn hạn";
-                hd.CreatedDate = DateTime.Now;
+                int hostelID = Convert.ToInt32(comboBox_tennhatro.SelectedValue);
+                int roomID = Convert.ToInt32(comboBox_tenphong.SelectedValue);
+                int tenantID = Convert.ToInt32(comboBox_khachthue.SelectedValue);
 
-                // Thêm hợp đồng vào DB
+
+                DateTime ngayBD = dateTimePicker_ngaybatdau.Value;
+                DateTime ngayKT = dateTimePicker_ngayketthuc.Value;
+
+                if (ngayKT <= ngayBD)
+                {
+                    MessageBox.Show("Ngày kết thúc phải lớn hơn ngày bắt đầu!");
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(textbox_tienphong.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập Tiền phòng!");
+                    return;
+                }
+
+                if (!decimal.TryParse(textbox_tienphong.Text, out decimal tienPhong))
+                {
+                    MessageBox.Show("Tiền phòng không hợp lệ!");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(textBox_tiencoc.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập Tiền cọc!");
+                    return;
+                }
+
+                if (!decimal.TryParse(textBox_tiencoc.Text, out decimal tienCoc))
+                {
+                    MessageBox.Show("Tiền cọc không hợp lệ!");
+                    return;
+                }
+                int maxId = contractBLL.LayMaxContractID();
+                string contractCode = "HD" + (maxId + 1).ToString("000");
+
+                HopDongDTO hd = new HopDongDTO
+                {
+                    ContractCode = contractCode,
+                    HostelID = hostelID,
+                    RoomID = roomID,
+                    TenantID = tenantID,
+
+                    NgayBatDau = ngayBD,
+                    NgayKetThuc = ngayKT,
+
+                    TienPhong = tienPhong,
+                    TienCoc = tienCoc,
+
+                    KyThanhToan = comboBox_kythanhtoan.Text,
+                    NgayChotTien = (int)numericUpDown_ngaychottien.Value,
+
+                    TrangThai = "Còn hạn",
+                    CreatedDate = DateTime.Now
+                };
+
                 contractBLL.ThemHopDong(hd);
 
-                // Cập nhật số người thuê phòng
-                PhongTroDTO room = roomBLL.FindByID(hd.RoomID);
-                room.soNguoiDaThue += 1;
-                roomBLL.update(room);
-
-                MessageBox.Show("Thêm hợp đồng thành công!");
+                MessageBox.Show("Thêm hợp đồng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             catch (Exception ex)
@@ -177,5 +234,7 @@ namespace GUI
                 MessageBox.Show("Lỗi thêm hợp đồng: " + ex.Message);
             }
         }
+
+
     }
 }

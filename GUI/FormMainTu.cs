@@ -35,7 +35,6 @@ namespace GUI
             this.button_khachthue.Click += Button_khachthue_Click;
             menuExpandedHeight = panel_khachthue.Height +panel_dshopdong.Height + panel_dskhachthue.Height + 10;
             this.btn_ThuGon.Click += Btn_ThuGon_Click;
-            this.button_trangchu.Click += Button_taikhoan_Click;
             this.button_thongke.Click += Button_thongke_Click;
             this.button_danhsachnha.Click += Button_danhsachnha_Click;
             this.button_phong.Click += Button_phong_Click;
@@ -97,11 +96,6 @@ namespace GUI
         private void Button_thongke_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormThongKe());
-        }
-
-        private void Button_taikhoan_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormTaiKhoan());
         }
 
         private void Btn_ThuGon_Click(object sender, EventArgs e)

@@ -22,3 +22,15 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.csproj.CoreCom
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.dll
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.pdb
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\bin\Debug\BLL.dll
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\bin\Debug\BLL.pdb
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\bin\Debug\DAL.dll
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\bin\Debug\DTO.dll
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\bin\Debug\DAL.pdb
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\bin\Debug\DAL.dll.config
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\bin\Debug\DTO.pdb
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\obj\Debug\BLL.dll
+C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\obj\Debug\BLL.pdb

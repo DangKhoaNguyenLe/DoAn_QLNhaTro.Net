@@ -26,45 +26,57 @@ namespace GUI
             this.pictureBox_timkiem.Click += pictureBox_timkiem_Click;
             this.pictureBox_lammoi.Click += PictureBox_lammoi_Click;
             this.button_themhopdong.Click += Button_themhopdong_Click;
+            this.button_suahopdong.Click += Button_suahopdong_Click;
             this.button_xoahopdong.Click += Button_xoahopdong_Click;
         }
+
+        private void Button_suahopdong_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_dshopdong.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn hợp đồng cần sửa!");
+                return;
+            }
+            int id = Convert.ToInt32(dataGridView_dshopdong.SelectedRows[0].Cells["ContractID"].Value);
+            FormSuaHopDong form = new FormSuaHopDong(id);
+            form.ShowDialog();
+
+            LoadHopDong();
+        }
+
 
         private void Button_xoahopdong_Click(object sender, EventArgs e)
         {
             if (dataGridView_dshopdong.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn hợp đồng cần xóa!");
+                MessageBox.Show("Vui lòng chọn hợp đồng cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Lấy hàng đang chọn
-            DataGridViewRow row = dataGridView_dshopdong.SelectedRows[0];
+            int contractId = Convert.ToInt32(dataGridView_dshopdong.SelectedRows[0].Cells["ContractID"].Value);
 
-            // Lấy ContractID từ cột ẩn
-            int contractID = Convert.ToInt32(row.Cells["ContractID"].Value);
+            DialogResult dialog = MessageBox.Show(
+                "Bạn có chắc chắn muốn xóa hợp đồng này?\n" +
+                "Hành động này sẽ cập nhật lại phòng và khách thuê.",
+                "Xác nhận xóa",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
 
-            // Xác nhận
-            if (MessageBox.Show("Bạn có chắc muốn xóa hợp đồng này?",
-                                "Xác nhận", MessageBoxButtons.YesNo,
-                                MessageBoxIcon.Warning) == DialogResult.No)
+            if (dialog == DialogResult.Yes)
             {
-                return;
-            }
+                bool result = hopDongBLL.XoaHopDong(contractId);
 
-            // Gọi BLL
-            HopDongBLL bll = new HopDongBLL();
-            bool result = bll.XoaHopDong(contractID);
+                if (result)
+                {
+                    MessageBox.Show("Xóa hợp đồng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            if (result)
-            {
-                MessageBox.Show("Xóa hợp đồng thành công!");
-
-                // Load lại danh sách
-                LoadHopDong();
-            }
-            else
-            {
-                MessageBox.Show("Không thể xóa hợp đồng!");
+                    LoadHopDong();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể xóa hợp đồng. Vui lòng thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -122,18 +134,22 @@ namespace GUI
         // ==================== LOAD HỢP ĐỒNG ===========================
         public void LoadHopDong()
         {
-            List<DanhSachHopDongDTO> ds = hopDongBLL.LayDanhSachHopDong();
+            if (comboBox_daynha.SelectedItem == null)
+                return;
+
+            string tenDay = comboBox_daynha.Text.Trim();
+
+            List<DanhSachHopDongDTO> ds = hopDongBLL.LayHopDongTheoDay(tenDay);
+
             dataGridView_dshopdong.DataSource = ds;
             UpdateTongSoHopDong();
         }
 
+
         // ==================== LỌC THEO DÃY ============================
         private void cmbDayNha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string tenDay = comboBox_daynha.Text.Trim();
-            List<DanhSachHopDongDTO> ds = hopDongBLL.LayHopDongTheoDay(tenDay);
-            dataGridView_dshopdong.DataSource = ds;
-            UpdateTongSoHopDong();
+            LoadHopDong();
         }
 
         private void UpdateTongSoHopDong()
