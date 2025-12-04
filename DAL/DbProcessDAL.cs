@@ -20,6 +20,8 @@ namespace DAL
         protected TENANTTableAdapter khachthue;
         protected RECEIPT_VOUCHERTableAdapter v_PhieuThu;
         protected BILLTableAdapter Bill;
+        protected DIENNUOCTableAdapter dienNuoc;
+
 
         public DbProcessDAL() {
             hostel = new HOSTELTableAdapter();
@@ -31,6 +33,7 @@ namespace DAL
             khachthue = new TENANTTableAdapter();
             v_PhieuThu = new RECEIPT_VOUCHERTableAdapter();
             Bill = new BILLTableAdapter();  
+            dienNuoc = new DIENNUOCTableAdapter();
         }
     }
 }
