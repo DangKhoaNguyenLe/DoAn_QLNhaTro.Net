@@ -45,39 +45,6 @@ namespace DAL
             return list;
         }
 
-        public List<HopDongDTO> GetDanhSachHD()
-        {
-            List<HopDongDTO> list = new List<HopDongDTO>();
-
-            DataTable dt = hopdong.GetData();
-
-            foreach (DataRow dr in dt.Rows)
-            {
-                var row = dr as DataNhaTro.CONTRACTRow;
-
-                HopDongDTO c = new HopDongDTO(
-                    row.ContractID,
-                    row.ContractCode,
-                    int.Parse(row.HostelID.ToString()),
-                    int.Parse(row.RoomID.ToString()),
-                    int.Parse(row.TenantID.ToString()),
-                    row.NgayBatDau,
-                    row.NgayKetThuc,
-                    row.TienPhong,
-                    row.TienCoc,
-                    row.KyThanhToan,
-                    int.Parse(row.NgayChotTien.ToString()),
-                    row.TrangThai,
-                    row.CreatedDate
-
-                );
-
-                list.Add(c);
-            }
-
-            return list;
-        }
-
         // Thêm hợp đồng
         public bool Insert(HopDongDTO c)
         {
@@ -104,20 +71,12 @@ namespace DAL
                 return false;
             }
         }
-        // Xoá hợp đồng
-        public bool XoaHopDong(int id)
+
+        public bool XoaHopDong(int contractId)
         {
             try
             {
-                // Lấy RoomID từ Contract trước khi xóa
-                var r = hopdong.GetData().FirstOrDefault(c => c.ContractID == id);
-                int roomID = r.RoomID;
-
-                // Xóa hợp đồng
-                hopdong.DeleteHopDong(id);
-
-                // Trừ số người thuê
-                room.UpdateSoNguoiDaThue(-1, roomID);
+                hopdong.DeleteQuery(contractId);
                 return true;
             }
             catch
@@ -125,5 +84,60 @@ namespace DAL
                 return false;
             }
         }
+
+        public bool CapNhatHopDong(HopDongDTO hd)
+        {
+            int result = hopdong.UpdateQuery(
+                hd.ContractCode,
+                hd.HostelID,
+                hd.RoomID,
+                hd.TenantID,
+                hd.NgayBatDau,
+                hd.NgayKetThuc,
+                hd.TienPhong,
+                hd.TienCoc,
+                hd.KyThanhToan,
+                hd.NgayChotTien,
+                hd.TrangThai,
+                hd.CreatedDate,
+                hd.ContractID
+            );
+
+            return result > 0;
+        }
+
+        public HopDongDTO LayHopDongTheoID(int id)
+        {
+            var dt = hopdong.GetDataByID(id);
+
+            if (dt.Rows.Count == 0) return null;
+
+            var r = dt[0];
+
+            return new HopDongDTO(
+                r.ContractID,
+                r.ContractCode,
+                r.HostelID,
+                r.RoomID,
+                r.TenantID,
+                r.NgayBatDau,
+                r.NgayKetThuc,
+                r.TienPhong,
+                r.TienCoc,
+                r.KyThanhToan,
+                r.NgayChotTien,
+                r.TrangThai,
+                r.CreatedDate
+            );
+        }
+
+
+        public int GetMaxContractID()
+        {
+            var dt = hopdong.GetData();
+            if (dt.Rows.Count == 0) return 0;
+            return dt.AsEnumerable().Max(r => r.Field<int>("ContractID"));
+        }
+
     }
 }
