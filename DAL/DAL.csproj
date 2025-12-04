@@ -67,8 +67,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataNhaTro.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataNhaTro1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataNhaTro.xss</DependentUpon>
+    </Compile>
     <Compile Include="DayNhaDAL.cs" />
     <Compile Include="DbProcessDAL.cs" />
+    <Compile Include="DienNuocDAL.cs" />
     <Compile Include="GiaDienNuocDAL.cs" />
     <Compile Include="HopDongDAL.cs" />
     <Compile Include="KhachThueDAL.cs" />
@@ -94,8 +100,9 @@
     </None>
     <None Include="DataNhaTro.xss">
       <DependentUpon>DataNhaTro.xsd</DependentUpon>
-	<Generator>MSDataSetGenerator</Generator>
-    </None>	
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataNhaTro1.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

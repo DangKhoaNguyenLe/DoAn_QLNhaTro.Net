@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +45,7 @@
     <Compile Include="BillBLL.cs" />
     <Compile Include="ConnectionBLL.cs" />
     <Compile Include="DayNhaBLL.cs" />
+    <Compile Include="DienNuocBLL.cs" />
     <Compile Include="GiaDienNuocBLL.cs" />
     <Compile Include="HopDongBLL.cs" />
     <Compile Include="KhachThueBLL.cs" />
