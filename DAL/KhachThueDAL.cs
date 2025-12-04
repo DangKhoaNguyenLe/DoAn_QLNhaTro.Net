@@ -31,7 +31,7 @@ namespace DAL
                     t.NgayCap,
                     t.NoiCap,
                     t.Status,
-                    t.RoomID
+                    t.IsRoomIDNull() ? 0 : t.RoomID
                 );
 
                 list.Add(kt);

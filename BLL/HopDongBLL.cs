@@ -23,6 +23,10 @@ namespace BLL
         {
             return dal.LayDSHD();
         }
+        public List<HopDongDTO> getList()
+        {
+            return dal.GetDanhSachHD();
+        }
 
         public List<DanhSachHopDongDTO> LayDanhSachHopDong()
         {

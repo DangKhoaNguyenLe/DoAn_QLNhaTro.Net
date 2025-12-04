@@ -58,12 +58,12 @@ namespace GUI
 
         private void LoadTenant()
         {
-            List<KhachThueDTO> list = tenantBLL.LayDSKhachThue();
-            list = list.Where(t => t.RoomId == 0).ToList();  // khách chưa ở phòng nào
+            List<KhachThueDTO> list = tenantBLL.getDsKhachChuaDK();
+             // khách chưa ở phòng nào
 
             comboBox_khachthue.DataSource = list;
-            comboBox_khachthue.DisplayMember = "FullName";
-            comboBox_khachthue.ValueMember = "TenantID";
+            comboBox_khachthue.DisplayMember = "fullName";
+            comboBox_khachthue.ValueMember = "tenantID";
         }
 
         private void comboBox_tennhatro_SelectedIndexChanged(object sender, EventArgs e)
