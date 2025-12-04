@@ -1,3 +1,13 @@
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\DAL\obj\Debug\DAL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\DAL\obj\Debug\DAL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\DAL\bin\Debug\DAL.dll.config
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\DAL\bin\Debug\DAL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\DAL\bin\Debug\DAL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\DAL\bin\Debug\DTO.dll
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\DAL\bin\Debug\DTO.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\fix_cnn\DAL\obj\Debug\DAL.csproj.Up2Date
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\bin\Debug\DAL.dll.config
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\bin\Debug\DAL.dll
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\bin\Debug\DAL.pdb

@@ -46,8 +46,13 @@ namespace GUI
             this.button_phieuthu.Click += Button_phieuthu_Click;
             this.WindowState = FormWindowState.Maximized;
             this.FormClosing += FormMainTu_FormClosing;
+            this.btn_diennuoc.Click += Btn_diennuoc_Click;
 
+        }
 
+        private void Btn_diennuoc_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormDienNuoc());
         }
 
         private void Button_phieuthu_Click(object sender, EventArgs e)

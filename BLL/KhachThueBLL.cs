@@ -21,5 +21,44 @@ namespace BLL
         {
             return khachThueDAL.GetListTenant().Where(t => t.RoomId == id).ToList();
         }
+
+        public bool add(KhachThueDTO kh)
+        {
+            try
+            {
+                khachThueDAL.Add(kh);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL " + ex.Message, ex);
+            }
+        }
+
+        public bool update(KhachThueDTO kh)
+        {
+            try
+            {
+                khachThueDAL.update(kh);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL " + ex.Message, ex);
+            }
+        }
+
+        public bool delete(int id)
+        {
+            try
+            {
+                khachThueDAL.delete(id);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL " + ex.Message, ex);
+            }
+        }
     }
 }

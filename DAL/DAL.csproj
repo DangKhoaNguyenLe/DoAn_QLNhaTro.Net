@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="DayNhaDAL.cs" />
     <Compile Include="DbProcessDAL.cs" />
+    <Compile Include="DienNuocDAL.cs" />
     <Compile Include="GiaDienNuocDAL.cs" />
     <Compile Include="HopDongDAL.cs" />
     <Compile Include="KhachThueDAL.cs" />
@@ -94,8 +95,7 @@
     </None>
     <None Include="DataNhaTro.xss">
       <DependentUpon>DataNhaTro.xsd</DependentUpon>
-	<Generator>MSDataSetGenerator</Generator>
-    </None>	
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
