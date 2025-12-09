@@ -16,3 +16,9 @@ C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\DTO\obj\Debug\DTO.csproj.As
 C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\DTO\obj\Debug\DTO.dll
 C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\DTO\obj\Debug\DTO.pdb
+D:\CNNET_Ngay10\DTO\bin\Debug\DTO.dll
+D:\CNNET_Ngay10\DTO\bin\Debug\DTO.pdb
+D:\CNNET_Ngay10\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\CNNET_Ngay10\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\CNNET_Ngay10\DTO\obj\Debug\DTO.dll
+D:\CNNET_Ngay10\DTO\obj\Debug\DTO.pdb
