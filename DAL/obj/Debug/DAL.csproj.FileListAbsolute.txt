@@ -38,3 +38,13 @@ D:\Thinh\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\Thinh\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\Thinh\DAL\obj\Debug\DAL.dll
 D:\Thinh\DAL\obj\Debug\DAL.pdb
+D:\CNNET_Ngay10\DAL\bin\Debug\DAL.dll.config
+D:\CNNET_Ngay10\DAL\bin\Debug\DAL.dll
+D:\CNNET_Ngay10\DAL\bin\Debug\DAL.pdb
+D:\CNNET_Ngay10\DAL\bin\Debug\DTO.dll
+D:\CNNET_Ngay10\DAL\bin\Debug\DTO.pdb
+D:\CNNET_Ngay10\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\CNNET_Ngay10\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\CNNET_Ngay10\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\CNNET_Ngay10\DAL\obj\Debug\DAL.dll
+D:\CNNET_Ngay10\DAL\obj\Debug\DAL.pdb

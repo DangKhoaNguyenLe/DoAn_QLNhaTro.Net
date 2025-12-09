@@ -46,3 +46,15 @@ D:\Thinh\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\Thinh\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\Thinh\BLL\obj\Debug\BLL.dll
 D:\Thinh\BLL\obj\Debug\BLL.pdb
+D:\CNNET_Ngay10\BLL\bin\Debug\BLL.dll
+D:\CNNET_Ngay10\BLL\bin\Debug\BLL.pdb
+D:\CNNET_Ngay10\BLL\bin\Debug\DAL.dll
+D:\CNNET_Ngay10\BLL\bin\Debug\DTO.dll
+D:\CNNET_Ngay10\BLL\bin\Debug\DAL.pdb
+D:\CNNET_Ngay10\BLL\bin\Debug\DAL.dll.config
+D:\CNNET_Ngay10\BLL\bin\Debug\DTO.pdb
+D:\CNNET_Ngay10\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\CNNET_Ngay10\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\CNNET_Ngay10\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\CNNET_Ngay10\BLL\obj\Debug\BLL.dll
+D:\CNNET_Ngay10\BLL\obj\Debug\BLL.pdb
