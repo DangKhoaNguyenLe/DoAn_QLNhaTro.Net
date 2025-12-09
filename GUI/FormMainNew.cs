@@ -12,7 +12,7 @@ namespace GUI
 {
     public partial class FormMainNew : Form
     {
-
+        private Form currentChildForm;
         int VanHanhExpandedHeight;
         int VanHanhCollapsedHeight = 60;
         bool VanHanhExpand = false;
@@ -47,9 +47,66 @@ namespace GUI
             this.button_he_thong.Click += Button_he_thong_Click;
             this.He_Thong_Transition.Tick += He_Thong_Transition_Tick;
             this.HeThongExpandedHeight = flowLayoutPanel_he_thong.Height + flowLayoutPanel_he_thong.Controls.OfType<Control>().Sum(c => c.Height) + 10;
+
+
+
+            this.button_dashboard.Click += Button_dashboard_Click;
+            this.button_hop_dong.Click += Button_hop_dong_Click;
+            this.button_phong.Click += Button_phong_Click;
+            this.button_khach_thue.Click += Button_khach_thue_Click;
+            this.button_nha_tro.Click += Button_nha_tro_Click;
+            this.button_dien_nuoc.Click += Button_dien_nuoc_Click;
         }
 
+        private void Button_dien_nuoc_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormDienNuoc());
+        }
 
+        private void Button_nha_tro_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormDayNha());
+        }
+
+        private void Button_khach_thue_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormKhachThue());
+        }
+
+        private void Button_phong_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormPhongTro());
+        }
+
+        private void Button_hop_dong_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormDSHopDong());
+        }
+
+        private void Button_dashboard_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormThongKe());
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            panel_body.Controls.Clear();
+            panel_body.Controls.Add(childForm);
+            panel_body.Tag = childForm;
+
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         //Menu thu gon button he thong
         private void Button_he_thong_Click(object sender, EventArgs e)
