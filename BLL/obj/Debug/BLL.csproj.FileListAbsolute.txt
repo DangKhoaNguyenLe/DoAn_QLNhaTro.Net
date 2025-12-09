@@ -34,3 +34,15 @@ C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\obj\Debug\BLL.csproj.Co
 C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\obj\Debug\BLL.dll
 C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\BLL\obj\Debug\BLL.pdb
+D:\Thinh\BLL\bin\Debug\BLL.dll
+D:\Thinh\BLL\bin\Debug\BLL.pdb
+D:\Thinh\BLL\bin\Debug\DAL.dll
+D:\Thinh\BLL\bin\Debug\DTO.dll
+D:\Thinh\BLL\bin\Debug\DAL.pdb
+D:\Thinh\BLL\bin\Debug\DAL.dll.config
+D:\Thinh\BLL\bin\Debug\DTO.pdb
+D:\Thinh\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Thinh\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Thinh\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\Thinh\BLL\obj\Debug\BLL.dll
+D:\Thinh\BLL\obj\Debug\BLL.pdb

@@ -28,3 +28,13 @@ C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\DAL\obj\Debug\DAL.csproj.Co
 C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\DAL\obj\Debug\DAL.csproj.Up2Date
 C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\DAL\obj\Debug\DAL.dll
 C:\Users\phamv\Source\Repos\CN.NET.ST6_DoAn_QLNhaTro\DAL\obj\Debug\DAL.pdb
+D:\Thinh\DAL\bin\Debug\DAL.dll.config
+D:\Thinh\DAL\bin\Debug\DAL.dll
+D:\Thinh\DAL\bin\Debug\DAL.pdb
+D:\Thinh\DAL\bin\Debug\DTO.dll
+D:\Thinh\DAL\bin\Debug\DTO.pdb
+D:\Thinh\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Thinh\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Thinh\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\Thinh\DAL\obj\Debug\DAL.dll
+D:\Thinh\DAL\obj\Debug\DAL.pdb
