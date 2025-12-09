@@ -73,7 +73,7 @@ namespace GUI
             MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Chuyển Form
-            FormMainTu formMain = new FormMainTu();
+            FormMainNew formMain = new FormMainNew();
             formMain.FormClosed += (s, args) => this.Close(); // Đóng form đăng nhập khi form chính đóng
             this.Hide();
             formMain.Show();
