@@ -88,3 +88,17 @@ D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\BLL\obj\Debug\BLL.csproj.CoreCompi
 D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\BLL\obj\Debug\BLL.dll
 D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\BLL\obj\Debug\BLL.pdb
+D:\BanCuaThinh\BLL\bin\Debug\App_Data\QL_nhaTro.mdf
+D:\BanCuaThinh\BLL\bin\Debug\App_Data\QL_nhaTro_log.ldf
+D:\BanCuaThinh\BLL\bin\Debug\BLL.dll
+D:\BanCuaThinh\BLL\bin\Debug\BLL.pdb
+D:\BanCuaThinh\BLL\bin\Debug\DAL.dll
+D:\BanCuaThinh\BLL\bin\Debug\DTO.dll
+D:\BanCuaThinh\BLL\bin\Debug\DAL.pdb
+D:\BanCuaThinh\BLL\bin\Debug\DAL.dll.config
+D:\BanCuaThinh\BLL\bin\Debug\DTO.pdb
+D:\BanCuaThinh\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\BanCuaThinh\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\BanCuaThinh\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\BanCuaThinh\BLL\obj\Debug\BLL.dll
+D:\BanCuaThinh\BLL\obj\Debug\BLL.pdb

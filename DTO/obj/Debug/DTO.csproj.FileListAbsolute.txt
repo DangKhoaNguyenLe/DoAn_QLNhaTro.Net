@@ -34,3 +34,9 @@ D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DTO\obj\Debug\DTO.csproj.AssemblyR
 D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DTO\obj\Debug\DTO.dll
 D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DTO\obj\Debug\DTO.pdb
+D:\BanCuaThinh\DTO\bin\Debug\DTO.dll
+D:\BanCuaThinh\DTO\bin\Debug\DTO.pdb
+D:\BanCuaThinh\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\BanCuaThinh\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\BanCuaThinh\DTO\obj\Debug\DTO.dll
+D:\BanCuaThinh\DTO\obj\Debug\DTO.pdb

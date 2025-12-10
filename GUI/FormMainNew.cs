@@ -101,7 +101,7 @@ namespace GUI
 
             // Các form bình thường (Ai cũng giống nhau)
             button_dien_nuoc.Click += (s, e) => OpenChildForm(new FormDienNuoc());
-            button_nha_tro.Click += (s, e) => OpenChildForm(new FormDayNha());
+            button_nha_tro.Click += (s, e) => OpenChildForm(new FormNhaTro());
 
             // Nút Thống kê (Admin mới được bấm, dù đã ẩn nhưng chặn thêm ở đây cho chắc)
             button_dashboard.Click += (s, e) => {

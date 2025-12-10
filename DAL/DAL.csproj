@@ -71,6 +71,7 @@
     <Compile Include="HopDongDAL.cs" />
     <Compile Include="KhachThueDAL.cs" />
     <Compile Include="NguoiDungDAL.cs" />
+    <Compile Include="NhaTroDAL.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

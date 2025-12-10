@@ -74,3 +74,15 @@ D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\obj\Debug\DAL.csproj.CoreCompi
 D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\obj\Debug\DAL.dll
 D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\obj\Debug\DAL.pdb
+D:\BanCuaThinh\DAL\bin\Debug\App_Data\QL_nhaTro.mdf
+D:\BanCuaThinh\DAL\bin\Debug\App_Data\QL_nhaTro_log.ldf
+D:\BanCuaThinh\DAL\bin\Debug\DAL.dll.config
+D:\BanCuaThinh\DAL\bin\Debug\DAL.dll
+D:\BanCuaThinh\DAL\bin\Debug\DAL.pdb
+D:\BanCuaThinh\DAL\bin\Debug\DTO.dll
+D:\BanCuaThinh\DAL\bin\Debug\DTO.pdb
+D:\BanCuaThinh\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\BanCuaThinh\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\BanCuaThinh\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\BanCuaThinh\DAL\obj\Debug\DAL.dll
+D:\BanCuaThinh\DAL\obj\Debug\DAL.pdb
