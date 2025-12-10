@@ -12,16 +12,17 @@ namespace BLL
     public class ConnectionBLL
     {
         protected DayNhaDAL dayNha;
-        protected UserDAL user;
+        protected NguoiDungDAL nguoiDungDAL;
         protected GiaDienNuocDAL giaDienNuoc;
         protected HopDongDAL hopDongDAL;
         protected PhongTroDAL phongTroDAL;
         protected KhachThueDAL khachThueDAL;
         protected ViewPhieuThuDAL v_phieuThuDAL;
         protected BillDAL billDAL;
-        public ConnectionBLL() { 
+        public ConnectionBLL()
+        {
             dayNha = new DayNhaDAL();
-            user = new UserDAL();
+            nguoiDungDAL = new NguoiDungDAL();
             hopDongDAL = new HopDongDAL();
             giaDienNuoc = new GiaDienNuocDAL();
             phongTroDAL = new PhongTroDAL();

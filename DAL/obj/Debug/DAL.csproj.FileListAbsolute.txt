@@ -62,3 +62,15 @@ D:\cnnet_10\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\cnnet_10\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\cnnet_10\DAL\obj\Debug\DAL.dll
 D:\cnnet_10\DAL\obj\Debug\DAL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\bin\Debug\App_Data\QL_nhaTro.mdf
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\bin\Debug\App_Data\QL_nhaTro_log.ldf
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\bin\Debug\DAL.dll.config
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\bin\Debug\DAL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\bin\Debug\DAL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\bin\Debug\DTO.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\bin\Debug\DTO.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\obj\Debug\DAL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\QL_NhaTro_Ngay10_12\DAL\obj\Debug\DAL.pdb
