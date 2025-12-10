@@ -15,7 +15,6 @@ namespace BLL
         protected NguoiDungDAL nguoiDungDAL;
         protected GiaDienNuocDAL giaDienNuoc;
         protected HopDongDAL hopDongDAL;
-        protected PhongTroDAL phongTroDAL;
         protected KhachThueDAL khachThueDAL;
         protected ViewPhieuThuDAL v_phieuThuDAL;
         protected BillDAL billDAL;
@@ -25,7 +24,6 @@ namespace BLL
             nguoiDungDAL = new NguoiDungDAL();
             hopDongDAL = new HopDongDAL();
             giaDienNuoc = new GiaDienNuocDAL();
-            phongTroDAL = new PhongTroDAL();
             khachThueDAL = new KhachThueDAL();
             v_phieuThuDAL = new ViewPhieuThuDAL();
             billDAL = new BillDAL();

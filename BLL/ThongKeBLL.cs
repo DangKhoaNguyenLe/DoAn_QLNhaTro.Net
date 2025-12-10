@@ -11,7 +11,6 @@ namespace BLL
     public class ThongKeBLL : ConnectionBLL
     {
         DayNhaBLL daynhas = new DayNhaBLL();
-        PhongTroBLL phongs = new PhongTroBLL();
         KhachThueBLL khachs = new KhachThueBLL();
         BillBLL Bill = new BillBLL();
         //public int CountDayNha()

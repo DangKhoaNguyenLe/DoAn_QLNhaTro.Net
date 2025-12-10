@@ -17,7 +17,6 @@ namespace GUI
     {
 
         KhachThueBLL khachThueBLL = new KhachThueBLL();
-        PhongTroBLL phongTroBLL = new PhongTroBLL();
         public FormThemKhachThue()
         {
             InitializeComponent();
