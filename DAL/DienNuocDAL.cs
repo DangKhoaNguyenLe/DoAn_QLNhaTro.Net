@@ -11,31 +11,31 @@ namespace DAL
     public class DienNuocDAL:DbProcessDAL
     {
        
-        public DienNuocDAL()
-        {
+        //public DienNuocDAL()
+        //{
             
-        }
+        //}
 
-        public DataTable loadDienNuoc()
-        {
-            return dienNuoc.GetData();
+        //public DataTable loadDienNuoc()
+        //{
+        //    return dienNuoc.GetData();
 
-        }
+        //}
 
-        public DataTable loadHopDong()
-        {
-            return hopdong.GetData();
+        //public DataTable loadHopDong()
+        //{
+        //    return hopdong.GetData();
 
-        }
+        //}
 
-        public DataTable LoadNha()
-        {
-            return hostel.GetData();
-        }
+        //public DataTable LoadNha()
+        //{
+        //    return hostel.GetData();
+        //}
 
-        public DataTable loadPhong()
-        {
-            return room.GetData();
-        }
+        //public DataTable loadPhong()
+        //{
+        //    return room.GetData();
+        //}
     }
 }

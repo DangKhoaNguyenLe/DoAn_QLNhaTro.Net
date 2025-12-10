@@ -29,20 +29,20 @@ namespace BLL
         }
 
 
-        public List<KhachThueDTO> LayDSKhachThue()
-        {
-            return khachThueDAL.GetListTenant();
-        }
+        //public List<KhachThueDTO> LayDSKhachThue()
+        //{
+        //    return khachThueDAL.GetListTenant();
+        //}
 
-        public List<KhachThueDTO> getListById(int id)
-        {
-            return khachThueDAL.GetListTenant().Where(t => t.RoomId == id).ToList();
-        }
+        //public List<KhachThueDTO> getListById(int id)
+        //{
+        //    return khachThueDAL.GetListTenant().Where(t => t.RoomId == id).ToList();
+        //}
         
-        public List<KhachThueDTO> getDsKhachChuaDK()
-        {
-            return LayDSKhachThue().Where(t => t.RoomId == 0).ToList();
-        }
+        //public List<KhachThueDTO> getDsKhachChuaDK()
+        //{
+        //    return LayDSKhachThue().Where(t => t.RoomId == 0).ToList();
+        //}
 
 
         public bool ThemKhachThue(KhachThueDTO kh)
@@ -66,43 +66,43 @@ namespace BLL
             // Có thể thêm logic kiểm tra nợ tiền trước khi xóa nếu cần
             return khachThueDAL.DeleteKhachThue(tenantID);
         }
-        public bool add(KhachThueDTO kh)
-        {
-            try
-            {
-                khachThueDAL.Add(kh);
-                return true;
-            }
-            catch (SqlException ex)
-            {
-                throw new Exception("Lỗi CSDL " + ex.Message, ex);
-            }
-        }
+        //public bool add(KhachThueDTO kh)
+        //{
+        //    try
+        //    {
+        //        khachThueDAL.Add(kh);
+        //        return true;
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        throw new Exception("Lỗi CSDL " + ex.Message, ex);
+        //    }
+        //}
 
-        public bool update(KhachThueDTO kh)
-        {
-            try
-            {
-                khachThueDAL.update(kh);
-                return true;
-            }
-            catch (SqlException ex)
-            {
-                throw new Exception("Lỗi CSDL " + ex.Message, ex);
-            }
-        }
+        //public bool update(KhachThueDTO kh)
+        //{
+        //    try
+        //    {
+        //        khachThueDAL.update(kh);
+        //        return true;
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        throw new Exception("Lỗi CSDL " + ex.Message, ex);
+        //    }
+        //}
 
-        public bool delete(int id)
-        {
-            try
-            {
-                khachThueDAL.delete(id);
-                return true;
-            }
-            catch (SqlException ex)
-            {
-                throw new Exception("Lỗi CSDL " + ex.Message, ex);
-            }
-        }
+        //public bool delete(int id)
+        //{
+        //    try
+        //    {
+        //        khachThueDAL.delete(id);
+        //        return true;
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        throw new Exception("Lỗi CSDL " + ex.Message, ex);
+        //    }
+        //}
     }
 }

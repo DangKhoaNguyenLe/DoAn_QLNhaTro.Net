@@ -48,3 +48,5 @@ D:\CNNET_Ngay10\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\CNNET_Ngay10\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\CNNET_Ngay10\DAL\obj\Debug\DAL.dll
 D:\CNNET_Ngay10\DAL\obj\Debug\DAL.pdb
+D:\Thinh\DAL\bin\Debug\App_Data\QL_nhaTro.mdf
+D:\Thinh\DAL\bin\Debug\App_Data\QL_nhaTro_log.ldf

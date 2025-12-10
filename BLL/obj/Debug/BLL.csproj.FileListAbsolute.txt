@@ -58,3 +58,5 @@ D:\CNNET_Ngay10\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\CNNET_Ngay10\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\CNNET_Ngay10\BLL\obj\Debug\BLL.dll
 D:\CNNET_Ngay10\BLL\obj\Debug\BLL.pdb
+D:\Thinh\BLL\bin\Debug\App_Data\QL_nhaTro.mdf
+D:\Thinh\BLL\bin\Debug\App_Data\QL_nhaTro_log.ldf

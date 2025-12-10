@@ -59,9 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BillDAL.cs" />
-    <Compile Include="DataNhaTro.cs">
-      <DependentUpon>DataNhaTro.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataNhaTro.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

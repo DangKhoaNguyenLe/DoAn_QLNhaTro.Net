@@ -10,9 +10,9 @@ namespace BLL
 {
     public class BillBLL : ConnectionBLL
     {
-        public List<BillDTO> getBillByIdRoom(int id)
-        {
-            return billDAL.getList().Where(t => t.RoomID == id).ToList();  
-        }
+        //public List<BillDTO> getBillByIdRoom(int id)
+        //{
+        //    return billDAL.getList().Where(t => t.RoomID == id).ToList();  
+        //}
     }
 }
