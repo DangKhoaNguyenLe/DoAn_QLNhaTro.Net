@@ -75,7 +75,6 @@ D:\Thinh\GUI\bin\Debug\DTO.pdb
 D:\Thinh\GUI\bin\Debug\DAL.pdb
 D:\Thinh\GUI\bin\Debug\DAL.dll.config
 D:\Thinh\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
-D:\Thinh\GUI\obj\Debug\GUI.exe.config
 D:\Thinh\GUI\obj\Debug\GUI.FormDayNha.resources
 D:\Thinh\GUI\obj\Debug\GUI.FormDangKy.resources
 D:\Thinh\GUI\obj\Debug\GUI.FormDangNhap.resources
@@ -133,3 +132,4 @@ D:\CNNET_Ngay10\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\CNNET_Ngay10\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\CNNET_Ngay10\GUI\obj\Debug\GUI.exe
 D:\CNNET_Ngay10\GUI\obj\Debug\GUI.pdb
+D:\Thinh\GUI\obj\Debug\GUI.FormMainNew.resources
