@@ -154,6 +154,7 @@
     <Compile Include="StatCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="MenuAnimator.cs" />
     <EmbeddedResource Include="FormDayNha.resx">
       <DependentUpon>FormDayNha.cs</DependentUpon>
     </EmbeddedResource>

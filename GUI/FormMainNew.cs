@@ -12,80 +12,34 @@ namespace GUI
 {
     public partial class FormMainNew : Form
     {
+        // Khai báo animator
+        private MenuAnimator menuVanHanh, menuTaiChinh, menuDanhMuc, menuHeThong;
+
+        // Form con
         private Form currentChildForm;
-        int VanHanhExpandedHeight;
-        int VanHanhCollapsedHeight = 60;
-        bool VanHanhExpand = false;
-
-        int taiChinhExpandedHeight;
-        int taiChinhCollapsedHeight = 60;
-        bool taiChinhExpand = false;
-
-        int DanhMucExpandedHeight;
-        int DanhMucCollapsedHeight = 60;
-        bool DanhMucExpand = false;
-
-        int HeThongExpandedHeight;
-        int HeThongCollapsedHeight = 60;
-        bool HeThongExpand = false;
         public FormMainNew()
         {
             InitializeComponent();
 
-            this.button_Van_Hanh.Click += Button_Van_Hanh_Click;
-            this.Van_Hanh_Transition.Tick += Van_Hanh_Transition_Tick;
-            this.VanHanhExpandedHeight = flowLayoutPanel_van_hanh.Height + flowLayoutPanel_van_hanh.Controls.OfType<Control>().Sum(c => c.Height) + 10;
+            // Khởi tạo animator cho 4 menu
+            menuVanHanh = new MenuAnimator(flowLayoutPanel_van_hanh, Van_Hanh_Transition);
+            menuTaiChinh = new MenuAnimator(flowLayoutPanel_tai_chinh_ke_toan, Tai_Chinh_Transition);
+            menuDanhMuc = new MenuAnimator(flowLayoutPanel_danh_muc, Danh_Muc_Transition);
+            menuHeThong = new MenuAnimator(flowLayoutPanel_he_thong, He_Thong_Transition);
 
-            this.button_tai_chinh_ke_toan.Click += Button_tai_chinh_ke_toan_Click;
-            this.Tai_Chinh_Transition.Tick += Tai_Chinh_Transition_Tick;
-            this.taiChinhExpandedHeight = flowLayoutPanel_tai_chinh_ke_toan.Height + flowLayoutPanel_tai_chinh_ke_toan.Controls.OfType<Control>().Sum(c => c.Height) + 10;
+            // Gán sự kiện click
+            button_Van_Hanh.Click += (s, e) => menuVanHanh.Toggle();
+            button_tai_chinh_ke_toan.Click += (s, e) => menuTaiChinh.Toggle();
+            button_quan_ly_danh_muc.Click += (s, e) => menuDanhMuc.Toggle();
+            button_he_thong.Click += (s, e) => menuHeThong.Toggle();
 
-            this.button_quan_ly_danh_muc.Click += Button_quan_ly_danh_muc_Click;
-            this.Danh_Muc_Transition.Tick += Danh_Muc_Transition_Tick;
-            this.DanhMucExpandedHeight = flowLayoutPanel_danh_muc.Height + flowLayoutPanel_danh_muc.Controls.OfType<Control>().Sum(c => c.Height) + 10;
-
-            this.button_he_thong.Click += Button_he_thong_Click;
-            this.He_Thong_Transition.Tick += He_Thong_Transition_Tick;
-            this.HeThongExpandedHeight = flowLayoutPanel_he_thong.Height + flowLayoutPanel_he_thong.Controls.OfType<Control>().Sum(c => c.Height) + 10;
-
-
-
-            this.button_dashboard.Click += Button_dashboard_Click;
-            this.button_hop_dong.Click += Button_hop_dong_Click;
-            this.button_phong.Click += Button_phong_Click;
-            this.button_khach_thue.Click += Button_khach_thue_Click;
-            this.button_nha_tro.Click += Button_nha_tro_Click;
-            this.button_dien_nuoc.Click += Button_dien_nuoc_Click;
-        }
-
-        private void Button_dien_nuoc_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormDienNuoc());
-        }
-
-        private void Button_nha_tro_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormDayNha());
-        }
-
-        private void Button_khach_thue_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormKhachThue());
-        }
-
-        private void Button_phong_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormPhongTro());
-        }
-
-        private void Button_hop_dong_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormDSHopDong());
-        }
-
-        private void Button_dashboard_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormThongKe());
+            // Các nút mở form con
+            button_dashboard.Click += (s, e) => OpenChildForm(new FormThongKe());
+            button_hop_dong.Click += (s, e) => OpenChildForm(new FormDSHopDong());
+            button_phong.Click += (s, e) => OpenChildForm(new FormPhongTro());
+            button_khach_thue.Click += (s, e) => OpenChildForm(new FormKhachThue());
+            button_nha_tro.Click += (s, e) => OpenChildForm(new FormDayNha());
+            button_dien_nuoc.Click += (s, e) => OpenChildForm(new FormDienNuoc());
         }
 
         private void OpenChildForm(Form childForm)
@@ -108,117 +62,24 @@ namespace GUI
             childForm.Show();
         }
 
-        //Menu thu gon button he thong
         private void Button_he_thong_Click(object sender, EventArgs e)
         {
             He_Thong_Transition.Start();
         }
-        private void He_Thong_Transition_Tick(object sender, EventArgs e)
-        {
-            if (!HeThongExpand)
-            {
-                flowLayoutPanel_he_thong.Height += 10;
-                if (flowLayoutPanel_he_thong.Height >= HeThongExpandedHeight)
-                {
-                    He_Thong_Transition.Stop();
-                    HeThongExpand = true;
-                }
-            }
-            else
-            {
-                flowLayoutPanel_he_thong.Height -= 10;
-                if (flowLayoutPanel_he_thong.Height <= HeThongCollapsedHeight)
-                {
-                    He_Thong_Transition.Stop();
-                    HeThongExpand = false;
-                }
-            }
-        }
 
-
-        //Menu thu gon button quan ly danh muc
         private void Button_quan_ly_danh_muc_Click(object sender, EventArgs e)
         {
-            Danh_Muc_Transition.Start();    
+            Danh_Muc_Transition.Start();
         }
 
-        private void Danh_Muc_Transition_Tick(object sender, EventArgs e)
-        {
-            if (!DanhMucExpand)
-            {
-                flowLayoutPanel_danh_muc.Height += 10;
-                if (flowLayoutPanel_danh_muc.Height >= DanhMucExpandedHeight)
-                {
-                    Danh_Muc_Transition.Stop();
-                    DanhMucExpand = true;
-                }
-            }
-            else
-            {
-                flowLayoutPanel_danh_muc.Height -= 10;
-                if (flowLayoutPanel_danh_muc.Height <= DanhMucCollapsedHeight)
-                {
-                    Danh_Muc_Transition.Stop();
-                    DanhMucExpand = false;
-                }
-            }
-        }
-
-        //Menu thu gon button tai chinh ke toan
         private void Button_tai_chinh_ke_toan_Click(object sender, EventArgs e)
         {
             Tai_Chinh_Transition.Start();
         }
 
-        private void Tai_Chinh_Transition_Tick(object sender, EventArgs e)
-        {
-            if (!taiChinhExpand)
-            {
-                flowLayoutPanel_tai_chinh_ke_toan.Height += 10;
-                if (flowLayoutPanel_tai_chinh_ke_toan.Height >= taiChinhExpandedHeight)
-                {
-                    Tai_Chinh_Transition.Stop();
-                    taiChinhExpand = true;
-                }
-            }
-            else
-            {
-                flowLayoutPanel_tai_chinh_ke_toan.Height -= 10;
-                if (flowLayoutPanel_tai_chinh_ke_toan.Height <= taiChinhCollapsedHeight)
-                {
-                    Tai_Chinh_Transition.Stop();
-                    taiChinhExpand = false;
-                }
-            }
-        }
-
-        //Menu thu gon button van hanh
-
         private void Button_Van_Hanh_Click(object sender, EventArgs e)
         {
             Van_Hanh_Transition.Start();
-        }
-
-        private void Van_Hanh_Transition_Tick(object sender, EventArgs e)
-        {
-            if (!VanHanhExpand)
-            {
-                flowLayoutPanel_van_hanh.Height += 10;
-                if (flowLayoutPanel_van_hanh.Height >= VanHanhExpandedHeight)
-                {
-                    Van_Hanh_Transition.Stop();
-                    VanHanhExpand = true;
-                }
-            }
-            else
-            {
-                flowLayoutPanel_van_hanh.Height -= 10;
-                if (flowLayoutPanel_van_hanh.Height <= VanHanhCollapsedHeight)
-                {
-                    Van_Hanh_Transition.Stop();
-                    VanHanhExpand = false;
-                }
-            }
         }
     }
 }

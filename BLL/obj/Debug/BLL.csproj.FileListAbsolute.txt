@@ -60,3 +60,17 @@ D:\CNNET_Ngay10\BLL\obj\Debug\BLL.dll
 D:\CNNET_Ngay10\BLL\obj\Debug\BLL.pdb
 D:\Thinh\BLL\bin\Debug\App_Data\QL_nhaTro.mdf
 D:\Thinh\BLL\bin\Debug\App_Data\QL_nhaTro_log.ldf
+D:\cnnet_10\BLL\bin\Debug\App_Data\QL_nhaTro.mdf
+D:\cnnet_10\BLL\bin\Debug\App_Data\QL_nhaTro_log.ldf
+D:\cnnet_10\BLL\bin\Debug\BLL.dll
+D:\cnnet_10\BLL\bin\Debug\BLL.pdb
+D:\cnnet_10\BLL\bin\Debug\DAL.dll
+D:\cnnet_10\BLL\bin\Debug\DTO.dll
+D:\cnnet_10\BLL\bin\Debug\DAL.pdb
+D:\cnnet_10\BLL\bin\Debug\DAL.dll.config
+D:\cnnet_10\BLL\bin\Debug\DTO.pdb
+D:\cnnet_10\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\cnnet_10\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\cnnet_10\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\cnnet_10\BLL\obj\Debug\BLL.dll
+D:\cnnet_10\BLL\obj\Debug\BLL.pdb
