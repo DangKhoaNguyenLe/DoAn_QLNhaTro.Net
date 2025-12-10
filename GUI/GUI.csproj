@@ -271,6 +271,11 @@
     <Content Include="Resources\Images\nha3.jpg" />
     <Content Include="Resources\Images\nha4.jpg" />
     <Content Include="Resources\Images\nha5.jpg" />
+    <Content Include="Resources\Images\phong1.jpg" />
+    <Content Include="Resources\Images\phong2.jpg" />
+    <Content Include="Resources\Images\phong3.jpg" />
+    <Content Include="Resources\Images\phong4.jpg" />
+    <Content Include="Resources\Images\phong5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

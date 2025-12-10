@@ -1,14 +1,15 @@
 ﻿using DAL.DataNhaTroTableAdapters;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 using static System.Net.Mime.MediaTypeNames;
-using System.IO;
-using DTO;
 
 namespace DAL
 {
@@ -20,39 +21,65 @@ namespace DAL
         {
             List<PhongDTO> dsPhong = new List<PhongDTO>();
 
-            try
-            {
-                // Lấy DataTable từ TableAdapter
-                var dt = _adapter.GetData();
+            // 1. Lấy chuỗi kết nối (Lấy từ Properties hoặc cấu hình của bạn)
+            // Bạn có thể copy chuỗi kết nối trong file App.config dán vào đây cũng được
+            string connectionString = Properties.Settings.Default.QL_nhaTroConnectionString1;
 
-                foreach (var row in dt)
+            // Câu lệnh SQL lấy luôn ảnh (Sub-query)
+            string query = @"
+        SELECT 
+            p.MaPhong, p.MaNha, p.TenPhong, p.Tang, p.TrangThai, p.GhiChu,
+            (SELECT TOP 1 t.DuongDanURL FROM ThuVienAnh t WHERE t.MaPhong = p.MaPhong) AS AnhDaiDien
+        FROM Phong p";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
                 {
-                    PhongDTO p = new PhongDTO();
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
 
-                    // Map dữ liệu từ Row sang DTO
-                    p.MaPhong = row.MaPhong;
-                    p.MaNha = row.MaNha;
+                    // Dùng SqlDataReader để đọc dữ liệu nhanh
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            PhongDTO p = new PhongDTO();
 
-                    // Kiểm tra null an toàn (vì DataSet sinh ra các hàm Is...Null)
-                    p.MaLoaiPhong = row.IsMaLoaiPhongNull() ? 0 : row.MaLoaiPhong;
-                    p.TenPhong = row.TenPhong;
-                    p.Tang = row.IsTangNull() ? 0 : row.Tang;
-                    p.TrangThai = row.IsTrangThaiNull() ? "Trong" : row.TrangThai;
-                    p.GhiChu = row.IsGhiChuNull() ? "" : row.GhiChu;
+                            // --- Mapping dữ liệu thủ công (An toàn tuyệt đối) ---
+                            p.MaPhong = int.Parse(reader["MaPhong"].ToString());
 
-                    dsPhong.Add(p);
+                            // Kiểm tra null khi gán
+                            p.MaNha = reader["MaNha"] != DBNull.Value ? int.Parse(reader["MaNha"].ToString()) : 0;
+                            p.TenPhong = reader["TenPhong"].ToString();
+                            p.Tang = reader["Tang"] != DBNull.Value ? int.Parse(reader["Tang"].ToString()) : 0;
+                            p.TrangThai = reader["TrangThai"] != DBNull.Value ? reader["TrangThai"].ToString() : "Trong";
+                            p.GhiChu = reader["GhiChu"] != DBNull.Value ? reader["GhiChu"].ToString() : "";
+
+                            // --- QUAN TRỌNG: LẤY CỘT ẢNH ---
+                            if (reader["AnhDaiDien"] != DBNull.Value)
+                            {
+                                p.AnhDaiDien = reader["AnhDaiDien"].ToString();
+                            }
+                            else
+                            {
+                                p.AnhDaiDien = ""; // Không có ảnh
+                            }
+
+                            dsPhong.Add(p);
+                        }
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                // Xử lý lỗi kết nối nếu cần
-                throw ex;
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
             }
 
             return dsPhong;
         }
 
-        // Các hàm Thêm, Xóa, Sửa dùng TableAdapter
         public bool ThemPhong(PhongDTO p)
         {
             try
