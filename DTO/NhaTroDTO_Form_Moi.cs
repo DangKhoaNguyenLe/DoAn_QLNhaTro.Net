@@ -14,7 +14,7 @@ namespace DTO
         private string diaChi;
         private int nguoiQuanLy;
         private string ghiChu;
-        //string anhDaiDien;
+        string anhDaiDien;
 
 
         public int MaNha
@@ -47,11 +47,11 @@ namespace DTO
             set { ghiChu = value; }
         }
 
-        //public string AnhDaiDien { get => anhDaiDien; set => anhDaiDien = value; }
+        public string AnhDaiDien { get => anhDaiDien; set => anhDaiDien = value; }
 
         public NhaTroDTO_Form_Moi() { }
 
-        public NhaTroDTO_Form_Moi( int maNha, string tenNha,string diaChi, int nguoiQuanLy,string ghiChu/*string anhdaidien*/
+        public NhaTroDTO_Form_Moi( int maNha, string tenNha,string diaChi, int nguoiQuanLy,string ghiChu,string anhdaidien
         )
         {
             this.maNha = maNha;
@@ -59,7 +59,7 @@ namespace DTO
             this.diaChi = diaChi;
             this.nguoiQuanLy = nguoiQuanLy;
             this.ghiChu = ghiChu;
-            //this.anhDaiDien = anhdaidien;
+            this.anhDaiDien = anhdaidien;
         }
     }
 }

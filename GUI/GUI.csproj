@@ -101,12 +101,6 @@
     <Compile Include="FormSuaHopDong.Designer.cs">
       <DependentUpon>FormSuaHopDong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThemDayNha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormThemDayNha.Designer.cs">
-      <DependentUpon>FormThemDayNha.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormDSHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +130,12 @@
     </Compile>
     <Compile Include="FormThemKhachThue.Designer.cs">
       <DependentUpon>FormThemKhachThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemNhaTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemNhaTro.Designer.cs">
+      <DependentUpon>FormThemNhaTro.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThongKe.cs">
       <SubType>Form</SubType>
@@ -188,9 +188,6 @@
     <EmbeddedResource Include="FormSuaHopDong.resx">
       <DependentUpon>FormSuaHopDong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThemDayNha.resx">
-      <DependentUpon>FormThemDayNha.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormDSHopDong.resx">
       <DependentUpon>FormDSHopDong.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemKhachThue.resx">
       <DependentUpon>FormThemKhachThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemNhaTro.resx">
+      <DependentUpon>FormThemNhaTro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
@@ -225,6 +225,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StatCard.resx">
+      <DependentUpon>StatCard.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -243,6 +246,10 @@
       <Project>{598fb54a-c147-4470-b410-d0cb6d819ce9}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{5351C023-0432-4C2D-A20F-BC121510A5B1}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{4194efe2-36a5-4ba2-b596-825886107e4f}</Project>
       <Name>DTO</Name>
@@ -252,5 +259,12 @@
     <None Include="Resources\Them.png" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Images\nha1.jpg" />
+    <Content Include="Resources\Images\nha2.jpg" />
+    <Content Include="Resources\Images\nha3.jpg" />
+    <Content Include="Resources\Images\nha4.jpg" />
+    <Content Include="Resources\Images\nha5.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

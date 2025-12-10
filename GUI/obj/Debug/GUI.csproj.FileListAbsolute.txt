@@ -229,7 +229,6 @@ D:\BanCuaThinh\GUI\obj\Debug\GUI.FormKhachThue.resources
 D:\BanCuaThinh\GUI\obj\Debug\GUI.FormMainNew.resources
 D:\BanCuaThinh\GUI\obj\Debug\GUI.FormNhaTro.resources
 D:\BanCuaThinh\GUI\obj\Debug\GUI.FormSuaHopDong.resources
-D:\BanCuaThinh\GUI\obj\Debug\GUI.FormThemDayNha.resources
 D:\BanCuaThinh\GUI\obj\Debug\GUI.FormDSHopDong.resources
 D:\BanCuaThinh\GUI\obj\Debug\GUI.FormMainTu.resources
 D:\BanCuaThinh\GUI\obj\Debug\GUI.FormQuenMatKhau.resources
@@ -244,3 +243,5 @@ D:\BanCuaThinh\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\BanCuaThinh\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\BanCuaThinh\GUI\obj\Debug\GUI.exe
 D:\BanCuaThinh\GUI\obj\Debug\GUI.pdb
+D:\BanCuaThinh\GUI\obj\Debug\GUI.StatCard.resources
+D:\BanCuaThinh\GUI\obj\Debug\GUI.FormThemNhaTro.resources

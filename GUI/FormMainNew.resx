@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox_logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEBLAEsAAD/4QBWRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAAB
         AAAARgEoAAMAAAABAAIAAAITAAMAAAABAAEAAAAAAAAAAAEsAAAAAQAAASwAAAAB/9sAQwAFAwQEBAMF
@@ -420,25 +420,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//2Q==
-</value>
-  </data>
-  <data name="button_dashboard.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAwNJREFUWEfF
-        lu9LU1EYxwUJwhcGESVB0R/QGyPBF2Ikli6S0DdLFwZFUSRmSFRitSzoB6Khkv2QCkqohiQk6dxEFJEC
-        p5N04Wq5FcUUtyBoy4Ke+D52dJ1779zNur74cM8e9jzf73nOufecpLyK3UnLiSJgNIqA0SgCRqMIGI0i
-        IENEyYGflPpqlta4o5TmjtL6RcB/0pCDXLmejCIQK+yciha0vQu11g/5B60D3jFBzeDbCS3Ef5Bj84Xu
-        2qe+Zcu1EzLQPx0pvTESCB/qcFNxh4f2dnq1eT4xB8Zdb3iMHOQ2DPv9mIhcP64BtPvO+CeXpX2Yirt9
-        ZOkJkMXpj49jkkXN7W42gBzObR+mlrGPL1BT1tE00Bf6kV7V6/nMhWQhNSDW4aE9DTbKOXKa8i/fnzPt
-        mGQzqNUXnt0q62gawLod7x6PoJ1qYoX3nGSqbWVR0R3MFgYgXtD8bK4j3T4GtbqCkVxZZ1ED3EIVcQiZ
-        H/aymLnNNS8OYbEMMCCMnXC+/m4PRvNlHX0GHJMsgJnvr7tFB67Wz/+GERiD8PbaZgbGxD6AAa2NqAio
-        GugJcEEI4tlSmUGeUylsAp0QT5hIPbmD2XX7Ke3r/fB3BrBecgfEGLN8dCadZi6sYOGyhks09GADXblW
-        xAZTzubTSmve0gxgvZAkXkHM7lh5JYNZwsC0NZkNlDddpC9dq+hmoymuAXvwa6Gsk7CBkkYbvdy2jhy5
-        m3izLWYAyAaW1IF/YUBXB+BWGEARNQPBcwt74L8ZwKu3rAbidUC8BWpLoLYJde2BWAPY9fi+12ZsZDCu
-        LtlMraWrqejwQeZJTRpVHM2i7LJqWmvJZDBG7kIHdH4J+TDq9NLOquuUmZNHWbkmXSAHuThPdB9GODpx
-        hPJx/PvbzrS5Ekbk4tk08r4PNyRZR9MAwDLgMvHHhQSXjVjEhUQlHnsh0Wp/XANgIBzd8tg3UyeuZOf7
-        J0aBPI79LcCskTsQjqbLdRM2IBCXUj1otVxGETAaRcBoFAGjUQSMRhEwml8axBiXiOV4tgAAAABJRU5E
-        rkJggg==
 </value>
   </data>
   <data name="button_lap_hoa_don.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
