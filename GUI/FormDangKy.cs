@@ -1,102 +1,88 @@
-﻿using BLL;
-using DTO;
-using GUI;
+﻿using BLL; // Sử dụng NguoiDungBLL
+using DTO; // Sử dụng NguoiDungDTO
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
-
 
 namespace GUI
 {
     public partial class FormDangKy : Form
     {
-        UserBLL userBLL = new UserBLL();
+ 
+        NguoiDungBLL bll = new NguoiDungBLL();
+
+        private const int EM_SETCUEBANNER = 0x1501;
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern Int32 SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
         public FormDangKy()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             this.pictureBox_Thoat.Click += PictureBox_Thoat_Click;
             this.linkLabel_quaylaiLogin.LinkClicked += LinkLabel_quaylaiLogin_LinkClicked;
             this.btn_dangky.Click += Btn_dangky_Click;
 
+            this.Load += FormDangKy_Load;
+            this.Shown += FormDangKy_Shown;
+        }
+
+        private void SetPlaceholder(TextBox txt, string placeholder)
+        {
+            SendMessage(txt.Handle, EM_SETCUEBANNER, 1, placeholder);
+        }
+
+        private void FormDangKy_Load(object sender, EventArgs e)
+        {
+            SetPlaceholder(txt_taikhoan_dangky, "Nhập tài khoản");
+            SetPlaceholder(txt_matkhau_dangky, "Nhập mật khẩu");
+            SetPlaceholder(txt_XNmatkhau_dangky, "Xác nhận mật khẩu");
+            SetPlaceholder(txt_fullname_dangky, "Nhập họ và tên");
+            SetPlaceholder(txt_phone, "Số điện thoại");
+        
+        }
+
+        private void FormDangKy_Shown(object sender, EventArgs e)
+        {
+            this.ActiveControl = null; 
         }
 
         private void Btn_dangky_Click(object sender, EventArgs e)
-        {
+        { 
             string username = txt_taikhoan_dangky.Text.Trim();
             string password = txt_matkhau_dangky.Text.Trim();
             string XNpassword = txt_XNmatkhau_dangky.Text.Trim();
             string fullName = txt_fullname_dangky.Text.Trim();
             string phone = txt_phone.Text.Trim();
-            string email = txt_email_dangky.Text.Trim();
+         
 
-
-            // Kiểm tra trống
-            if (string.IsNullOrWhiteSpace(username) ||
-                string.IsNullOrWhiteSpace(password) ||
-                string.IsNullOrWhiteSpace(XNpassword) ||
-                string.IsNullOrWhiteSpace(fullName) ||
-                string.IsNullOrWhiteSpace(email))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thiếu thông tin",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ Tài khoản và Mật khẩu!", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Kiểm tra xác nhận mật khẩu
-            if (password != XNpassword)
-            {
-                MessageBox.Show("Mật khẩu xác nhận không khớp!", "Lỗi",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            NguoiDungDTO newUser = new NguoiDungDTO();
+            newUser.TenDangNhap = username;
+            newUser.MatKhau = password;
+            newUser.HoTen = fullName;
+            newUser.SDT = phone;
 
-            // Gán dữ liệu cho DTO
-            UserDTO user = new UserDTO();
-            user.Username = username;
-            user.PasswordHash = password;
-            user.FullName = fullName;
-            user.Phone = phone;
-            user.Email = email;
+            string ketQua = bll.DangKyTaiKhoan(newUser, XNpassword);
 
-            int result = userBLL.DangKy(user);
 
-            if (result == 1)
+            if (ketQua == "ThanhCong")
             {
-                MessageBox.Show("Thiếu thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (result == 2)
-            {
-                MessageBox.Show("Tên đăng nhập đã tồn tại!", "Lỗi đăng ký", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (result == 3)
-            {
-                MessageBox.Show("Email không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (result == 4)
-            {
-                MessageBox.Show("Số điện thoại không hợp lệ! (Phải 10 số, bắt đầu bằng 0)",
-                                "Lỗi số điện thoại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (result == 5)
-            {
-                MessageBox.Show("Đăng ký thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                MessageBox.Show("Đăng ký thành công! Bạn có thể đăng nhập ngay.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close(); 
             }
             else
             {
-                MessageBox.Show("Lỗi hệ thống khi đăng ký!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ketQua, "Lỗi đăng ký", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
-
 
         private void LinkLabel_quaylaiLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -106,7 +92,8 @@ namespace GUI
         private void PictureBox_Thoat_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-                "Bạn có chắc muốn thoát chương trình?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question
+                "Bạn có chắc muốn thoát chương trình?", "Xác nhận thoát",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question
             );
 
             if (result == DialogResult.Yes)
@@ -114,7 +101,5 @@ namespace GUI
                 Application.Exit();
             }
         }
-
-
     }
 }

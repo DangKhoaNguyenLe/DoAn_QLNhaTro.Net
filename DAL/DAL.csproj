@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -47,7 +47,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,9 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BillDAL.cs" />
-    <Compile Include="DataNhaTro.cs">
-      <DependentUpon>DataNhaTro.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="CocDAL.cs" />
+    <Compile Include="DanhMucDAL.cs" />
     <Compile Include="DataNhaTro.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,14 +71,19 @@
     <Compile Include="DienNuocDAL.cs" />
     <Compile Include="GiaDienNuocDAL.cs" />
     <Compile Include="HopDongDAL.cs" />
+    <Compile Include="KhachHangDAL.cs" />
     <Compile Include="KhachThueDAL.cs" />
+    <Compile Include="NguoiDungDAL.cs" />
+    <Compile Include="NhaTroDAL.cs" />
+    <Compile Include="PhongDAL.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="TaiKhoanDAL.cs" />
+    <Compile Include="ThuePhongDAL.cs" />
     <Compile Include="ViewPhieuThuDAL.cs" />
-    <Compile Include="PhongTroDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDAL.cs" />
   </ItemGroup>
@@ -120,10 +124,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Datatabse\QL_nhaTro.mdf" />
-    <Content Include="Datatabse\QL_nhaTro_log.ldf">
+    <Content Include="App_Data\QL_nhaTro.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\QL_nhaTro_log.ldf">
       <DependentUpon>QL_nhaTro.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

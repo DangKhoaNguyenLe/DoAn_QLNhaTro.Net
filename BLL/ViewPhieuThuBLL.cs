@@ -10,10 +10,10 @@ namespace BLL
 {
     public class ViewPhieuThuBLL: ConnectionBLL
     {
-        public List<ViewPhieuThuDTO> LayDanhSachPhieuThu()
-        {
-            return v_phieuThuDAL.GetListPhieuThu();
-        }
+        //public List<ViewPhieuThuDTO> LayDanhSachPhieuThu()
+        //{
+        //    return v_phieuThuDAL.GetListPhieuThu();
+        //}
 
     }
 }

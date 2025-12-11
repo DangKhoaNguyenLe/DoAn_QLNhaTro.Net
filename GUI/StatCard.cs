@@ -74,5 +74,17 @@ namespace GUI
             else
                 lblValue.Text = value.ToString("N0");
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // StatCard
+            // 
+            this.Name = "StatCard";
+            this.Size = new System.Drawing.Size(285, 245);
+            this.ResumeLayout(false);
+
+        }
     }
 }
