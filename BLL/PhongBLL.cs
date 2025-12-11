@@ -12,15 +12,28 @@ namespace BLL
     {
         private PhongDAL dal = new PhongDAL();
 
-        public List<PhongDTO> LayDSPhong()
+        public List<PhongDTO> LayDSPhong() => dal.LayTatCaPhong();
+        public bool ThemPhongMoi(PhongDTO p) => dal.ThemPhong(p);
+
+        public bool XoaPhong(int maPhong)
         {
-            return dal.LayTatCaPhong();
+            return dal.XoaPhong(maPhong);
         }
 
-        public bool ThemPhongMoi(PhongDTO p)
+
+        public bool SuaPhong(PhongDTO p)
         {
-            // Có thể kiểm tra nghiệp vụ: Tên phòng có trùng không, v.v.
-            return dal.ThemPhong(p);
+            // Có thể thêm kiểm tra logic nếu cần
+            return dal.SuaPhong(p);
         }
+
+        public bool TraPhong(int maPhong)
+        {
+            // Có thể thêm logic tính tiền điện nước cuối cùng ở đây nếu cần
+            PhongDAL dal = new PhongDAL();
+            return dal.TraPhong(maPhong);
+        }
+
+
     }
 }

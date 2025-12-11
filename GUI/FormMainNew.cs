@@ -24,9 +24,14 @@ namespace GUI
             menuDanhMuc = new MenuAnimator(flowLayoutPanel_danh_muc, Danh_Muc_Transition);
             menuHeThong = new MenuAnimator(flowLayoutPanel_he_thong, He_Thong_Transition);
             this.FormClosing += FormMainNew_FormClosing;
-
+            button_phong.Click += Button_phong_Click;
             ApplyTheme();
             DangKySuKien();
+        }
+
+        private void Button_phong_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormPhongTro());
         }
 
         private void FormMainNew_FormClosing(object sender, FormClosingEventArgs e)

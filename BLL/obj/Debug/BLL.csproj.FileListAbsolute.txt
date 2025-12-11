@@ -116,3 +116,17 @@ D:\Nguyen_Ngoc_Thinh\.NET\ngay11_12\BLL\bin\Debug\DAL.pdb
 D:\Nguyen_Ngoc_Thinh\.NET\ngay11_12\BLL\bin\Debug\DAL.dll.config
 D:\Nguyen_Ngoc_Thinh\.NET\ngay11_12\BLL\bin\Debug\DTO.pdb
 D:\Nguyen_Ngoc_Thinh\.NET\ngay11_12\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\bin\Debug\App_Data\QL_nhaTro.mdf
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\bin\Debug\App_Data\QL_nhaTro_log.ldf
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\bin\Debug\BLL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\bin\Debug\BLL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\bin\Debug\DAL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\bin\Debug\DTO.dll
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\bin\Debug\DAL.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\bin\Debug\DAL.dll.config
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\bin\Debug\DTO.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\obj\Debug\BLL.dll
+D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\obj\Debug\BLL.pdb

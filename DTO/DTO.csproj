@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BillDTO.cs" />
+    <Compile Include="CocDTO.cs" />
     <Compile Include="DanhSachHopDongDTO.cs" />
     <Compile Include="DienNuocDTO.cs" />
     <Compile Include="HopDongDTO.cs" />
     <Compile Include="GiaDienNuocDTO.cs" />
+    <Compile Include="KhachHangDTO.cs" />
     <Compile Include="KhachThueDTO.cs" />
     <Compile Include="NguoiDungDTO.cs" />
     <Compile Include="NhaTroDTO.cs" />
