@@ -134,3 +134,15 @@ D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.ca
 D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\DAL\obj\Debug\DAL.dll
 D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\DAL\obj\Debug\DAL.pdb
+D:\125\DAL\bin\Debug\App_Data\QL_nhaTro.mdf
+D:\125\DAL\bin\Debug\App_Data\QL_nhaTro_log.ldf
+D:\125\DAL\bin\Debug\DAL.dll.config
+D:\125\DAL\bin\Debug\DAL.dll
+D:\125\DAL\bin\Debug\DAL.pdb
+D:\125\DAL\bin\Debug\DTO.dll
+D:\125\DAL\bin\Debug\DTO.pdb
+D:\125\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\125\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\125\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\125\DAL\obj\Debug\DAL.dll
+D:\125\DAL\obj\Debug\DAL.pdb

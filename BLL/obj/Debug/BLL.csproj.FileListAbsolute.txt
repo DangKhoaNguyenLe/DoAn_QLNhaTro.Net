@@ -158,3 +158,17 @@ D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.ca
 D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\BLL\obj\Debug\BLL.dll
 D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\BLL\obj\Debug\BLL.pdb
+D:\125\BLL\bin\Debug\App_Data\QL_nhaTro.mdf
+D:\125\BLL\bin\Debug\App_Data\QL_nhaTro_log.ldf
+D:\125\BLL\bin\Debug\BLL.dll
+D:\125\BLL\bin\Debug\BLL.pdb
+D:\125\BLL\bin\Debug\DAL.dll
+D:\125\BLL\bin\Debug\DTO.dll
+D:\125\BLL\bin\Debug\DAL.pdb
+D:\125\BLL\bin\Debug\DAL.dll.config
+D:\125\BLL\bin\Debug\DTO.pdb
+D:\125\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\125\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\125\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\125\BLL\obj\Debug\BLL.dll
+D:\125\BLL\obj\Debug\BLL.pdb

@@ -138,13 +138,11 @@ namespace GUI
             {
                 button_phan_quyen.Visible = false;
                 button_dashboard.Visible = false;
-                button_bao_cao_doanh_thu.Visible = false;
             }
             else
             {
                 button_phan_quyen.Visible = true;
                 button_dashboard.Visible = true;
-                button_bao_cao_doanh_thu.Visible = true;
             }
         }
         private void DangKySuKien()
@@ -154,21 +152,6 @@ namespace GUI
             button_tai_chinh_ke_toan.Click += (s, e) => menuTaiChinh.Toggle();
             button_quan_ly_danh_muc.Click += (s, e) => menuDanhMuc.Toggle();
             button_he_thong.Click += (s, e) => menuHeThong.Toggle();
-
-
-            // 1. Cấu hình giá (Dịch vụ) -> Cần truyền quyền để khóa TextBox
-            //button_dich_vu.Click += (s, e) => OpenChildForm(new FormDichVu(_vaiTro));
-
-            // 2. Các form danh sách (Phòng, Khách) -> Cần truyền quyền để khóa nút Xóa
-            //button_phong.Click += (s, e) => OpenChildForm(new FormPhongTro(_vaiTro));
-            //button_khach_thue.Click += (s, e) => OpenChildForm(new FormKhachThue(_vaiTro));
-            //button_hop_dong.Click += (s, e) => OpenChildForm(new FormDSHopDong(_vaiTro));
-
-            //// 3. Phiếu Chi -> Cần truyền quyền để giới hạn số tiền
-            //button_thu_chi.Click += (s, e) => OpenChildForm(new FormPhieuChi(_vaiTro));
-
-            // Các form bình thường (Ai cũng giống nhau)
-            button_dien_nuoc.Click += (s, e) => OpenChildForm(new FormDienNuoc());
             button_nha_tro.Click += (s, e) => OpenChildForm(new FormNhaTro());
             button_dashboard.Click += (s, e) => {
                 if (_vaiTro == "ADMIN") OpenChildForm(new FormThongKe());
@@ -236,14 +219,9 @@ namespace GUI
             {
                 button_lap_hoa_don,
                 button_thu_chi,
-                button_bao_cao_doanh_thu,
                 button_phong,
                 button_khach_thue,
                 button_hop_dong,
-                button_dien_nuoc,
-                button_nha_tro,
-                button_tai_san,
-                button_dich_vu,
                 button_phan_quyen,
                 button_doi_mat_khau,
                 button_dang_xuat
