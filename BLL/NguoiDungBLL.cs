@@ -51,6 +51,11 @@ namespace BLL
             return dal.LayDSNguoiDung();
         }
 
+        public List<NguoiDungDTO> getNguoiDungByAdmin()
+        {
+            return dal.LayDSNguoiDung().Where(t => t.VaiTro == "ADMIN").ToList() ;
+        }
+
         public string ThemNhanVien(NguoiDungDTO nd)
         {
             if (string.IsNullOrEmpty(nd.TenDangNhap) || string.IsNullOrEmpty(nd.MatKhau))

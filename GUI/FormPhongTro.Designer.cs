@@ -117,7 +117,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(454, 1175);
+            this.panel2.Size = new System.Drawing.Size(454, 975);
             this.panel2.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -160,7 +160,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 280F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(454, 1175);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(454, 975);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label3
@@ -169,7 +169,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
             this.label3.Location = new System.Drawing.Point(37, 126);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 33);
+            this.label3.Size = new System.Drawing.Size(104, 33);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên phòng";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -179,7 +179,7 @@
             this.txtTenPhong.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtTenPhong.Location = new System.Drawing.Point(194, 129);
             this.txtTenPhong.Name = "txtTenPhong";
-            this.txtTenPhong.Size = new System.Drawing.Size(228, 37);
+            this.txtTenPhong.Size = new System.Drawing.Size(228, 32);
             this.txtTenPhong.TabIndex = 1;
             // 
             // label4
@@ -188,7 +188,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.Location = new System.Drawing.Point(37, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 26);
+            this.label4.Size = new System.Drawing.Size(56, 26);
             this.label4.TabIndex = 2;
             this.label4.Text = "Tầng";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -198,7 +198,7 @@
             this.txtTang.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtTang.Location = new System.Drawing.Point(194, 187);
             this.txtTang.Name = "txtTang";
-            this.txtTang.Size = new System.Drawing.Size(228, 37);
+            this.txtTang.Size = new System.Drawing.Size(228, 32);
             this.txtTang.TabIndex = 4;
             // 
             // label5
@@ -207,7 +207,7 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
             this.label5.Location = new System.Drawing.Point(37, 246);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 29);
+            this.label5.Size = new System.Drawing.Size(81, 29);
             this.label5.TabIndex = 3;
             this.label5.Text = "Ghi chú";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,7 +217,7 @@
             this.txtGhiChu.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtGhiChu.Location = new System.Drawing.Point(194, 249);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(228, 37);
+            this.txtGhiChu.Size = new System.Drawing.Size(228, 32);
             this.txtGhiChu.TabIndex = 5;
             // 
             // tableLayoutPanel3
@@ -321,7 +321,7 @@
             this.cboLoaiPhong.FormattingEnabled = true;
             this.cboLoaiPhong.Location = new System.Drawing.Point(194, 69);
             this.cboLoaiPhong.Name = "cboLoaiPhong";
-            this.cboLoaiPhong.Size = new System.Drawing.Size(228, 37);
+            this.cboLoaiPhong.Size = new System.Drawing.Size(228, 33);
             this.cboLoaiPhong.TabIndex = 11;
             // 
             // label2
@@ -330,7 +330,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
             this.label2.Location = new System.Drawing.Point(37, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 29);
+            this.label2.Size = new System.Drawing.Size(109, 29);
             this.label2.TabIndex = 12;
             this.label2.Text = "Loại phòng";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -341,7 +341,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Location = new System.Drawing.Point(37, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 32);
+            this.label1.Size = new System.Drawing.Size(48, 32);
             this.label1.TabIndex = 13;
             this.label1.Text = "Nhà";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -352,7 +352,7 @@
             this.cboChiNhanh.FormattingEnabled = true;
             this.cboChiNhanh.Location = new System.Drawing.Point(194, 11);
             this.cboChiNhanh.Name = "cboChiNhanh";
-            this.cboChiNhanh.Size = new System.Drawing.Size(228, 37);
+            this.cboChiNhanh.Size = new System.Drawing.Size(228, 33);
             this.cboChiNhanh.TabIndex = 14;
             // 
             // picAnhPhong
@@ -395,7 +395,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(454, 80);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1018, 1175);
+            this.panel3.Size = new System.Drawing.Size(1018, 975);
             this.panel3.TabIndex = 2;
             // 
             // flpDanhSachPhong
@@ -404,16 +404,16 @@
             this.flpDanhSachPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpDanhSachPhong.Location = new System.Drawing.Point(0, 0);
             this.flpDanhSachPhong.Name = "flpDanhSachPhong";
-            this.flpDanhSachPhong.Size = new System.Drawing.Size(1018, 1175);
+            this.flpDanhSachPhong.Size = new System.Drawing.Size(1018, 975);
             this.flpDanhSachPhong.TabIndex = 0;
             // 
             // FormPhongTro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1472, 1255);
+            this.ClientSize = new System.Drawing.Size(1472, 1055);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

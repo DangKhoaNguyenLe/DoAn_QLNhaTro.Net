@@ -1,17 +1,42 @@
-﻿using DTO;
+﻿using DAL.DataNhaTroTableAdapters;
+using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DAL
 {
     public class KhachHangDAL
     {
         private string connStr = Properties.Settings.Default.QL_nhaTroConnectionString1;
+        KhachHangTableAdapter khachHangs = new KhachHangTableAdapter();
+        public List<KhachHangDTO> GetList()
+        {
+            List<KhachHangDTO> daynhas = new List<KhachHangDTO>();
+            DataTable dt = khachHangs.GetData();
 
+            foreach(DataRow dr in dt.Rows)
+            {
+                DataNhaTro.KhachHangRow ht = dr as DataNhaTro.KhachHangRow;
+                KhachHangDTO d = new KhachHangDTO();
+                d.MaKhachHang = ht.MaKhachHang;
+                d.HoTen = ht.HoTen ?? " ";
+                d.CCCD = ht.CCCD ?? " ";
+                d.SDT = ht.SDT ?? " ";
+                d.QueQuan = ht.QueQuan ?? " ";
+                d.GioiTinh = ht.GioiTinh ?? " ";
+                d.NgaySinh = ht.IsNgaySinhNull() ? DateTime.ParseExact("01/01/1753", "dd/MM/yyyy", null) : ht.NgaySinh;
+                d.AnhMatTruoc = ht.IsAnhMatTruocNull() ? "" : ht.AnhMatTruoc;
+                d.AnhMatSau = ht.IsAnhMatSauNull() ? "" : ht.AnhMatSau;
+                daynhas.Add(d);
+            }
+            return daynhas;
+        }
         public bool KiemTraTonTaiCCCD(string cccd)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -60,5 +85,42 @@ namespace DAL
                 }
             }
         }
+
+        public bool delete(int id)
+        {
+            try
+            {
+                khachHangs.DeleteQuery(id);
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL: " + ex.Message, ex);
+            }
+        }
+
+        public bool update(KhachHangDTO kh)
+        {
+            try
+            {
+                khachHangs.UpdateQuery(
+                    kh.HoTen,
+                    kh.CCCD,
+                    kh.SDT,
+                    kh.QueQuan,
+                    kh.GioiTinh,
+                    kh.NgaySinh.ToString(),
+                    kh.AnhMatSau,
+                    kh.AnhMatSau,
+                    kh.MaKhachHang);
+                
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi CSDL: " + ex.Message, ex);
+            }
+        }
     }
+
 }

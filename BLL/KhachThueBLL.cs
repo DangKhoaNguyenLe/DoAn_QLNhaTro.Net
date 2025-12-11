@@ -17,7 +17,7 @@ namespace BLL
 
 
         // Hàm mới để lọc theo dãy nhà
-        public List<KhachThueDTO> LayKhachThueTheoDay(int hostelID)
+      /*  public List<KhachThueDTO> LayKhachThueTheoDay(int hostelID)
         {
             return khachThueDAL.GetListTenantByHostel(hostelID);
         }
@@ -27,7 +27,7 @@ namespace BLL
             List<KhachThueDTO> list = khachThueDAL.GetListTenantByHostel(hostelID);
             return list.FindAll(x => x.FullName.ToLower().Contains(keyword.ToLower()));
         }
-
+*/
 
         //public List<KhachThueDTO> LayDSKhachThue()
         //{
@@ -45,7 +45,7 @@ namespace BLL
         //}
 
 
-        public bool ThemKhachThue(KhachThueDTO kh)
+       /* public bool ThemKhachThue(KhachThueDTO kh)
         {
             if (string.IsNullOrEmpty(kh.FullName))
             {
@@ -58,14 +58,14 @@ namespace BLL
             }
 
             return khachThueDAL.AddKhachThue(kh);
-        }
+        }*/
 
         // Trong class KhachThueBLL
-        public bool XoaKhachThue(int tenantID)
+       /* public bool XoaKhachThue(int tenantID)
         {
             // Có thể thêm logic kiểm tra nợ tiền trước khi xóa nếu cần
             return khachThueDAL.DeleteKhachThue(tenantID);
-        }
+        }*/
         //public bool add(KhachThueDTO kh)
         //{
         //    try

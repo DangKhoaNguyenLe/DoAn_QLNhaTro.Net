@@ -1,7 +1,9 @@
 ﻿using BLL;
+using DAL;
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -11,6 +13,7 @@ namespace GUI
     public partial class FormNhaTro : Form
     {
         NhaTroBLL nhatrobll = new NhaTroBLL();
+        
 
         public FormNhaTro()
         {
@@ -19,13 +22,56 @@ namespace GUI
             this.Load += FormNhaTro_Load;
             this.dataGridView_nha_Tro.CellFormatting += DataGridView_nha_Tro_CellFormatting;
             this.dataGridView_nha_Tro.RowPostPaint += dataGridView_nha_Tro_RowPostPaint;
+            this.button_them_nha_tro.Click += Button_them_nha_tro_Click;
+            this.btnXoa.Click += BtnXoa_Click;
+            this.btnEdit.Click += BtnEdit_Click;
+        }
+
+        private void BtnXoa_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(dataGridView_nha_Tro.SelectedRows[0].Cells["MaNha"].Value.ToString());
+            try
+            {
+                if (nhatrobll.delete(id))
+                {
+                    MessageBox.Show("Xóa thành công", "Success");
+                }
+            }catch
+            {
+                MessageBox.Show("Không thể xóa dãy nhà này do đã có các phòng trọ và hợp đồng liên quan", "Error",
+                    MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            
+            LoadDataGirdView();
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(dataGridView_nha_Tro.SelectedRows[0].Cells["MaNha"].Value.ToString());
+            FormThemNhaTro formThemNhaTro = new FormThemNhaTro("edit", id);
+            formThemNhaTro.ShowDialog();
+            LoadDataGirdView();
+        }
+
+        private void LoadDataGirdView()
+        {
+            List<NhaTroDTO> list = nhatrobll.LayNhaTro();
+            dataGridView_nha_Tro.DataSource = list;
+            label_tat_Ca.Text = "Tất cả (" + list.Count + ")";
+        }
+        private void Button_them_nha_tro_Click(object sender, EventArgs e)
+        {
+            FormThemNhaTro formThemNhaTro = new FormThemNhaTro("Them", 0);
+
+            formThemNhaTro.ShowDialog();
+            LoadDataGirdView();
+
         }
 
         private void FormNhaTro_Load(object sender, EventArgs e)
         {
-            List<NhaTroDTO_Form_Moi> list = nhatrobll.LayNhaTro();
-            dataGridView_nha_Tro.DataSource = list;
-            label_tat_Ca.Text = "Tất cả (" + list.Count + ")";
+            LoadDataGirdView();
 
         }
 
@@ -34,63 +80,51 @@ namespace GUI
             if (dataGridView_nha_Tro.Columns[e.ColumnIndex].Name != "AnhDaiDien")
                 return;
 
-            if (e.Value is string rawPath && !string.IsNullOrEmpty(rawPath))
+            string rawPath = e.Value?.ToString();
+
+            if (string.IsNullOrEmpty(rawPath))
             {
-                string fullPath = null;
+                e.Value = null;
+                return;
+            }
 
-                try
+            Image img = null;
+
+            try
+            {
+                
+                if (rawPath.StartsWith("http"))
                 {
-                    // 1. Lấy vị trí thư mục hiện tại của file .exe (Ví dụ: C:\...\GUI\bin\Debug)
-                    string currentAssemblyPath = Application.StartupPath;
-
-                    // 2. Đi ngược lên 2 cấp để đến thư mục Project GUI
-                    // currentAssemblyPath -> bin -> GUI Project folder
-                    // Lưu ý: Nếu bạn đang chạy ứng dụng đã Build (không phải Debug), cần kiểm tra kỹ số cấp Parent.
-
-                    // Thư mục GUI Project: D:\BanCuaThinh\GUI
-                    DirectoryInfo projectDir = Directory.GetParent(currentAssemblyPath)?.Parent;
-
-                    if (projectDir == null)
+                    using (var wc = new System.Net.WebClient())
                     {
-                        e.Value = null;
-                        return;
-                    }
-
-                    // 3. Nối tới thư mục Resources: D:\BanCuaThinh\GUI\Resources
-                    string resourcesPath = Path.Combine(projectDir.FullName, "Resources");
-
-                    // 4. Kiểm tra và xây dựng đường dẫn ảnh cuối cùng
-                    // fullPath = D:\BanCuaThinh\GUI\Resources\Images\nha1.jpg
-                    fullPath = Path.Combine(resourcesPath, rawPath.Replace("/", "\\"));
-                }
-                catch
-                {
-                    // Lỗi xảy ra trong quá trình tìm đường dẫn
-                    e.Value = null;
-                    return;
-                }
-
-                // --- LOAD ẢNH ---
-                if (File.Exists(fullPath))
-                {
-                    try
-                    {
-                        using (FileStream fs = new FileStream(fullPath, FileMode.Open, FileAccess.Read))
+                        byte[] bytes = wc.DownloadData(rawPath);
+                        using (var ms = new MemoryStream(bytes))
                         {
-                            Image img = Image.FromStream(fs);
-                            e.Value = new Bitmap(img, new Size(80, 80));
-                            e.FormattingApplied = true;
+                            img = Image.FromStream(ms);
                         }
-                    }
-                    catch
-                    {
-                        e.Value = null;
                     }
                 }
                 else
                 {
-                    e.Value = null;
+                    // Nếu là đường dẫn local → build lại đường dẫn từ thư mục Debug
+                    string localPath = Path.Combine(Application.StartupPath, rawPath.Replace("/", "\\"));
+
+                    if (File.Exists(localPath))
+                    {
+                        img = Image.FromFile(localPath);
+                    }
                 }
+            }
+            catch
+            {
+                img = null;
+            }
+
+            // Resize ảnh cho vừa DataGridView
+            if (img != null)
+            {
+                e.Value = new Bitmap(img, new Size(80, 80));
+                e.FormattingApplied = true;
             }
             else
             {

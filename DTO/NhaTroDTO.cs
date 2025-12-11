@@ -6,17 +6,61 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class NhaTroDTO
+    public class NhaTroDTO
     {
-        public int RoomID { get; set; }
-        public int HostelID { get; set; }
-        public string RoomName { get; set; }
-        public string Floor { get; set; }
-        public decimal Area { get; set; }
-        public int Capacity { get; set; }
-        public int SoNguoiDaThue { get; set; }
-        public decimal Price { get; set; }
-        public decimal Deposit { get; set; }
-        public string Status { get; set; } 
+
+        private int maNha;
+        private string tenNha;
+        private string diaChi;
+        private int nguoiQuanLy;
+        private string ghiChu;
+        string anhDaiDien;
+
+
+        public int MaNha
+        {
+            get { return maNha; }
+            set { maNha = value; }
+        }
+
+        public string TenNha
+        {
+            get { return tenNha; }
+            set { tenNha = value; }
+        }
+
+        public string DiaChi
+        {
+            get { return diaChi; }
+            set { diaChi = value; }
+        }
+
+        public int NguoiQuanLy
+        {
+            get { return nguoiQuanLy; }
+            set { nguoiQuanLy = value; }
+        }
+
+        public string GhiChu
+        {
+            get { return ghiChu; }
+            set { ghiChu = value; }
+        }
+
+        public string AnhDaiDien { get => anhDaiDien; set => anhDaiDien = value; }
+
+        public NhaTroDTO() { }
+
+        public NhaTroDTO( int maNha, string tenNha,string diaChi, int nguoiQuanLy,string ghiChu,string anhdaidien
+        )
+        {
+            this.maNha = maNha;
+            this.tenNha = tenNha;
+            this.diaChi = diaChi;
+            this.nguoiQuanLy = nguoiQuanLy;
+            this.ghiChu = ghiChu;
+            this.anhDaiDien = anhdaidien;
+        }
     }
 }
+

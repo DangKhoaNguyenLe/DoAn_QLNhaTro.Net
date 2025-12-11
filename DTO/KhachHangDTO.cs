@@ -14,7 +14,7 @@ namespace DTO
         public string SDT { get; set; }
         public string QueQuan { get; set; }
         public string GioiTinh { get; set; } // "Nam" hoặc "Nữ"
-        public DateTime NgaySinh { get; set; }
+        public DateTime? NgaySinh { get; set; }
         public string AnhMatTruoc { get; set; } // Đường dẫn ảnh
         public string AnhMatSau { get; set; }   // Đường dẫn ảnh
     }

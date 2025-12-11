@@ -50,6 +50,8 @@ namespace GUI
             this.MaNha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel_body = new System.Windows.Forms.TableLayoutPanel();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.panel_title.SuspendLayout();
             this.panel_datagv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nha_Tro)).BeginInit();
@@ -59,6 +61,8 @@ namespace GUI
             // panel_title
             // 
             this.panel_title.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel_title.Controls.Add(this.btnXoa);
+            this.panel_title.Controls.Add(this.btnEdit);
             this.panel_title.Controls.Add(this.label_tat_Ca);
             this.panel_title.Controls.Add(this.button_them_nha_tro);
             this.panel_title.Controls.Add(this.label_nhatro);
@@ -162,6 +166,7 @@ namespace GUI
             this.dataGridView_nha_Tro.RowHeadersVisible = false;
             this.dataGridView_nha_Tro.RowHeadersWidth = 50;
             this.dataGridView_nha_Tro.RowTemplate.Height = 70;
+            this.dataGridView_nha_Tro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_nha_Tro.Size = new System.Drawing.Size(1113, 646);
             this.dataGridView_nha_Tro.TabIndex = 0;
             // 
@@ -252,6 +257,30 @@ namespace GUI
             this.tableLayoutPanel_body.Size = new System.Drawing.Size(1123, 656);
             this.tableLayoutPanel_body.TabIndex = 3;
             // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(270, 15);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(132, 43);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Cập nhật";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.Maroon;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(408, 15);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(132, 43);
+            this.btnXoa.TabIndex = 4;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            // 
             // FormNhaTro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,5 +317,7 @@ namespace GUI
         private DataGridViewTextBoxColumn MaNha;
         private DataGridViewTextBoxColumn MaAnh;
         private TableLayoutPanel tableLayoutPanel_body;
+        private Button btnXoa;
+        private Button btnEdit;
     }
 }
