@@ -108,15 +108,17 @@ namespace GUI
         {
             if (_vaiTroHienTai == "NHANVIEN")
             {
-                btnThem.Enabled = false; 
-                btnSua.Enabled = false;  
-                btnXoa.Enabled = false;   
+                btnThem.Visible = false;
+                btnSua.Visible = false;
+                btnXoa.Visible = false;
+
             }
             else
             {
-                btnThem.Enabled = true;
-                btnSua.Enabled = true;
-                btnXoa.Enabled = true;
+                btnThem.Visible = true;
+                btnSua.Visible = true;
+                btnXoa.Visible = true;
+
             }
         }
 

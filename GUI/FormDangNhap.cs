@@ -50,16 +50,15 @@ namespace GUI
 
         private void FormDangNhap_Shown(object sender, EventArgs e)
         {
-            this.ActiveControl = null; // Bỏ focus ban đầu cho đẹp
+            this.ActiveControl = null; 
         }
 
-        // --- 3. XỬ LÝ ĐĂNG NHẬP ---
+
         private void Btn_dangnhap_Click(object sender, EventArgs e)
         {
             ThucHienDangNhap();
         }
 
-        // Hàm xử lý chung (dùng cho cả Nút bấm và Phím Enter)
         private void ThucHienDangNhap()
         {
             string username = txt_taikhoan_login.Text.Trim();
@@ -74,21 +73,18 @@ namespace GUI
 
             try
             {
-                // GỌI BLL: Trả về đối tượng DTO chứa đầy đủ thông tin
+   
                 NguoiDungDTO user = bll.KiemTraDangNhap(username, password);
 
                 if (user != null)
                 {
                     MessageBox.Show("Đăng nhập thành công! Xin chào " + user.HoTen, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // --- CHUYỂN FORM & TRUYỀN QUYỀN ---
-                    // Lưu ý: FormMainNew phải có Constructor nhận 2 tham số (VaiTro, HoTen)
-                    FormMainNew formMain = new FormMainNew(user.VaiTro, user.HoTen);
+                    FormMainNew formMain = new FormMainNew(user.VaiTro, user.HoTen, user.TenDangNhap);
 
                     this.Hide();
-                    formMain.ShowDialog(); // Dùng ShowDialog để quản lý luồng tốt hơn
+                    formMain.ShowDialog();
 
-                    // Khi FormMain đóng lại thì thoát ứng dụng luôn
                     this.Close();
                 }
                 else
@@ -111,11 +107,8 @@ namespace GUI
             }
         }
 
-        // --- CÁC SỰ KIỆN KHÁC ---
-
         private void Linklabel_quenmatkhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Mở form quên mật khẩu (Giả định bạn có form này)
             FormQuenMatKhau formQuenMatKhau = new FormQuenMatKhau();
             formQuenMatKhau.FormClosed += (s, args) => this.Show();
             this.Hide();
@@ -124,7 +117,6 @@ namespace GUI
 
         private void Linklabel_dangky_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Mở form đăng ký (Giả định bạn có form này)
             FormDangKy formDangKy = new FormDangKy();
             formDangKy.FormClosed += (s, args) => this.Show();
             this.Hide();

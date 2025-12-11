@@ -7,26 +7,70 @@ namespace GUI
     public partial class FormMainNew : Form
     {
      
-        private string _vaiTro;
-        private string _hoTen;
+        string _vaiTro;
+        string _hoTen;
+        string _tenDangNhap;
+        bool _isDangXuat = false;
+        MenuAnimator menuVanHanh, menuTaiChinh, menuDanhMuc, menuHeThong;
+        Form currentChildForm;
 
-        private MenuAnimator menuVanHanh, menuTaiChinh, menuDanhMuc, menuHeThong;
-        private Form currentChildForm;
-
-        public FormMainNew(string vaiTro, string hoTen)
+        public FormMainNew(string vaiTro, string hoTen, string tenDangNhap)
         {
             InitializeComponent();
             this._vaiTro = vaiTro;
             this._hoTen = hoTen;
-
+            _tenDangNhap = tenDangNhap;
             menuVanHanh = new MenuAnimator(flowLayoutPanel_van_hanh, Van_Hanh_Transition);
             menuTaiChinh = new MenuAnimator(flowLayoutPanel_tai_chinh_ke_toan, Tai_Chinh_Transition);
             menuDanhMuc = new MenuAnimator(flowLayoutPanel_danh_muc, Danh_Muc_Transition);
             menuHeThong = new MenuAnimator(flowLayoutPanel_he_thong, He_Thong_Transition);
             this.FormClosing += FormMainNew_FormClosing;
             button_phong.Click += Button_phong_Click;
+            button_doi_mat_khau.Click += Button_doi_mat_khau_Click;
             ApplyTheme();
             DangKySuKien();
+            button_doi_mat_khau.Click += Button_doi_mat_khau_Click;
+            button_dang_xuat.Click += Button_dang_xuat_Click;
+            button_phan_quyen.Click += Button_phan_quyen_Click;
+        }
+
+        private void Button_phan_quyen_Click(object sender, EventArgs e)
+        {
+            if (_vaiTro != "ADMIN")
+            {
+                MessageBox.Show("Bạn không có quyền truy cập chức năng này!");
+                return;
+            }
+
+            OpenChildForm(new FormQuanLyNhanVien());
+        }
+
+        private void Button_dang_xuat_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (r == DialogResult.Yes)
+            {
+                _isDangXuat = true;
+                this.Hide();
+
+                FormDangNhap frm = new FormDangNhap();
+                frm.ShowDialog(); 
+                this.Close();
+            }
+        }
+
+        private void Button_doi_mat_khau_Click(object sender, EventArgs e)
+        {
+            FormDoiMatKhau frm = new FormDoiMatKhau(_tenDangNhap);
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                this.Hide();
+                FormDangNhap frmLogin = new FormDangNhap();
+                frmLogin.ShowDialog(); 
+                this.Close();
+            }
         }
 
         private void Button_phong_Click(object sender, EventArgs e)
@@ -64,24 +108,17 @@ namespace GUI
 
         private void PhanQuyenGiaoDien()
         {
-            if (_vaiTro == "NHANVIEN")
+            if (_vaiTro != "ADMIN")
             {
-                // 1. Thống Kê Doanh Thu -> Ẩn hoàn toàn
-                // (Giả sử nút Dashboard là nút xem thống kê)
+                button_phan_quyen.Visible = false;
                 button_dashboard.Visible = false;
-                // Nếu bạn có nút "Báo cáo doanh thu" riêng trong nhóm Tài chính:
                 button_bao_cao_doanh_thu.Visible = false;
-
-                // 2. Quản Lý Nhân Viên -> Ẩn hoàn toàn
-                // Thường nằm trong nhóm Hệ thống
-                button_phan_quyen.Visible = false; // Ẩn nút phân quyền/nhân viên
-
-                // Nếu muốn ẩn cả nhóm Hệ thống vì nhân viên không cần dùng:
-                // flowLayoutPanel_he_thong.Visible = false; 
-
-                // 3. Cấu Hình Giá & Xóa Dữ Liệu
-                // Các nút này vẫn HIỆN để nhân viên vào xem, 
-                // nhưng vào bên trong sẽ bị khóa (Xử lý ở phần OpenChildForm bên dưới)
+            }
+            else
+            {
+                button_phan_quyen.Visible = true;
+                button_dashboard.Visible = true;
+                button_bao_cao_doanh_thu.Visible = true;
             }
         }
         private void DangKySuKien()
@@ -107,8 +144,6 @@ namespace GUI
             // Các form bình thường (Ai cũng giống nhau)
             button_dien_nuoc.Click += (s, e) => OpenChildForm(new FormDienNuoc());
             button_nha_tro.Click += (s, e) => OpenChildForm(new FormNhaTro());
-
-            // Nút Thống kê (Admin mới được bấm, dù đã ẩn nhưng chặn thêm ở đây cho chắc)
             button_dashboard.Click += (s, e) => {
                 if (_vaiTro == "ADMIN") OpenChildForm(new FormThongKe());
             };

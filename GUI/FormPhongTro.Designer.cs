@@ -122,6 +122,7 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.AutoScroll = true;
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
@@ -178,7 +179,7 @@
             this.txtTenPhong.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtTenPhong.Location = new System.Drawing.Point(194, 129);
             this.txtTenPhong.Name = "txtTenPhong";
-            this.txtTenPhong.Size = new System.Drawing.Size(260, 37);
+            this.txtTenPhong.Size = new System.Drawing.Size(228, 37);
             this.txtTenPhong.TabIndex = 1;
             // 
             // label4
@@ -197,7 +198,7 @@
             this.txtTang.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtTang.Location = new System.Drawing.Point(194, 187);
             this.txtTang.Name = "txtTang";
-            this.txtTang.Size = new System.Drawing.Size(260, 37);
+            this.txtTang.Size = new System.Drawing.Size(228, 37);
             this.txtTang.TabIndex = 4;
             // 
             // label5
@@ -216,7 +217,7 @@
             this.txtGhiChu.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtGhiChu.Location = new System.Drawing.Point(194, 249);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(254, 37);
+            this.txtGhiChu.Size = new System.Drawing.Size(228, 37);
             this.txtGhiChu.TabIndex = 5;
             // 
             // tableLayoutPanel3
@@ -320,7 +321,7 @@
             this.cboLoaiPhong.FormattingEnabled = true;
             this.cboLoaiPhong.Location = new System.Drawing.Point(194, 69);
             this.cboLoaiPhong.Name = "cboLoaiPhong";
-            this.cboLoaiPhong.Size = new System.Drawing.Size(257, 37);
+            this.cboLoaiPhong.Size = new System.Drawing.Size(228, 37);
             this.cboLoaiPhong.TabIndex = 11;
             // 
             // label2
@@ -351,7 +352,7 @@
             this.cboChiNhanh.FormattingEnabled = true;
             this.cboChiNhanh.Location = new System.Drawing.Point(194, 11);
             this.cboChiNhanh.Name = "cboChiNhanh";
-            this.cboChiNhanh.Size = new System.Drawing.Size(260, 37);
+            this.cboChiNhanh.Size = new System.Drawing.Size(228, 37);
             this.cboChiNhanh.TabIndex = 14;
             // 
             // picAnhPhong
@@ -359,7 +360,7 @@
             this.picAnhPhong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picAnhPhong.Location = new System.Drawing.Point(194, 312);
             this.picAnhPhong.Name = "picAnhPhong";
-            this.picAnhPhong.Size = new System.Drawing.Size(254, 146);
+            this.picAnhPhong.Size = new System.Drawing.Size(228, 146);
             this.picAnhPhong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAnhPhong.TabIndex = 15;
             this.picAnhPhong.TabStop = false;
