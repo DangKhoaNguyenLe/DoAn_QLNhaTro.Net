@@ -2,7 +2,11 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Data.SqlClient;
+=======
+using System.Data;
+>>>>>>> d2459924a6a5283f3cba13e2dbb0d2973b9c4ba8
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +17,10 @@ namespace BLL
     {
         private KhachHangDAL dal = new KhachHangDAL();
 
+        public DataTable LayDanhSachKhachHang()
+        {
+            return dal.LayDanhSachKhachHang();
+        }
         public string ThemKhachHang(KhachHangDTO kh)
         {
 

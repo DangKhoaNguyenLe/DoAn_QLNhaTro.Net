@@ -47,8 +47,6 @@
             this.button_lap_hoa_don = new System.Windows.Forms.Button();
             this.panel_thu_chi = new System.Windows.Forms.Panel();
             this.button_thu_chi = new System.Windows.Forms.Button();
-            this.panel_bao_cao_doanh_thu = new System.Windows.Forms.Panel();
-            this.button_bao_cao_doanh_thu = new System.Windows.Forms.Button();
             this.flowLayoutPanel_van_hanh = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_van_hanh = new System.Windows.Forms.Panel();
             this.button_Van_Hanh = new System.Windows.Forms.Button();
@@ -58,17 +56,11 @@
             this.button_khach_thue = new System.Windows.Forms.Button();
             this.panel_hop_dong = new System.Windows.Forms.Panel();
             this.button_hop_dong = new System.Windows.Forms.Button();
-            this.panel_ghi_dien_nuoc = new System.Windows.Forms.Panel();
-            this.button_dien_nuoc = new System.Windows.Forms.Button();
             this.flowLayoutPanel_danh_muc = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_ql_danh_muc = new System.Windows.Forms.Panel();
             this.button_quan_ly_danh_muc = new System.Windows.Forms.Button();
             this.panel_nha_tro = new System.Windows.Forms.Panel();
             this.button_nha_tro = new System.Windows.Forms.Button();
-            this.panel_tai_san = new System.Windows.Forms.Panel();
-            this.button_tai_san = new System.Windows.Forms.Button();
-            this.panel_dich_vu = new System.Windows.Forms.Panel();
-            this.button_dich_vu = new System.Windows.Forms.Button();
             this.flowLayoutPanel_he_thong = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_he_thong = new System.Windows.Forms.Panel();
             this.button_he_thong = new System.Windows.Forms.Button();
@@ -93,18 +85,14 @@
             this.panel_tai_chinh_ke_toan.SuspendLayout();
             this.panel_lap_hoa_don.SuspendLayout();
             this.panel_thu_chi.SuspendLayout();
-            this.panel_bao_cao_doanh_thu.SuspendLayout();
             this.flowLayoutPanel_van_hanh.SuspendLayout();
             this.panel_van_hanh.SuspendLayout();
             this.panel_phong_giathue.SuspendLayout();
             this.panel_khach_thue.SuspendLayout();
             this.panel_hop_dong.SuspendLayout();
-            this.panel_ghi_dien_nuoc.SuspendLayout();
             this.flowLayoutPanel_danh_muc.SuspendLayout();
             this.panel_ql_danh_muc.SuspendLayout();
             this.panel_nha_tro.SuspendLayout();
-            this.panel_tai_san.SuspendLayout();
-            this.panel_dich_vu.SuspendLayout();
             this.flowLayoutPanel_he_thong.SuspendLayout();
             this.panel_he_thong.SuspendLayout();
             this.panel_phan_quyen.SuspendLayout();
@@ -200,7 +188,7 @@
             this.flowLayoutPanel_Menu_Trai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.flowLayoutPanel_Menu_Trai.Location = new System.Drawing.Point(0, 150);
             this.flowLayoutPanel_Menu_Trai.Name = "flowLayoutPanel_Menu_Trai";
-            this.flowLayoutPanel_Menu_Trai.Size = new System.Drawing.Size(425, 665);
+            this.flowLayoutPanel_Menu_Trai.Size = new System.Drawing.Size(423, 665);
             this.flowLayoutPanel_Menu_Trai.TabIndex = 1;
             // 
             // panel_dashboard
@@ -234,7 +222,6 @@
             this.flowLayoutPanel_tai_chinh_ke_toan.Controls.Add(this.panel_tai_chinh_ke_toan);
             this.flowLayoutPanel_tai_chinh_ke_toan.Controls.Add(this.panel_lap_hoa_don);
             this.flowLayoutPanel_tai_chinh_ke_toan.Controls.Add(this.panel_thu_chi);
-            this.flowLayoutPanel_tai_chinh_ke_toan.Controls.Add(this.panel_bao_cao_doanh_thu);
             this.flowLayoutPanel_tai_chinh_ke_toan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.flowLayoutPanel_tai_chinh_ke_toan.Location = new System.Drawing.Point(3, 71);
             this.flowLayoutPanel_tai_chinh_ke_toan.Name = "flowLayoutPanel_tai_chinh_ke_toan";
@@ -318,39 +305,12 @@
             this.button_thu_chi.Text = "Quản Lý Thu / Chi";
             this.button_thu_chi.UseVisualStyleBackColor = false;
             // 
-            // panel_bao_cao_doanh_thu
-            // 
-            this.panel_bao_cao_doanh_thu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_bao_cao_doanh_thu.Controls.Add(this.button_bao_cao_doanh_thu);
-            this.panel_bao_cao_doanh_thu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_bao_cao_doanh_thu.Location = new System.Drawing.Point(3, 207);
-            this.panel_bao_cao_doanh_thu.Name = "panel_bao_cao_doanh_thu";
-            this.panel_bao_cao_doanh_thu.Size = new System.Drawing.Size(390, 62);
-            this.panel_bao_cao_doanh_thu.TabIndex = 4;
-            // 
-            // button_bao_cao_doanh_thu
-            // 
-            this.button_bao_cao_doanh_thu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button_bao_cao_doanh_thu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_bao_cao_doanh_thu.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.button_bao_cao_doanh_thu.ForeColor = System.Drawing.Color.White;
-            this.button_bao_cao_doanh_thu.Image = ((System.Drawing.Image)(resources.GetObject("button_bao_cao_doanh_thu.Image")));
-            this.button_bao_cao_doanh_thu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_bao_cao_doanh_thu.Location = new System.Drawing.Point(0, 0);
-            this.button_bao_cao_doanh_thu.Name = "button_bao_cao_doanh_thu";
-            this.button_bao_cao_doanh_thu.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
-            this.button_bao_cao_doanh_thu.Size = new System.Drawing.Size(390, 62);
-            this.button_bao_cao_doanh_thu.TabIndex = 1;
-            this.button_bao_cao_doanh_thu.Text = "Báo Cáo Doanh Thu";
-            this.button_bao_cao_doanh_thu.UseVisualStyleBackColor = false;
-            // 
             // flowLayoutPanel_van_hanh
             // 
             this.flowLayoutPanel_van_hanh.Controls.Add(this.panel_van_hanh);
             this.flowLayoutPanel_van_hanh.Controls.Add(this.panel_phong_giathue);
             this.flowLayoutPanel_van_hanh.Controls.Add(this.panel_khach_thue);
             this.flowLayoutPanel_van_hanh.Controls.Add(this.panel_hop_dong);
-            this.flowLayoutPanel_van_hanh.Controls.Add(this.panel_ghi_dien_nuoc);
             this.flowLayoutPanel_van_hanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.flowLayoutPanel_van_hanh.Location = new System.Drawing.Point(3, 144);
             this.flowLayoutPanel_van_hanh.Name = "flowLayoutPanel_van_hanh";
@@ -460,42 +420,14 @@
             this.button_hop_dong.Text = "Hợp Đồng";
             this.button_hop_dong.UseVisualStyleBackColor = false;
             // 
-            // panel_ghi_dien_nuoc
-            // 
-            this.panel_ghi_dien_nuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_ghi_dien_nuoc.Controls.Add(this.button_dien_nuoc);
-            this.panel_ghi_dien_nuoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_ghi_dien_nuoc.Location = new System.Drawing.Point(3, 275);
-            this.panel_ghi_dien_nuoc.Name = "panel_ghi_dien_nuoc";
-            this.panel_ghi_dien_nuoc.Size = new System.Drawing.Size(390, 62);
-            this.panel_ghi_dien_nuoc.TabIndex = 5;
-            // 
-            // button_dien_nuoc
-            // 
-            this.button_dien_nuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button_dien_nuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_dien_nuoc.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.button_dien_nuoc.ForeColor = System.Drawing.Color.White;
-            this.button_dien_nuoc.Image = ((System.Drawing.Image)(resources.GetObject("button_dien_nuoc.Image")));
-            this.button_dien_nuoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_dien_nuoc.Location = new System.Drawing.Point(0, 0);
-            this.button_dien_nuoc.Name = "button_dien_nuoc";
-            this.button_dien_nuoc.Padding = new System.Windows.Forms.Padding(78, 0, 28, 0);
-            this.button_dien_nuoc.Size = new System.Drawing.Size(390, 62);
-            this.button_dien_nuoc.TabIndex = 1;
-            this.button_dien_nuoc.Text = "Ghi Điện Nước";
-            this.button_dien_nuoc.UseVisualStyleBackColor = false;
-            // 
             // flowLayoutPanel_danh_muc
             // 
             this.flowLayoutPanel_danh_muc.Controls.Add(this.panel_ql_danh_muc);
             this.flowLayoutPanel_danh_muc.Controls.Add(this.panel_nha_tro);
-            this.flowLayoutPanel_danh_muc.Controls.Add(this.panel_tai_san);
-            this.flowLayoutPanel_danh_muc.Controls.Add(this.panel_dich_vu);
             this.flowLayoutPanel_danh_muc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.flowLayoutPanel_danh_muc.Location = new System.Drawing.Point(3, 217);
             this.flowLayoutPanel_danh_muc.Name = "flowLayoutPanel_danh_muc";
-            this.flowLayoutPanel_danh_muc.Size = new System.Drawing.Size(393, 67);
+            this.flowLayoutPanel_danh_muc.Size = new System.Drawing.Size(393, 69);
             this.flowLayoutPanel_danh_muc.TabIndex = 7;
             // 
             // panel_ql_danh_muc
@@ -549,58 +481,6 @@
             this.button_nha_tro.Text = "Nhà Trọ";
             this.button_nha_tro.UseVisualStyleBackColor = false;
             // 
-            // panel_tai_san
-            // 
-            this.panel_tai_san.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_tai_san.Controls.Add(this.button_tai_san);
-            this.panel_tai_san.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_tai_san.Location = new System.Drawing.Point(3, 139);
-            this.panel_tai_san.Name = "panel_tai_san";
-            this.panel_tai_san.Size = new System.Drawing.Size(390, 62);
-            this.panel_tai_san.TabIndex = 3;
-            // 
-            // button_tai_san
-            // 
-            this.button_tai_san.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button_tai_san.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_tai_san.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.button_tai_san.ForeColor = System.Drawing.Color.White;
-            this.button_tai_san.Image = ((System.Drawing.Image)(resources.GetObject("button_tai_san.Image")));
-            this.button_tai_san.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_tai_san.Location = new System.Drawing.Point(0, 0);
-            this.button_tai_san.Name = "button_tai_san";
-            this.button_tai_san.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
-            this.button_tai_san.Size = new System.Drawing.Size(390, 62);
-            this.button_tai_san.TabIndex = 1;
-            this.button_tai_san.Text = "Tài Sản - Thiết Bị";
-            this.button_tai_san.UseVisualStyleBackColor = false;
-            // 
-            // panel_dich_vu
-            // 
-            this.panel_dich_vu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_dich_vu.Controls.Add(this.button_dich_vu);
-            this.panel_dich_vu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_dich_vu.Location = new System.Drawing.Point(3, 207);
-            this.panel_dich_vu.Name = "panel_dich_vu";
-            this.panel_dich_vu.Size = new System.Drawing.Size(390, 62);
-            this.panel_dich_vu.TabIndex = 4;
-            // 
-            // button_dich_vu
-            // 
-            this.button_dich_vu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button_dich_vu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_dich_vu.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.button_dich_vu.ForeColor = System.Drawing.Color.White;
-            this.button_dich_vu.Image = ((System.Drawing.Image)(resources.GetObject("button_dich_vu.Image")));
-            this.button_dich_vu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_dich_vu.Location = new System.Drawing.Point(0, 0);
-            this.button_dich_vu.Name = "button_dich_vu";
-            this.button_dich_vu.Padding = new System.Windows.Forms.Padding(70, 0, 85, 0);
-            this.button_dich_vu.Size = new System.Drawing.Size(390, 62);
-            this.button_dich_vu.TabIndex = 1;
-            this.button_dich_vu.Text = "Dịch Vụ";
-            this.button_dich_vu.UseVisualStyleBackColor = false;
-            // 
             // flowLayoutPanel_he_thong
             // 
             this.flowLayoutPanel_he_thong.Controls.Add(this.panel_he_thong);
@@ -608,7 +488,7 @@
             this.flowLayoutPanel_he_thong.Controls.Add(this.panel_doi_mat_khau);
             this.flowLayoutPanel_he_thong.Controls.Add(this.panel_dang_xuat);
             this.flowLayoutPanel_he_thong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.flowLayoutPanel_he_thong.Location = new System.Drawing.Point(3, 290);
+            this.flowLayoutPanel_he_thong.Location = new System.Drawing.Point(3, 292);
             this.flowLayoutPanel_he_thong.Name = "flowLayoutPanel_he_thong";
             this.flowLayoutPanel_he_thong.Size = new System.Drawing.Size(393, 67);
             this.flowLayoutPanel_he_thong.TabIndex = 8;
@@ -721,9 +601,9 @@
             // 
             this.panel_body.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_body.Location = new System.Drawing.Point(425, 150);
+            this.panel_body.Location = new System.Drawing.Point(423, 150);
             this.panel_body.Name = "panel_body";
-            this.panel_body.Size = new System.Drawing.Size(1067, 665);
+            this.panel_body.Size = new System.Drawing.Size(1069, 665);
             this.panel_body.TabIndex = 2;
             // 
             // Van_Hanh_Transition
@@ -764,18 +644,14 @@
             this.panel_tai_chinh_ke_toan.ResumeLayout(false);
             this.panel_lap_hoa_don.ResumeLayout(false);
             this.panel_thu_chi.ResumeLayout(false);
-            this.panel_bao_cao_doanh_thu.ResumeLayout(false);
             this.flowLayoutPanel_van_hanh.ResumeLayout(false);
             this.panel_van_hanh.ResumeLayout(false);
             this.panel_phong_giathue.ResumeLayout(false);
             this.panel_khach_thue.ResumeLayout(false);
             this.panel_hop_dong.ResumeLayout(false);
-            this.panel_ghi_dien_nuoc.ResumeLayout(false);
             this.flowLayoutPanel_danh_muc.ResumeLayout(false);
             this.panel_ql_danh_muc.ResumeLayout(false);
             this.panel_nha_tro.ResumeLayout(false);
-            this.panel_tai_san.ResumeLayout(false);
-            this.panel_dich_vu.ResumeLayout(false);
             this.flowLayoutPanel_he_thong.ResumeLayout(false);
             this.panel_he_thong.ResumeLayout(false);
             this.panel_phan_quyen.ResumeLayout(false);
@@ -801,8 +677,6 @@
         private System.Windows.Forms.Button button_khach_thue;
         private System.Windows.Forms.Panel panel_hop_dong;
         private System.Windows.Forms.Button button_hop_dong;
-        private System.Windows.Forms.Panel panel_ghi_dien_nuoc;
-        private System.Windows.Forms.Button button_dien_nuoc;
         private System.Windows.Forms.Timer Van_Hanh_Transition;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_tai_chinh_ke_toan;
         private System.Windows.Forms.Panel panel_tai_chinh_ke_toan;
@@ -811,18 +685,12 @@
         private System.Windows.Forms.Button button_lap_hoa_don;
         private System.Windows.Forms.Panel panel_thu_chi;
         private System.Windows.Forms.Button button_thu_chi;
-        private System.Windows.Forms.Panel panel_bao_cao_doanh_thu;
-        private System.Windows.Forms.Button button_bao_cao_doanh_thu;
         private System.Windows.Forms.Timer Tai_Chinh_Transition;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_danh_muc;
         private System.Windows.Forms.Panel panel_ql_danh_muc;
         private System.Windows.Forms.Button button_quan_ly_danh_muc;
         private System.Windows.Forms.Panel panel_nha_tro;
         private System.Windows.Forms.Button button_nha_tro;
-        private System.Windows.Forms.Panel panel_tai_san;
-        private System.Windows.Forms.Button button_tai_san;
-        private System.Windows.Forms.Panel panel_dich_vu;
-        private System.Windows.Forms.Button button_dich_vu;
         private System.Windows.Forms.Timer Danh_Muc_Transition;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_he_thong;
         private System.Windows.Forms.Panel panel_he_thong;

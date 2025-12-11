@@ -13,13 +13,15 @@ namespace GUI
         bool _isDangXuat = false;
         MenuAnimator menuVanHanh, menuTaiChinh, menuDanhMuc, menuHeThong;
         Form currentChildForm;
+        int _maNguoiDungHienTai;
 
-        public FormMainNew(string vaiTro, string hoTen, string tenDangNhap)
+        public FormMainNew(string vaiTro, string hoTen, string tenDangNhap, int maNguoiDung)
         {
             InitializeComponent();
             this._vaiTro = vaiTro;
             this._hoTen = hoTen;
             _tenDangNhap = tenDangNhap;
+            this._maNguoiDungHienTai = maNguoiDung;
             menuVanHanh = new MenuAnimator(flowLayoutPanel_van_hanh, Van_Hanh_Transition);
             menuTaiChinh = new MenuAnimator(flowLayoutPanel_tai_chinh_ke_toan, Tai_Chinh_Transition);
             menuDanhMuc = new MenuAnimator(flowLayoutPanel_danh_muc, Danh_Muc_Transition);
@@ -32,12 +34,39 @@ namespace GUI
             button_doi_mat_khau.Click += Button_doi_mat_khau_Click;
             button_dang_xuat.Click += Button_dang_xuat_Click;
             button_phan_quyen.Click += Button_phan_quyen_Click;
+<<<<<<< HEAD
             button_khach_thue.Click += Button_khach_thue_Click;
         }
 
         private void Button_khach_thue_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormKhachHang());
+=======
+            button_hop_dong.Click += Button_hop_dong_Click;
+            button_lap_hoa_don.Click += Button_lap_hoa_don_Click;
+            button_thu_chi.Click += Button_thu_chi_Click;
+            button_dashboard.Click += Button_dashboard_Click;
+        }
+
+        private void Button_dashboard_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormTongQuan());
+        }
+
+        private void Button_thu_chi_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormQuanLyThuTien());
+        }
+
+        private void Button_lap_hoa_don_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormLapHoaDon(_maNguoiDungHienTai));
+        }
+
+        private void Button_hop_dong_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormHopDong());
+>>>>>>> d2459924a6a5283f3cba13e2dbb0d2973b9c4ba8
         }
 
         private void Button_phan_quyen_Click(object sender, EventArgs e)
@@ -118,13 +147,11 @@ namespace GUI
             {
                 button_phan_quyen.Visible = false;
                 button_dashboard.Visible = false;
-                button_bao_cao_doanh_thu.Visible = false;
             }
             else
             {
                 button_phan_quyen.Visible = true;
                 button_dashboard.Visible = true;
-                button_bao_cao_doanh_thu.Visible = true;
             }
         }
         private void DangKySuKien()
@@ -134,21 +161,6 @@ namespace GUI
             button_tai_chinh_ke_toan.Click += (s, e) => menuTaiChinh.Toggle();
             button_quan_ly_danh_muc.Click += (s, e) => menuDanhMuc.Toggle();
             button_he_thong.Click += (s, e) => menuHeThong.Toggle();
-
-
-            // 1. Cấu hình giá (Dịch vụ) -> Cần truyền quyền để khóa TextBox
-            //button_dich_vu.Click += (s, e) => OpenChildForm(new FormDichVu(_vaiTro));
-
-            // 2. Các form danh sách (Phòng, Khách) -> Cần truyền quyền để khóa nút Xóa
-            //button_phong.Click += (s, e) => OpenChildForm(new FormPhongTro(_vaiTro));
-            //button_khach_thue.Click += (s, e) => OpenChildForm(new FormKhachThue(_vaiTro));
-            //button_hop_dong.Click += (s, e) => OpenChildForm(new FormDSHopDong(_vaiTro));
-
-            //// 3. Phiếu Chi -> Cần truyền quyền để giới hạn số tiền
-            //button_thu_chi.Click += (s, e) => OpenChildForm(new FormPhieuChi(_vaiTro));
-
-            // Các form bình thường (Ai cũng giống nhau)
-            button_dien_nuoc.Click += (s, e) => OpenChildForm(new FormDienNuoc());
             button_nha_tro.Click += (s, e) => OpenChildForm(new FormNhaTro());
             button_dashboard.Click += (s, e) => {
                 if (_vaiTro == "ADMIN") OpenChildForm(new FormThongKe());
@@ -216,14 +228,9 @@ namespace GUI
             {
                 button_lap_hoa_don,
                 button_thu_chi,
-                button_bao_cao_doanh_thu,
                 button_phong,
                 button_khach_thue,
                 button_hop_dong,
-                button_dien_nuoc,
-                button_nha_tro,
-                button_tai_san,
-                button_dich_vu,
                 button_phan_quyen,
                 button_doi_mat_khau,
                 button_dang_xuat

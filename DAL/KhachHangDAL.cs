@@ -20,6 +20,7 @@ namespace DAL
             List<KhachHangDTO> daynhas = new List<KhachHangDTO>();
             DataTable dt = khachHangs.GetData();
 
+<<<<<<< HEAD
             foreach(DataRow dr in dt.Rows)
             {
                 DataNhaTro.KhachHangRow ht = dr as DataNhaTro.KhachHangRow;
@@ -36,6 +37,27 @@ namespace DAL
                 daynhas.Add(d);
             }
             return daynhas;
+=======
+        public DataTable LayDanhSachKhachHang()
+        {
+            DataTable dt = new DataTable();
+            string connectionString = DAL.Properties.Settings.Default.QL_nhaTroConnectionString1;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT MaKhachHang, HoTen FROM KhachHang";
+                    using (SqlDataAdapter da = new SqlDataAdapter(query, conn))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+                catch { }
+            }
+            return dt;
+>>>>>>> d2459924a6a5283f3cba13e2dbb0d2973b9c4ba8
         }
         public bool KiemTraTonTaiCCCD(string cccd)
         {

@@ -15,6 +15,12 @@ namespace BLL
         public List<PhongDTO> LayDSPhong() => dal.LayTatCaPhong();
         public bool ThemPhongMoi(PhongDTO p) => dal.ThemPhong(p);
 
+        public List<PhongDTO> GetListPhongTrong()
+        {
+            List<PhongDTO> listAll = dal.LayTatCaPhong();
+            return listAll.Where(p => p.TrangThai == "Trong").ToList();
+        }
+
         public bool XoaPhong(int maPhong)
         {
             return dal.XoaPhong(maPhong);

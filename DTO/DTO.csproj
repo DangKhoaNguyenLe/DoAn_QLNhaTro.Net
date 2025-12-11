@@ -42,19 +42,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BillDTO.cs" />
+    <Compile Include="ChiTietHoaDonDTO.cs" />
+    <Compile Include="ChotDienNuocDTO.cs" />
     <Compile Include="CocDTO.cs" />
-    <Compile Include="DanhSachHopDongDTO.cs" />
     <Compile Include="DienNuocDTO.cs" />
+    <Compile Include="HoaDonDTO.cs" />
     <Compile Include="HopDongDTO.cs" />
     <Compile Include="GiaDienNuocDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />
     <Compile Include="KhachThueDTO.cs" />
     <Compile Include="NguoiDungDTO.cs" />
+<<<<<<< HEAD
     <Compile Include="NhaTroDTO.cs" />
+=======
+    <Compile Include="NhaTroDTO_Form_Moi.cs" />
+>>>>>>> d2459924a6a5283f3cba13e2dbb0d2973b9c4ba8
     <Compile Include="PhongDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThongKeDienNuocDTO.cs" />
-    <Compile Include="ViewPhieuThuTO.cs" />
+    <Compile Include="UserSession.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

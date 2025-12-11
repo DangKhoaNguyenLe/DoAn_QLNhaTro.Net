@@ -6,69 +6,46 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BLL
 {
-    public class HopDongBLL
+    public class HopDongBLL:ConnectionBLL
     {
-        //private HopDongDAL dal = new HopDongDAL();
-        //private DayNhaBLL dayNhaBLL = new DayNhaBLL();
-
-        //public bool XoaHopDong(int contractID)
-        //{
-        //    return dal.XoaHopDong(contractID);
-        //}
-
-        //public DataTable LayDanhSachHD()
-        //{
-        //    return dal.LayDSHD();
-        //}
-
-        //public List<DanhSachHopDongDTO> LayDanhSachHopDong()
-        //{
-        //    List<DayNhaDTO> danhSachDay = dayNhaBLL.getListByAdmin();
-
-        //    List<DanhSachHopDongDTO> all = dal.GetDanhSachHopDong();
-
-        //    List<string> tenDay = danhSachDay.Select(t => t.HostelName).ToList();
-
-        //    return all.Where(hd => tenDay.Contains(hd.HostelName)).ToList();
-
-        //}
-
-        //public List<DanhSachHopDongDTO> LayHopDongTheoDay(string hostelName)
-        //{
-        //    List<DanhSachHopDongDTO> dshd = dal.GetDanhSachHopDong();
-        //    return dshd.Where(t => t.HostelName == hostelName).ToList();
-        //}
-
-        //public List<DanhSachHopDongDTO> TimKiemTheoTen(string keyword, string tenDay)
-        //{
-        //    List<DanhSachHopDongDTO> dsTheoDay = LayHopDongTheoDay(tenDay);
-
-        //    return dsTheoDay.Where(hd => hd.FullName != null &&hd.FullName.ToLower().Contains(keyword.ToLower())).ToList();
-        //}
-
-        //public bool ThemHopDong(HopDongDTO c)
-        //{
-        //    return dal.Insert(c);
-        //}
-
-        //public bool CapNhatHopDong(HopDongDTO hd)
-        //{
-        //    return dal.CapNhatHopDong(hd);
-        //}
-
-        //public HopDongDTO LayHopDongTheoID(int id)
-        //{
-        //    return dal.LayHopDongTheoID(id);
-        //}
 
 
-        //public int LayMaxContractID()
-        //{
-        //    return dal.GetMaxContractID();
-        //}
+        private KhachHangDAL khachDal = new KhachHangDAL();
+
+        public List<HopDongDTO> LayDanhSachHopDong()
+        {
+            return hopDongDAL.LayDanhSachHopDong();
+        }
+
+
+        public bool ThemHopDong(HopDongDTO hd, out string errorMessage)
+        {
+            if (hd.MaPhong <= 0)
+            {
+                errorMessage = "Vui lòng chọn phòng!";
+                return false;
+            }
+            if (hd.MaKhachHang <= 0)
+            {
+                errorMessage = "Vui lòng chọn khách hàng!";
+                return false;
+            }
+            if (hd.TienCoc < 0 || hd.GiaThueThucTe < 0)
+            {
+                errorMessage = "Giá thuê và tiền cọc phải ≥ 0!";
+                return false;
+            }
+
+            return hopDongDAL.ThemHopDong(hd, out errorMessage);
+        }
+        public bool SuaHopDong(HopDongDTO hd, out string errorMessage)
+        {
+            return hopDongDAL.SuaHopDong(hd, out errorMessage);
+        }
+
     }
-
 }

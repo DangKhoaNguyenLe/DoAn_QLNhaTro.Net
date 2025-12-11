@@ -100,6 +100,7 @@ D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.c
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\DAL\obj\Debug\DAL.dll
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\DAL\obj\Debug\DAL.pdb
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\bin\Debug\App_Data\QL_nhaTro.mdf
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\bin\Debug\App_Data\QL_nhaTro_log.ldf
@@ -118,6 +119,8 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\bin\Debug\DAL.dll.config
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\bin\Debug\DAL.dll
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\bin\Debug\DAL.pdb
 =======
+=======
+>>>>>>> d2459924a6a5283f3cba13e2dbb0d2973b9c4ba8
 D:\850\DAL\bin\Debug\App_Data\QL_nhaTro.mdf
 D:\850\DAL\bin\Debug\App_Data\QL_nhaTro_log.ldf
 D:\850\DAL\bin\Debug\DAL.dll.config
@@ -154,6 +157,9 @@ D:\125\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\125\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\125\DAL\obj\Debug\DAL.dll
 D:\125\DAL\obj\Debug\DAL.pdb
+<<<<<<< HEAD
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\bin\Debug\App_Data\QL_nhaTro.mdf
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\DAL\bin\Debug\App_Data\QL_nhaTro_log.ldf
 >>>>>>> Stashed changes
+=======
+>>>>>>> d2459924a6a5283f3cba13e2dbb0d2973b9c4ba8

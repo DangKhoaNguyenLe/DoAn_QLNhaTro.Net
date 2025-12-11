@@ -320,6 +320,7 @@ D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\GUI\obj\Debug\GUI.pdb
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\GUI\obj\Debug\GUI.ThuePhong.resources
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\GUI\obj\Debug\GUI.exe.config
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\GUI\obj\Debug\GUI.FormQuanLyNhanVien.resources
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\bin\Debug\CloudinaryDotNet.dll
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
@@ -358,6 +359,8 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.csproj.CopyCom
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.exe
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.pdb
 =======
+=======
+>>>>>>> d2459924a6a5283f3cba13e2dbb0d2973b9c4ba8
 D:\850\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 D:\850\GUI\obj\Debug\GUI.FormDayNha.resources
 D:\850\GUI\obj\Debug\GUI.FormDangKy.resources
@@ -471,6 +474,7 @@ D:\125\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\125\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\125\GUI\obj\Debug\GUI.exe
 D:\125\GUI\obj\Debug\GUI.pdb
+<<<<<<< HEAD
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\bin\Debug\App_Data\QL_nhaTro.mdf
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\bin\Debug\App_Data\QL_nhaTro_log.ldf
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.FormHopDong.resources
@@ -484,3 +488,5 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.FormTongQuan.r
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.StatCard.resources
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\GUI\obj\Debug\GUI.ThuePhong.resources
 >>>>>>> Stashed changes
+=======
+>>>>>>> d2459924a6a5283f3cba13e2dbb0d2973b9c4ba8

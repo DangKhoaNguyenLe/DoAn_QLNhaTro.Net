@@ -118,6 +118,7 @@ D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.c
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\obj\Debug\BLL.dll
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\BLL\obj\Debug\BLL.pdb
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
@@ -134,6 +135,8 @@ C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.csproj.CopyCom
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.dll
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\obj\Debug\BLL.pdb
 =======
+=======
+>>>>>>> d2459924a6a5283f3cba13e2dbb0d2973b9c4ba8
 D:\850\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 D:\850\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\850\BLL\bin\Debug\App_Data\QL_nhaTro.mdf
@@ -176,6 +179,9 @@ D:\125\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\125\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\125\BLL\obj\Debug\BLL.dll
 D:\125\BLL\obj\Debug\BLL.pdb
+<<<<<<< HEAD
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\bin\Debug\App_Data\QL_nhaTro.mdf
 C:\Users\nguye\Documents\CaNhan\QL_NhaTro\Clone\BLL\bin\Debug\App_Data\QL_nhaTro_log.ldf
 >>>>>>> Stashed changes
+=======
+>>>>>>> d2459924a6a5283f3cba13e2dbb0d2973b9c4ba8
