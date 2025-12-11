@@ -20,13 +20,15 @@ namespace GUI
 {
     public partial class FormPhongTro : Form
     {
+        string _vaiTroHienTai;
         PhongBLL bll = new PhongBLL();
         string _duongDanAnhGoc = string.Empty;
         int _maPhongDangChon = 0;
         string _pathAnhCuDatabase = string.Empty;
         private RoomItem _itemDangChon = null;
-        public FormPhongTro()
+        public FormPhongTro(string vaiTro)
         {
+            _vaiTroHienTai = vaiTro;
             InitializeComponent();
             this.Load += FormPhongTro_Load;
             btnChonAnh.Click += BtnChonAnh_Click;
@@ -99,6 +101,22 @@ namespace GUI
                 {
                     MessageBox.Show("Lỗi khi trả phòng!");
                 }
+            }
+        }
+
+        private void PhanQuyen()
+        {
+            if (_vaiTroHienTai == "NHANVIEN")
+            {
+                btnThem.Enabled = false; 
+                btnSua.Enabled = false;  
+                btnXoa.Enabled = false;   
+            }
+            else
+            {
+                btnThem.Enabled = true;
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
             }
         }
 
@@ -362,6 +380,7 @@ namespace GUI
             LoadComboboxNha();
             LoadComboboxLoaiPhong();
             LoadHienThiPhong();
+            PhanQuyen();
         }
         private Image LoadAnhTuDuongDan(string duongDanTuDB)
         {

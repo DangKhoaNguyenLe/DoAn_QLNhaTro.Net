@@ -31,7 +31,7 @@ namespace GUI
 
         private void Button_phong_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormPhongTro());
+            OpenChildForm(new FormPhongTro(_vaiTro));
         }
 
         private void FormMainNew_FormClosing(object sender, FormClosingEventArgs e)
