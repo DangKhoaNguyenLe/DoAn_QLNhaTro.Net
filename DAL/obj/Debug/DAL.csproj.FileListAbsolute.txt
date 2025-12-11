@@ -110,3 +110,15 @@ D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.c
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\DAL\obj\Debug\DAL.dll
 D:\Nguyen_Ngoc_Thinh\.NET\Trua11-12\DAL\obj\Debug\DAL.pdb
+D:\850\DAL\bin\Debug\App_Data\QL_nhaTro.mdf
+D:\850\DAL\bin\Debug\App_Data\QL_nhaTro_log.ldf
+D:\850\DAL\bin\Debug\DAL.dll.config
+D:\850\DAL\bin\Debug\DAL.dll
+D:\850\DAL\bin\Debug\DAL.pdb
+D:\850\DAL\bin\Debug\DTO.dll
+D:\850\DAL\bin\Debug\DTO.pdb
+D:\850\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\850\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\850\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\850\DAL\obj\Debug\DAL.dll
+D:\850\DAL\obj\Debug\DAL.pdb
