@@ -89,6 +89,12 @@
     <Compile Include="FormHopDong.Designer.cs">
       <DependentUpon>FormHopDong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLapHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLapHoaDon.Designer.cs">
+      <DependentUpon>FormLapHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMainNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     </Compile>
     <Compile Include="FormQuanLyNhanVien.Designer.cs">
       <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLyThuTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLyThuTien.Designer.cs">
+      <DependentUpon>FormQuanLyThuTien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQuenMatKhau.cs">
       <SubType>Form</SubType>
@@ -176,6 +188,9 @@
     <EmbeddedResource Include="FormHopDong.resx">
       <DependentUpon>FormHopDong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLapHoaDon.resx">
+      <DependentUpon>FormLapHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMainNew.resx">
       <DependentUpon>FormMainNew.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLyNhanVien.resx">
       <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLyThuTien.resx">
+      <DependentUpon>FormQuanLyThuTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuenMatKhau.resx">
       <DependentUpon>FormQuenMatKhau.cs</DependentUpon>

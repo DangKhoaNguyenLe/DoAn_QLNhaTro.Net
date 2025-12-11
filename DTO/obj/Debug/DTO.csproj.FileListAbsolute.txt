@@ -58,3 +58,9 @@ D:\850\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\850\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\850\DTO\obj\Debug\DTO.dll
 D:\850\DTO\obj\Debug\DTO.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\DTO\bin\Debug\DTO.dll
+D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\DTO\bin\Debug\DTO.pdb
+D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\DTO\obj\Debug\DTO.dll
+D:\Nguyen_Ngoc_Thinh\.NET\Toi11_12\DTO\obj\Debug\DTO.pdb

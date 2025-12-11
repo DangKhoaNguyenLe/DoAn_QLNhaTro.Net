@@ -1,21 +1,19 @@
-﻿using BLL; // Namespace chứa NguoiDungBLL
-using DTO; // Namespace chứa NguoiDungDTO
-using DTO.DTO; // Namespace chứa UserSession
-using System;
+﻿using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using BLL;
+using DTO; 
 
 namespace GUI
 {
     public partial class FormDangNhap : Form
     {
-        // --- 1. PHẦN API TẠO PLACEHOLDER (GIỮ NGUYÊN) ---
+    
         private const int EM_SETCUEBANNER = 0x1501;
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern Int32 SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
-        // --- 2. KHAI BÁO BLL MỚI ---
         NguoiDungBLL bll = new NguoiDungBLL();
 
         public FormDangNhap()
@@ -64,8 +62,6 @@ namespace GUI
         {
             string username = txt_taikhoan_login.Text.Trim();
             string password = txt_matkhau_login.Text.Trim();
-
-            // Kiểm tra rỗng
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -77,16 +73,11 @@ namespace GUI
    
                 NguoiDungDTO user = bll.KiemTraDangNhap(username, password);
 
-
                 if (user != null)
                 {
                     MessageBox.Show("Đăng nhập thành công! Xin chào " + user.HoTen, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UserSession.MaNguoiDung = user.MaNguoiDung;
-                    UserSession.HoTen = user.HoTen;
-                    UserSession.VaiTro = user.VaiTro;
-
-                    FormMainNew formMain = new FormMainNew(user.VaiTro, user.HoTen, user.TenDangNhap);
+                    FormMainNew formMain = new FormMainNew(user.VaiTro, user.HoTen, user.TenDangNhap, user.MaNguoiDung);
 
                     this.Hide();
                     formMain.ShowDialog();

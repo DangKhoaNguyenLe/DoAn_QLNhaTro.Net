@@ -13,13 +13,15 @@ namespace GUI
         bool _isDangXuat = false;
         MenuAnimator menuVanHanh, menuTaiChinh, menuDanhMuc, menuHeThong;
         Form currentChildForm;
+        int _maNguoiDungHienTai;
 
-        public FormMainNew(string vaiTro, string hoTen, string tenDangNhap)
+        public FormMainNew(string vaiTro, string hoTen, string tenDangNhap, int maNguoiDung)
         {
             InitializeComponent();
             this._vaiTro = vaiTro;
             this._hoTen = hoTen;
             _tenDangNhap = tenDangNhap;
+            this._maNguoiDungHienTai = maNguoiDung;
             menuVanHanh = new MenuAnimator(flowLayoutPanel_van_hanh, Van_Hanh_Transition);
             menuTaiChinh = new MenuAnimator(flowLayoutPanel_tai_chinh_ke_toan, Tai_Chinh_Transition);
             menuDanhMuc = new MenuAnimator(flowLayoutPanel_danh_muc, Danh_Muc_Transition);
@@ -33,6 +35,18 @@ namespace GUI
             button_dang_xuat.Click += Button_dang_xuat_Click;
             button_phan_quyen.Click += Button_phan_quyen_Click;
             button_hop_dong.Click += Button_hop_dong_Click;
+            button_lap_hoa_don.Click += Button_lap_hoa_don_Click;
+            button_thu_chi.Click += Button_thu_chi_Click;
+        }
+
+        private void Button_thu_chi_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormQuanLyThuTien());
+        }
+
+        private void Button_lap_hoa_don_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormLapHoaDon(_maNguoiDungHienTai));
         }
 
         private void Button_hop_dong_Click(object sender, EventArgs e)
