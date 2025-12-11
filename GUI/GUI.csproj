@@ -83,23 +83,11 @@
     <Compile Include="FormDoiMatKhau.Designer.cs">
       <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDSPhieuThu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDSPhieuThu.Designer.cs">
-      <DependentUpon>FormDSPhieuThu.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormHopDong.Designer.cs">
       <DependentUpon>FormHopDong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormKhachThue.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormKhachThue.Designer.cs">
-      <DependentUpon>FormKhachThue.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMainNew.cs">
       <SubType>Form</SubType>
@@ -119,12 +107,6 @@
     <Compile Include="FormQuanLyNhanVien.Designer.cs">
       <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMainTu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMainTu.Designer.cs">
-      <DependentUpon>FormMainTu.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormQuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,12 +118,6 @@
     </Compile>
     <Compile Include="FormThemHopDong.Designer.cs">
       <DependentUpon>FormThemHopDong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormThemKhachThue.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormThemKhachThue.Designer.cs">
-      <DependentUpon>FormThemKhachThue.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThemNhaTro.cs">
       <SubType>Form</SubType>
@@ -197,14 +173,8 @@
     <EmbeddedResource Include="FormDienNuoc.resx">
       <DependentUpon>FormDienNuoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDSPhieuThu.resx">
-      <DependentUpon>FormDSPhieuThu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormHopDong.resx">
       <DependentUpon>FormHopDong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormKhachThue.resx">
-      <DependentUpon>FormKhachThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainNew.resx">
       <DependentUpon>FormMainNew.cs</DependentUpon>
@@ -215,17 +185,11 @@
     <EmbeddedResource Include="FormQuanLyNhanVien.resx">
       <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMainTu.resx">
-      <DependentUpon>FormMainTu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormQuenMatKhau.resx">
       <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemHopDong.resx">
       <DependentUpon>FormThemHopDong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormThemKhachThue.resx">
-      <DependentUpon>FormThemKhachThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemNhaTro.resx">
       <DependentUpon>FormThemNhaTro.cs</DependentUpon>
