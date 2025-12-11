@@ -37,6 +37,12 @@ namespace GUI
             button_hop_dong.Click += Button_hop_dong_Click;
             button_lap_hoa_don.Click += Button_lap_hoa_don_Click;
             button_thu_chi.Click += Button_thu_chi_Click;
+            button_dashboard.Click += Button_dashboard_Click;
+        }
+
+        private void Button_dashboard_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormTongQuan());
         }
 
         private void Button_thu_chi_Click(object sender, EventArgs e)

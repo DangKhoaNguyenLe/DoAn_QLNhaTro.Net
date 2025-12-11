@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -143,6 +144,12 @@
     <Compile Include="FormThongKe.Designer.cs">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTongQuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTongQuan.Designer.cs">
+      <DependentUpon>FormTongQuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -214,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTongQuan.resx">
+      <DependentUpon>FormTongQuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoRoom.resx">
       <DependentUpon>InfoRoom.cs</DependentUpon>

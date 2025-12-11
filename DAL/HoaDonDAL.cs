@@ -3,12 +3,37 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace DAL
 {
     public class HoaDonDAL
     {
         private string connStr = Properties.Settings.Default.QL_nhaTroConnectionString1;
+
+        public DataTable LayDoanhThu6ThangGanNhat()
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string query = @"
+            SELECT TOP 6 
+                H.Thang, 
+                H.Nam, 
+                SUM(H.TongTien) AS TongThu
+            FROM HoaDon H
+            WHERE H.TrangThai = 'DaThanhToan' 
+            GROUP BY H.Thang, H.Nam
+            ORDER BY H.Nam DESC, H.Thang DESC"; 
+
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                return dt;
+            }
+        }
+
 
         public DataTable LayThongTinHopDong(int maPhong)
         {
@@ -29,7 +54,57 @@ namespace DAL
             }
         }
 
-       
+        public DataTable LayTopHoaDonChuaThanhToan(int topCount)
+        {
+            DataTable dt = new DataTable();
+
+            string query = $@"
+            SELECT TOP {topCount} 
+                hd.MaHD, 
+                p.TenPhong, 
+                kh.TenKhach,  -- Giả định đã join được tên khách hàng
+                hd.TongTien, 
+                hd.NgayTao
+            FROM 
+                HOADON hd
+            JOIN 
+                PHONG p ON hd.MaPhong = p.MaPhong
+            JOIN
+                KHACHHANG kh ON hd.MaKhach = kh.MaKhach  -- Thay bằng logic join thực tế của bạn
+            WHERE 
+                hd.TrangThai = 0  -- 0 là trạng thái Chưa Thanh Toán/Công Nợ
+            ORDER BY 
+                hd.TongTien DESC;
+        ";
+
+
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+     
+                MessageBox.Show("Lỗi khi lấy Top Công Nợ: " + ex.Message);
+            }
+
+            return dt;
+        }
+        public decimal TinhTongCongNo(int thang, int nam)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string query = @"SELECT ISNULL(SUM(ConNo), 0) 
+                         FROM HoaDon 
+                         WHERE Thang = @T AND Nam = @N AND TrangThai = 'ChuaThanhToan'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@T", thang);
+                cmd.Parameters.AddWithValue("@N", nam);
+
+                return (decimal)cmd.ExecuteScalar();
+            }
+        }
         public DataTable LayLichSuHoaDon(int maHopDong)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -200,8 +275,6 @@ namespace DAL
                 }
             }
         }
-
-        // Thanh toán hóa đơn (Cập nhật trạng thái)
         public bool ThanhToanHoaDon(int maHoaDon, decimal soTienTra)
         {
             using (SqlConnection conn = new SqlConnection(connStr))
