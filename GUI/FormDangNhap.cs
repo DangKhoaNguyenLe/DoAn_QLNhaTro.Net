@@ -1,9 +1,10 @@
-﻿using System;
+﻿using BLL; // Namespace chứa NguoiDungBLL
+using DTO; // Namespace chứa NguoiDungDTO
+using DTO.DTO; // Namespace chứa UserSession
+using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using BLL; // Namespace chứa NguoiDungBLL
-using DTO; // Namespace chứa NguoiDungDTO
 
 namespace GUI
 {
@@ -76,9 +77,14 @@ namespace GUI
    
                 NguoiDungDTO user = bll.KiemTraDangNhap(username, password);
 
+
                 if (user != null)
                 {
                     MessageBox.Show("Đăng nhập thành công! Xin chào " + user.HoTen, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    UserSession.MaNguoiDung = user.MaNguoiDung;
+                    UserSession.HoTen = user.HoTen;
+                    UserSession.VaiTro = user.VaiTro;
 
                     FormMainNew formMain = new FormMainNew(user.VaiTro, user.HoTen, user.TenDangNhap);
 

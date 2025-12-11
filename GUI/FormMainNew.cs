@@ -32,6 +32,12 @@ namespace GUI
             button_doi_mat_khau.Click += Button_doi_mat_khau_Click;
             button_dang_xuat.Click += Button_dang_xuat_Click;
             button_phan_quyen.Click += Button_phan_quyen_Click;
+            button_hop_dong.Click += Button_hop_dong_Click;
+        }
+
+        private void Button_hop_dong_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormHopDong());
         }
 
         private void Button_phan_quyen_Click(object sender, EventArgs e)

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics.Contracts;
 using System.Linq;
 
@@ -9,135 +10,135 @@ namespace DAL
 {
     public class HopDongDAL : DbProcessDAL
     {
+        string connectionString = DAL.Properties.Settings.Default.QL_nhaTroConnectionString1;
 
-        //public DataTable LayDSHD()
-        //{
-        //    return hopdong.GetData();
-        //}
-        //public List<DanhSachHopDongDTO> GetDanhSachHopDong()
-        //{
-        //    List<DanhSachHopDongDTO> list = new List<DanhSachHopDongDTO>();
+        public List<HopDongDTO> LayDanhSachHopDong()
+        {
+            List<HopDongDTO> list = new List<HopDongDTO>();
+            // string connectionString = nhaTro_adapter.Connection.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("sp_LayDanhSachHopDong", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                HopDongDTO item = new HopDongDTO();
+                                item.MaHopDong = int.Parse(reader["MaHopDong"].ToString());
+                                item.MaPhong = reader["MaPhong"] != DBNull.Value ? (int)reader["MaPhong"] : 0;
+                                item.TenPhong = reader["TenPhong"].ToString();
+                                item.TenNhaTro = reader["TenNhaTro"].ToString();
+                                item.MaKhachHang = reader["MaKhachHang"] != DBNull.Value ? (int)reader["MaKhachHang"] : 0;
+                                // item.TenKhachHang = reader["TenKhachHang"].ToString();
+                                item.NgayBatDau = (DateTime)reader["NgayBatDau"];
+                                if (reader["NgayKetThuc"] != DBNull.Value)
+                                    item.NgayKetThuc = (DateTime)reader["NgayKetThuc"];
+                                item.TienCoc = reader["TienCoc"] != DBNull.Value ? (decimal)reader["TienCoc"] : 0;
+                                item.GiaThueThucTe = (decimal)reader["GiaThueThucTe"];
+                                item.ChuKyThanhToan = reader["ChuKyThanhToan"] != DBNull.Value ? (int)reader["ChuKyThanhToan"] : 1;
+                                item.TrangThai = reader["TrangThai"].ToString();
+                                item.HoTenNguoiLapPhieu = reader["HoTenNguoiLapPhieu"].ToString();
 
-        //    DataTable dt = dshopdong1.GetData();
+                                list.Add(item);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Lỗi DAL khi gọi Procedure: " + ex.Message);
+                }
+            }
+            return list;
+        }
 
-        //    foreach (DataRow dr in dt.Rows)
-        //    {
-        //        var row = dr as DataNhaTro.DanhSachHopDong1Row;
-        //        if (row == null) continue;
+        public bool ThemHopDong(HopDongDTO hd, out string errorMessage)
+        {
+            errorMessage = "";
 
-        //        DanhSachHopDongDTO c = new DanhSachHopDongDTO(
-        //            row.ContractID,
-        //            row.ContractCode,
-        //            row.HostelName,
-        //            row.RoomName,
-        //            row.FullName,
-        //            row.NgayBatDau,
-        //            row.NgayKetThuc,
-        //            row.TienPhong,
-        //            row.TienCoc,
-        //            row.TrangThai,
-        //            row.CreatedDate
-        //        );
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand("sp_ThemHopDong", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
 
-        //        list.Add(c);
-        //    }
+                // TRUYỀN THAM SỐ ĐẦU VÀO
+                cmd.Parameters.AddWithValue("@MaPhong", hd.MaPhong);
+                cmd.Parameters.AddWithValue("@MaKhachHang", hd.MaKhachHang);
+                cmd.Parameters.AddWithValue("@NguoiLapPhieu", hd.NguoiLapPhieu);
+                cmd.Parameters.AddWithValue("@NgayBatDau", hd.NgayBatDau);
+                cmd.Parameters.AddWithValue("@NgayKetThuc", hd.NgayKetThuc ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@TienCoc", hd.TienCoc);
+                cmd.Parameters.AddWithValue("@GiaThueThucTe", hd.GiaThueThucTe);
+                cmd.Parameters.AddWithValue("@ChuKyThanhToan", hd.ChuKyThanhToan);
+                cmd.Parameters.AddWithValue("@TrangThai", hd.TrangThai);
 
-        //    return list;
-        //}
+                // TRẢ KẾT QUẢ TỪ SP
+                SqlParameter pResult = new SqlParameter("@Result", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                SqlParameter pMsg = new SqlParameter("@Message", SqlDbType.NVarChar, 200)
+                {
+                    Direction = ParameterDirection.Output
+                };
 
-        //// Thêm hợp đồng
-        //public bool Insert(HopDongDTO c)
-        //{
-        //    try
-        //    {
-        //        hopdong.Insert(
-        //            c.ContractCode,
-        //            c.HostelID,
-        //            c.RoomID,
-        //            c.TenantID,
-        //            c.NgayBatDau,
-        //            c.NgayKetThuc,
-        //            c.TienPhong,
-        //            c.TienCoc,
-        //            c.KyThanhToan,
-        //            c.NgayChotTien,
-        //            c.TrangThai,
-        //            c.CreatedDate
-        //        );
-        //        return true;
-        //    }
-        //    catch
-        //    {
-        //        return false;
-        //    }
-        //}
+                cmd.Parameters.Add(pResult);
+                cmd.Parameters.Add(pMsg);
 
-        //public bool XoaHopDong(int contractId)
-        //{
-        //    try
-        //    {
-        //        hopdong.DeleteQuery(contractId);
-        //        return true;
-        //    }
-        //    catch
-        //    {
-        //        return false;
-        //    }
-        //}
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
 
-        //public bool CapNhatHopDong(HopDongDTO hd)
-        //{
-        //    int result = hopdong.UpdateQuery(
-        //        hd.ContractCode,
-        //        hd.HostelID,
-        //        hd.RoomID,
-        //        hd.TenantID,
-        //        hd.NgayBatDau,
-        //        hd.NgayKetThuc,
-        //        hd.TienPhong,
-        //        hd.TienCoc,
-        //        hd.KyThanhToan,
-        //        hd.NgayChotTien,
-        //        hd.TrangThai,
-        //        hd.CreatedDate,
-        //        hd.ContractID
-        //    );
+                    int result = (int)pResult.Value;
+                    errorMessage = pMsg.Value?.ToString();
 
-        //    return result > 0;
-        //}
-
-        //public HopDongDTO LayHopDongTheoID(int id)
-        //{
-        //    var dt = hopdong.GetDataByID(id);
-
-        //    if (dt.Rows.Count == 0) return null;
-
-        //    var r = dt[0];
-
-        //    return new HopDongDTO(
-        //        r.ContractID,
-        //        r.ContractCode,
-        //        r.HostelID,
-        //        r.RoomID,
-        //        r.TenantID,
-        //        r.NgayBatDau,
-        //        r.NgayKetThuc,
-        //        r.TienPhong,
-        //        r.TienCoc,
-        //        r.KyThanhToan,
-        //        r.NgayChotTien,
-        //        r.TrangThai,
-        //        r.CreatedDate
-        //    );
-        //}
+                    return result == 1;
+                }
+                catch (SqlException ex)
+                {
+                    errorMessage = "Lỗi DAL: " + ex.Message;
+                    return false;
+                }
+            }
+        }
 
 
-        //public int GetMaxContractID()
-        //{
-        //    var dt = hopdong.GetData();
-        //    if (dt.Rows.Count == 0) return 0;
-        //    return dt.AsEnumerable().Max(r => r.Field<int>("ContractID"));
-        //}
+        public bool SuaHopDong(HopDongDTO hd, out string errorMessage)
+        {
+            errorMessage = "";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand("sp_SuaHopDong", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@MaHopDong", hd.MaHopDong);
+                cmd.Parameters.AddWithValue("@MaPhongMoi", hd.MaPhong);
+                cmd.Parameters.AddWithValue("@MaKhachHang", hd.MaKhachHang);
+                cmd.Parameters.AddWithValue("@NgayBatDau", hd.NgayBatDau);
+                cmd.Parameters.AddWithValue("@NgayKetThuc", hd.NgayKetThuc ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@TienCoc", hd.TienCoc);
+                cmd.Parameters.AddWithValue("@GiaThue", hd.GiaThueThucTe);
+                cmd.Parameters.AddWithValue("@ChuKyThanhToan", hd.ChuKyThanhToan);
+                cmd.Parameters.AddWithValue("@TrangThai", hd.TrangThai);
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    errorMessage = ex.Message;
+                    return false;
+                }
+            }
+        }
+
 
     }
 }

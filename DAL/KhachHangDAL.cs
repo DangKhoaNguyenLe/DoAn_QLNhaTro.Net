@@ -1,6 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,26 @@ namespace DAL
     {
         private string connStr = Properties.Settings.Default.QL_nhaTroConnectionString1;
 
+        public DataTable LayDanhSachKhachHang()
+        {
+            DataTable dt = new DataTable();
+            string connectionString = DAL.Properties.Settings.Default.QL_nhaTroConnectionString1;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT MaKhachHang, HoTen FROM KhachHang";
+                    using (SqlDataAdapter da = new SqlDataAdapter(query, conn))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+                catch { }
+            }
+            return dt;
+        }
         public bool KiemTraTonTaiCCCD(string cccd)
         {
             using (SqlConnection conn = new SqlConnection(connStr))

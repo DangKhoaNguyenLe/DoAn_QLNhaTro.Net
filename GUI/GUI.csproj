@@ -89,6 +89,12 @@
     <Compile Include="FormDSPhieuThu.Designer.cs">
       <DependentUpon>FormDSPhieuThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHopDong.Designer.cs">
+      <DependentUpon>FormHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKhachThue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,18 +118,6 @@
     </Compile>
     <Compile Include="FormQuanLyNhanVien.Designer.cs">
       <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSuaHopDong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSuaHopDong.Designer.cs">
-      <DependentUpon>FormSuaHopDong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDSHopDong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDSHopDong.Designer.cs">
-      <DependentUpon>FormDSHopDong.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMainTu.cs">
       <SubType>Form</SubType>
@@ -206,6 +200,9 @@
     <EmbeddedResource Include="FormDSPhieuThu.resx">
       <DependentUpon>FormDSPhieuThu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHopDong.resx">
+      <DependentUpon>FormHopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKhachThue.resx">
       <DependentUpon>FormKhachThue.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,12 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLyNhanVien.resx">
       <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSuaHopDong.resx">
-      <DependentUpon>FormSuaHopDong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDSHopDong.resx">
-      <DependentUpon>FormDSHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainTu.resx">
       <DependentUpon>FormMainTu.cs</DependentUpon>
